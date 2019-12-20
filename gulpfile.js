@@ -17,7 +17,7 @@ const styleFiles = [
 
 const jsFiles = [
     './src/js/lib.js',
-    './src/js/filter.js'
+    './src/js/filter.js',
 ]
 
 function img(){

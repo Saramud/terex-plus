@@ -9,7 +9,7 @@ $("#sendMail").on("click", function(){
         return false;
     }
     if (phone.length !== 12) {
-        $("#error").text("Введите номер телефона в формате +7123456789");
+        $("#error").text("Введите номер телефона в формате +79995553344");
         $("#phone").val("+7");
         $("#phone").css("border", "2px solid red");
         return false;
@@ -41,5 +41,16 @@ $("#sendMail").on("click", function(){
     })
     
 });
+
+    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+        e.preventDefault();
+        let t = 1000;
+        let d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $("#sendMail").css( "animation", "blink 0.7s ease-in-out 3" );
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top -300 }, t);
+        
+
+    });
+
 
 

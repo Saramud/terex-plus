@@ -12,11 +12,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="row align-items-center"> 
                 <div class="col-sm logo">
-                        <img title="terex-plus" src="build/img/vectorpaint (4).png" width="200" alt="terex-plus">
+                        <img title="terex-plus" src="build/img/logo_2.png" width="200" alt="terex-plus">
                         <span class="logo_name">ТЕРЕКС-ПЛЮС  <span class="sub">Аренда Спецтехники в СПб</span></span>
                 </div> 
                 <div class="col-sm info text-right">
@@ -97,10 +97,9 @@
                     <h2 class='technics__title'>Каталог спецтехники</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="techics__menu col-12">
-                    <ul class="technics__menu text-center">
-                        <li id="all" class="btn btn-info techs">Вся техника</li>
+                    <ul class="technics__menu">
                         <li id="autokran" class="btn btn-info techs ">Автокран</li>
                         <li id="mini" class="btn btn-info techs">Миниэкскаватор</li>
                         <li id="samosval" class="btn btn-info techs">Самосвал</li>
@@ -110,14 +109,70 @@
                     </ul>
                 </div>
             </div>
-            <div class="row"></div>
-                <div class="technics__menu-items">
+            <div class="row justify-content-center">
+                <div class="technics__menu-items text-center">
                     <div class="technics__menu-item card-deck">
                         
                     </div>
                 </div>
+            </div>
+    </section>
+    <section class="information">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h2 class="info__title">С НАМИ ВЫГОДНО СОТРУДНИЧАТЬ</h2>
+                </div>
+                <div>    
+                    <a href="#header"><img class="logo-rotate" src="build/img/logo_3.png" style="width:150px"></a>
+                </div>
+            </div>
+        </div>
+
     </section>
     <footer class="footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-4 ">
+                    <div class="footer__reference ">
+                        <h4>ТЕРЕКС-ПЛЮС</h4>
+                        <ul class="footer__menu ">
+                            <li class="footer-menu__item"><a href="./">Главная</a></li>
+                            <li class="footer-menu__item"><a href="./technics.html">Спецтехника</a></li>
+                            <li class="footer-menu__item"><a href="./about.html">О компании</a></li>
+                            <li class="footer-menu__item"><a href="./contacts.html">Контакты</a></li>
+                            <li class="footer-menu__item"><a href="#requestform">Оставить завку</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-4 ">
+                    <h4>КОНТАКТЫ</h4>
+                    <div class="footer__contact parts">
+                        <div class="info">
+                            <a href="tel:8(812)999-99-99" class="icon icon-phone">8(812)888-88-88</a>
+                            <a href="mailto:info@terex-plus.ru" class="icon icon-mail">info@terex-plus.ru</a>
+                            <a href="tg://resolve?domain=SSaramud" class="icon icon-telegram">Написать в Telegram</a>
+                            <a href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу%20продвижения." class="icon icon-whatsapp">Написать в Whatsapp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <h4>АДРЕС</h4>
+                    <div class="footer__contact parts">
+                        <div class="info">
+                            <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.318700%2C59.890521&mode=search&sll=30.471402%2C59.944323&sspn=0.090122%2C0.023683&text=%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20105&z=18" class="icon icon-address">Московский проспект 105</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row text-center">
+                <div class="copyright col-12">
+                    <p>2019 © «Терекс-Плюс». Все права защищены. </p>
+                </div>
+            </div>
+        </div>
     </footer>    
     <script src="build/js/all.js"></script>
 </body>

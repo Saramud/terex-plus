@@ -10,25 +10,47 @@
     font-style: normal;
     font-display: block;
 }
-// [class^="icon-"], [class*=" icon-"] {
-// /* use !important to prevent issues with browser extensions that change fonts */
-//     font-family: 'icomoon' !important;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-variant: normal;
-//     text-transform: none;
-//     line-height: 1;
+/*Скроллбар */
+::-webkit-scrollbar-button {
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:6px;
+    height:0px
+    }
+    
+    ::-webkit-scrollbar-track {
+    background-color:#32312e;
+    box-shadow:0px 0px 3px #000 inset;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color:#ffcb17;
+    box-shadow:0px 1px 1px #fff inset;
+    background-image:url('https://yraaa.ru/_pu/24/59610063.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    }
+    
+    ::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:7px;
+    height:0px
+    }
+    
+    ::-webkit-scrollbar{
+    width: 11px;
+    }
 
-//     /* Better Font Rendering =========== */
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
 
 /* Спецификация */
 * {
     font-family: 'Fira Sans Condensed', sans serif; 
     transition: all 0.3s;
 }
+
 $main-color: #FFC61A;
 /* Шапка */
 .header {
@@ -62,6 +84,7 @@ $main-color: #FFC61A;
 }
 .icon-phone:before {
     content: "\e942";
+    color:green;
 }
 .icon-mail:before {
     content: "\e945";
@@ -203,7 +226,7 @@ $main-color: #FFC61A;
             margin-top: 5px;
         }
         button {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
         .warning {
             font-size: 10px;
@@ -242,10 +265,20 @@ $main-color: #FFC61A;
     }
 }
 
+@keyframes blink {
+    50% { background-color: rgb(0, 48, 100); }
+    51% { background-color: rgb(40, 167, 69); border-color: rgb(40, 167, 69); }
+    100% { background-color: rgb(0, 48, 100); }
+}
+
 /*Каталог техники */
 
 .technics {
-    min-height: 400px;
+    min-height: 800px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
     .technics__title {
         font-size: 30px;
         font-weight: 600;
@@ -253,20 +286,138 @@ $main-color: #FFC61A;
         margin: 50px;
         border-bottom: 1px solid black;
     } 
-    .techics__menu {
+    .technics__menu {
         text-decoration: none;
+        padding: 0;
+        margin-bottom: 50px;
     }
     .technics__menu li {
         margin-bottom: 5px;
         margin: 5px;
+        font-weight: 600;
+        text-transform: uppercase;
         line-height: 1;
-        vertical-align: center;
     }
     .techs-active{
         background-color: #135862;
         border-color: #135862;
     }
+    .card {
+        box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.42);
+        h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 5px;
+            font-weight: 600;
+            
+        }
+    }
+    .card:hover {
+        box-shadow: 3px 10px 21px -1px rgba(120,118,120,0.76);
+    }
+    .card-header{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
 
+}
+/* Раздел информации*/
+
+.information {
+    position: relative;
+    .logo-rotate {
+        position: absolute;
+        bottom: 0;
+        right: 25px;
+        &:hover {
+        transition: all 1s;
+        transform: rotate(45deg);
+        }
+    }
+    min-height: 500px;
+    background-color: rgb(189, 189, 189);
+    box-shadow: inset 0px -9px 4px -1px rgba(163,163,163,1);
+    .info__title {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 50px;
+        border-bottom: 1px solid black;
+    }
+}
+
+/*Footer*/
+.footer {
+    min-height: 200px;
+    padding-top: 50px;
+    background-color: #161616;
+
+    .footer__reference {
+        
+    .footer__menu {
+        padding: 0;
+    .footer-menu__item {
+        list-style: none;
+        a {
+        color: $main-color;
+        text-decoration: none;
+        &:hover {
+            color:rgb(139, 108, 12);
+            }    
+            }
+        }
+    } 
+}
+    .footer__contact {
+        .info a{
+            display: block;
+            color: $main-color;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .icon:before {
+            color: $main-color;
+            font-family: 'icomoon';
+            font-size: 16px;
+            padding-right: 5px;
+        }
+        .icon-phone:before {
+            content: "\e942";
+            color: green;
+        }
+        .icon-mail:before {
+            content: "\e945";
+        }
+        .icon-telegram:before {
+            content: "\ea95";
+            color: #0088cc;
+        }
+        .icon-whatsapp:before {
+            content: "\ea93";
+            color: #25d366;
+        }
+        .icon-address:before {
+            content: "\e947";
+            color: white;
+        }
+        .icon:hover {
+            color: rgb(139, 108, 12);
+        }
+        .icon:hover:before  {
+            color: rgb(139, 108, 12);
+            transition: all 0.3s;
+        }
+    }
+    h4 {
+        color: white;
+        
+        }
+    .copyright {
+        margin-top: 20px;
+        color: #868686;
+        font-size: 12px;
+    }
+    
 }
 
 
@@ -328,6 +479,13 @@ $main-color: #FFC61A;
     .header .phone p a {
         font-size: 45px;
     }
+    .card-deck {
+        flex-flow: column wrap;
+        .card {
+            margin-bottom: 20px;
+        }
+        
+    }
     }
 
 @media (max-width: 768px) {
@@ -355,6 +513,9 @@ $main-color: #FFC61A;
     }
     .header .phone p a {
         font-size: 45px;
+    }
+    .technics card {
+        flex-direction: column;
     }
     }
 
