@@ -52,11 +52,11 @@
 }
 
 $main-color: #FFC61A;
-/* Шапка */
+/* Шапка для главной страницы */
 .header {
     background-image: url(/build/img/excavators-3282001_1920.jpg);
     background-repeat: no-repeat;
-    height: 650px;
+    min-height: 650px;
     background-size: cover;
     background-position: 0% 85%;
     position: relative;
@@ -71,6 +71,7 @@ $main-color: #FFC61A;
     display: block;
     color: $main-color;
     font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
 }
 .icon {
@@ -187,6 +188,7 @@ $main-color: #FFC61A;
     z-index: 1;
 }
 }
+
 
 /* ОТПРАВКА ЗАЯВКИ */
 .request {
@@ -328,7 +330,7 @@ $main-color: #FFC61A;
     .logo-rotate {
         position: absolute;
         bottom: 0;
-        right: 25px;
+        right: 0px;
         &:hover {
         transition: all 1s;
         transform: rotate(45deg);
@@ -351,16 +353,25 @@ $main-color: #FFC61A;
     min-height: 200px;
     padding-top: 50px;
     background-color: #161616;
-
     .footer__reference {
-        
     .footer__menu {
         padding: 0;
     .footer-menu__item {
         list-style: none;
+        line-height: 2;
         a {
         color: $main-color;
         text-decoration: none;
+        &:before {
+            font-family: 'icomoon';
+            content: "\ea42";
+            padding-right: 5px;
+            display: inline-block;           
+        }
+        &:hover:before {
+            transform: rotateX(-180deg);
+            transition: 1s;
+        }
         &:hover {
             color:rgb(139, 108, 12);
             }    
@@ -370,6 +381,7 @@ $main-color: #FFC61A;
 }
     .footer__contact {
         .info a{
+            line-height: 2;
             display: block;
             color: $main-color;
             font-size: 16px;
@@ -449,6 +461,7 @@ $main-color: #FFC61A;
 
 
 @media (max-width: 1200px) {
+   
     .request .excavator {
         left: 300px;
         top: 0px;
@@ -570,6 +583,9 @@ $main-color: #FFC61A;
 .header .logo img {
     margin-left: -15px;
 }
+.footer .container {
+    .footer-menu__item {}
 
+}
 }
 
