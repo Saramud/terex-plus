@@ -11,8 +11,8 @@ const babel = require("gulp-babel");
 const pug = require("gulp-pug");
 
 const styleFiles = [
-    './src/sass/about.scss',
     './src/sass/main.scss',
+    './src/sass/sections.scss',
     // './src/css/bootstrap.min.css'
 ]
 

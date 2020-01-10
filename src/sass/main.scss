@@ -51,7 +51,7 @@
     transition: all 0.3s;
 }
 
-$main-color: #FFC61A;
+$main-color: rgb(255, 198, 26);
 /* Шапка для главной страницы */
 .header {
     background-image: url(/build/img/excavators-3282001_1920.jpg);
@@ -274,6 +274,7 @@ $main-color: #FFC61A;
 }
 
 /*Каталог техники */
+
 
 .technics {
     min-height: 800px;

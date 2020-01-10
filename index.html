@@ -9,14 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/build/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header class="header" id="header">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm logo"><img src="build/img/logo_2.png" width="200" alt="Терекс-Плюс"><span class="logo_name">ТЕРЕКС-ПЛЮС  <span class="sub">Аренда Спецтехники в СПб</span></span></div>
-          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)999-99-99">8(812)888-88-88</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу%20продвижения.">Написать в Whatsapp</a></div>
+          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)999-99-99">8(812)888-88-88</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20.">Написать в Whatsapp</a></div>
         </div>
         <div class="row">
           <div class="col-12 text-center">
@@ -44,9 +47,6 @@
           <div class="col-lg-12"><img class="excavator" src="/build/img/terex.png" width="800" alt="экскаватор"></div>
         </div>
         <div class="row">
-          <div class="request__successfull display_off col-12" id="request_successfull">Заявка отправлена</div>
-        </div>
-        <div class="row">
           <form class="request__form col-12" id="requestform" name="request_form">
             <legend>Отправить заявку на аренду/подбор техники</legend>
             <div class="form-row text-center">
@@ -54,7 +54,7 @@
                 <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
               </div>
               <div class="col-sm-6 user user__phone">
-                <input class="form-control" id="phone" type="phone" name="user_phone" pattern="^+7d{3}d{7}$" value="+7" maxlength="12" required="" placeholder="Телефон">
+                <input class="form-control" id="phone" type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
               </div>
               <div class="col-sm-6 user user__technics">
                 <input class="form-control" id="technics" type="text" list="airports" name="user_technics" placeholder="Тип техники">
@@ -73,9 +73,14 @@
               </div>
               <p class="warning col-12">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
               <button class="btn btn-primary col-lg-2 col-sm-4" id="sendMail" type="submit">Отправить</button>
-              <div class="error col-8" id="error"></div>
+              <div class="error col" id="error"></div>
             </div>
           </form>
+          <script>
+            $(document).ready(function() {
+              $("#phone").mask("+7(999)999-99-99");
+            })
+          </script>
         </div>
       </div>
     </section>
@@ -126,14 +131,15 @@
                 <li class="footer-menu__item"><a href="./technics.html">Спецтехника</a></li>
                 <li class="footer-menu__item"><a href="./about.html">О компании</a></li>
                 <li class="footer-menu__item"><a href="./contacts.html">Контакты</a></li>
-                <li class="footer-menu__item"><a href="#requestform">Оставить завку</a></li>
+                <li class="footer-menu__item"><a href="#requestform">Оставить завку</a>
+                </li>
               </ul>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6">
             <h4>КОНТАКТЫ</h4>
             <div class="footer__contact contacts">
-              <div class="info"><a class="icon icon-phone" href="tel:8(812)999-99-99">8(812)888-88-88</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу%20продвижения.">Написать в Whatsapp</a></div>
+              <div class="info"><a class="icon icon-phone" href="tel:8(812)999-99-99">8(812)888-88-88</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу%.">Написать в Whatsapp</a></div>
             </div>
           </div>
           <div class="col-lg-4 md-12">

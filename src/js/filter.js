@@ -1,3 +1,4 @@
+/*Переменные*/
 const all = {
     autokran: { 
         img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg'],
@@ -36,20 +37,24 @@ const all = {
         price: [12000, 13000, 11000]
     },
 };
-/*Создаем список техники на первом экране по умолчанию*/
+
+
+/*Создаем список техники на главной странице по умолчанию*/
 $('#autokran').addClass("techs-active");
 let defaultList = all.autokran;
-for (let i = 0; i < defaultList.img.length; i+=1) {
-    let bodyCard = $("<div class='card-body'></div")
-        .append(`<p>${defaultList.description[i]}</p>`)
-        .append("<div class='btn btn-secondary'><a href='#'>Узнать подробнее</a></div>");
-    let newCard = $("<div class='card border-warning text-center'></div>")
-        .append(`<h3>${defaultList.title[i]}</h3>`)
-        .append(`<div class='card-header bg-warning '>${defaultList.price[i]} руб. за смену</div>`)
-        .append(`<img class='card-img-top card__img' src=${defaultList.img[i]} 'alt='экскаватор'>`)
-        .append(bodyCard);
-    $(".technics__menu-item")
-        .append(newCard); 
+    if($('#allTechnics').length === 0) {
+        for (let i = 0; i < defaultList.img.length; i+=1) {
+            let bodyCard = $("<div class='card-body'></div")
+                .append(`<p>${defaultList.description[i]}</p>`)
+                .append("<div class='btn btn-secondary'><a href='#'>Узнать подробнее</a></div>");
+            let newCard = $("<div class='card border-warning text-center'></div>")
+                .append(`<h3>${defaultList.title[i]}</h3>`)
+                .append(`<div class='card-header bg-warning '>${defaultList.price[i]} руб. за смену</div>`)
+                .append(`<img class='card-img-top card__img' src=${defaultList.img[i]} 'alt='экскаватор'>`)
+                .append(bodyCard);
+            $(".technics__menu-item")
+                .append(newCard); 
+        }
 }
 
 /*Меняем список техники по клику*/
@@ -74,3 +79,5 @@ $(".techs").click(function() {
             .append(newCard); 
     }
 });
+
+
