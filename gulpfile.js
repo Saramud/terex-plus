@@ -7,12 +7,13 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
-const babel = require("gulp-babel");
-const pug = require("gulp-pug");
+const babel = require('gulp-babel');
+const pug = require('gulp-pug');
 
 const styleFiles = [
     './src/sass/main.scss',
     './src/sass/sections.scss',
+
     // './src/css/bootstrap.min.css'
 ]
 
@@ -20,12 +21,20 @@ const jsFiles = [
     './src/js/lib.js',
     './src/js/filter.js',
 ]
+
 function pugs(){
-    return gulp.src('src/pug/pages/*.pug')
+    return gulp.src('src/pug/pages/**/*.pug')
         .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('./'))
+}
+function pugsTech(){
+    return gulp.src('src/pug/technics/**/*.pug')
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(gulp.dest('./technics'))
 }
 
 function img(){
@@ -39,7 +48,7 @@ function styles(){
             .pipe(sass())
             .pipe(concat('all.css'))
             .pipe(autoprefixer({
-                browsers: ['last 2 versions'],
+                overrideBrowserslist: ['last 2 versions'],
                 cascade: false
             }))
             .pipe(cleanCSS({
@@ -70,7 +79,8 @@ function watch() {
     gulp.watch('./src/sass/**/*.scss', styles);
     gulp.watch('./src/js/**/*.js', scripts);
     gulp.watch('./src/img/**/*.jpg', img);
-    gulp.watch('./src/**/*.pug', pugs);
+    gulp.watch('./src/pug/technics/**/*.pug', pugsTech);
+    gulp.watch('./src/pug/pages/**/*.pug', pugs);
     gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
@@ -78,9 +88,10 @@ function clean() {
     return del(['build/*']);
 }
 gulp.task('pugs', pugs); 
+gulp.task('pugsTech', pugsTech)
 gulp.task('watch', watch); 
 gulp.task('build', gulp.series(clean,
-                    gulp.parallel(styles, scripts, img)
+                    gulp.parallel(pugs, pugsTech, styles, scripts, img)
                     ));
 gulp.task('dev', gulp.series('build', 'watch'));
 
