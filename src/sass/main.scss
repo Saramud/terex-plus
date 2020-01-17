@@ -219,10 +219,10 @@ $main-color: rgb(255, 198, 26);
         legend {
             color:black;
             border-bottom: 1px solid white;
-            
             font-size: 30px;
             font-weight: 700;
             text-transform: uppercase;
+            text-align: center;
         }
         input {
             margin-top: 5px;
@@ -292,7 +292,7 @@ $main-color: rgb(255, 198, 26);
     .technics__menu {
         text-decoration: none;
         padding: 0;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
     .technics__menu li {
         margin: 5px 5px;
@@ -312,13 +312,21 @@ $main-color: rgb(255, 198, 26);
     }
     .card {
         box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.42);
-        margin: 10px;
+        margin: 20px 20px 10px 20px;
+        width: 295px;
         h3 {
-            font-size: 20px;
+            font-size: 17px;
             text-transform: uppercase;
             padding: 5px;
             font-weight: 600;
-            
+            height: 35px;
+        }
+        .card-image {
+            width: 290px;
+            height: 250px;
+            border-top-left-radius: calc(.25rem - 1px);
+            border-top-right-radius: calc(.25rem - 1px);
+            object-fit: contain;
         }
     }
     .card:hover {
@@ -439,6 +447,21 @@ $main-color: rgb(255, 198, 26);
     
 }
 
+/* Отдельная страница под каждую технику */
+
+.technic {
+    min-height: 800px;
+    h1 {
+        font-size: 35px;
+        margin: 40px 0 80px 0;
+        text-transform: uppercase;
+    }
+    .tech {
+        img {
+            width: 400px;
+        }
+    }
+}
 
 @keyframes swing {
 15% {
@@ -468,7 +491,6 @@ $main-color: rgb(255, 198, 26);
 
 
 @media (max-width: 1200px) {
-   
     .request .excavator {
         left: 300px;
         top: 0px;
