@@ -1,0 +1,26 @@
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+  
+- var subPage= 'Самосвал КАМАЗ 6520', value = "Спецтехника", name = 'smsvlKamaz6520', identifikator = 'samosval';
+- 
+  var obj = [
+    {menu__item: 'menu__item', href: '/', name: 'Главная', }, 
+    {menu__item: 'menu__item', href:'/technics.html', name: 'Спецтехника', active:'active' }, 
+    {menu__item: 'menu__item', href:'/about.html', name: 'О компании'},
+    {menu__item: 'menu__item', href: '/contacts.html', name: 'Контакты', }]
+
+//- use
+
+
+doctype html
+html(lang="ru")
+    include ../head
+    body
+      include ../header
+      include ../strip
+      include ../technic
+      include ../footer
+      script(src="../build/js/all.js")

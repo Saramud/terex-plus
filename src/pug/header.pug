@@ -1,0 +1,35 @@
+header.header.header_template
+      .container
+        .row.align-items-center
+          .col-sm.logo
+            a(href="/" title="На главную")
+              img(src="/build/img/logo_2.png" width="200" alt="Терекс-Плюс")
+              span.logo_name
+                | ТЕРЕКС-ПЛЮС  
+                span.sub Аренда Спецтехники в СПб
+          .col-sm.info.text-right
+            a.icon.icon-phone(href="tel:8(812)999-99-99") 8(812)888-88-88
+            a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
+            a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
+            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу.") Написать в Whatsapp
+        .row
+          .col-12.text-center
+            nav
+              ul.menu.justify-content-center
+                li.menu__item
+                  a(href="./") Главная
+                li.menu__item
+                    if page === 'technics' || subPage
+                        a.active(href="/technics.html") Спецтехника
+                    else
+                        a(href="/technics.html") Спецтехника
+                li.menu__item
+                    if page === 'about'
+                        a.active(href="/about.html") О компании
+                    else
+                        a(href="/about.html") О компании
+                li.menu__item
+                    if page === 'contacts'
+                        a.active(href="./contacts.html") Контакты
+                    else
+                        a(href="/contacts.html") Контакты

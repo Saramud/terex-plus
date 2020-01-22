@@ -23,14 +23,14 @@ const jsFiles = [
 ]
 
 function pugs(){
-    return gulp.src('src/pug/pages/**/*.pug')
+    return gulp.src('./src/pug/pages/**/*.pug')
         .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('./'))
 }
 function pugsTech(){
-    return gulp.src('src/pug/technics/**/*.pug')
+    return gulp.src('./src/pug/technics/**/*.pug')
         .pipe(pug({
             pretty: true
         }))

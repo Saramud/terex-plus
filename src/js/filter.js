@@ -220,21 +220,24 @@ $(".techs").click(function() {
             .append(navMenu);
 
         //Наполняем таблицу свойствами
-        let selectType = $(".card-body")
-            .append(table);
-        let tbody = $("<tbody></tbody>")
-        // .append(() => {
-        //     let props ='';
-        //     let preProperties = 5;
-        //         for (let j = 0; j < preProperties; j++) {
-        //             let prop = nameTechnics.properties[j];
-        //             props += `<tr><td class='text-dark text-left'>${propertiesCommon[nameTechnics.properties[j]]}</td><td class='text-dark text-right'>${nameTechnics[prop][i]}</td><tr>`;
-        //     }
-        //     return props;
-        // });
-        let table =$("<table class='table'></table")
-        .append(tbody);
+        
+        let selectType = $(".card-body");
         let typeOfTech = selectType.attr("id"); 
-        let massTech = all[typeOfTech].title;
-        let indexOfTech = massTech.findIndex(item => item === name[nameTech][0]); 
+        let arrTech = all[typeOfTech].title;
+        let indexOfTech = arrTech.findIndex(item => item === name[nameTech][0]); 
+        let tbody = $("<tbody></tbody>")
+            .append(() => {
+                let props ='';
+                    for (let j = 0; j < all[typeOfTech].properties.length; j++) {
+                        let prop = all[typeOfTech].properties[j];
+                        props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><td class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</td><tr>`;
+                }
+                return props;
+            });
+        let table =$("<table class='table'></table")
+            .append(tbody);
+        selectType = $(".card-body")
+            .append(table);
+        
+
     }
