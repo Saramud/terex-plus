@@ -1,0 +1,37 @@
+#exampleModalCenter.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+                .modal-dialog.modal-dialog-centered(role="document")
+                  .modal-content
+                    .modal-header.bg-warning
+                      h5#exampleModalLongTitle.modal-title.ml-auto.text-uppercase Отправить заявку на аренду/подбор техники
+                      button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") ×
+                    .modal-body
+                      form#requestform.request__form.col-12(name="request_form")
+                        legend
+                        .form-row.text-center
+                          .col-sm-6.user.user__name
+                            input#name.form-control(type="text" name="user_name" placeholder="Ваше имя")
+                          .col-sm-6.user.user__phone
+                            input#phone.form-control(type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12")
+                          .col-sm-6.user.user__technics
+                            input#technics.form-control(type="text" list="airports" name="user_technics" placeholder="Тип техники")
+                          datalist#airports
+                            // Список предопределенных вариантов для ввода
+                            option(value="Автокран")
+                            option(value="Миниэкскаватор")
+                            option(value="Самосвал")
+                            option(value="Экскаватор Гусеничный")
+                            option(value="Экскаватор Колесный")
+                            option(value="Экскаватор Погрузчик")
+                          .col-sm-6.user.user__rent
+                            input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
+                          p(style="line-height:1; margin-top: 5px; font-size: 10px;")
+                            | Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
+                          #error.error.col(style="line-height:1; color:red;")
+                      script.
+                        $(document).ready(function() {
+                        $("#phone").mask("+7(999)999-99-99");
+                        })
+                    .modal-footer
+                      button.btn.btn-secondary(type="button" data-dismiss="modal") Закрыть
+                      button#sendMail.btn.btn-primary(type="button") Отправить

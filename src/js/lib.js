@@ -17,7 +17,7 @@ $("#sendMail").on("click", function(){
     }
     $("#error").text("");
     $.ajax({
-        url:'telegram.php',
+        url:'/telegram.php',
         type: 'POST',
         cache: false,
         data: { 'name': name, 'technics': technics, 'rent': rent, 'phone': phone},

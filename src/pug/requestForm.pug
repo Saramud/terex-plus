@@ -1,0 +1,23 @@
+form#requestform.request__form.col-12(name="request_form")
+            legend Отправить заявку на аренду/подбор техники
+            .form-row.text-center
+              .col-sm-6.user.user__name
+                input#name.form-control(type="text" name="user_name" placeholder="Ваше имя")
+              .col-sm-6.user.user__phone
+                input#phone.form-control(type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12")
+              .col-sm-6.user.user__technics
+                input#technics.form-control(type="text" list="airports" name="user_technics" placeholder="Тип техники")
+              datalist#airports
+                // Список предопределенных вариантов для ввода
+                option(value="Автокран")
+                option(value="Миниэкскаватор")
+                option(value="Самосвал")
+                option(value="Экскаватор Гусеничный")
+                option(value="Экскаватор Колесный")
+                option(value="Экскаватор Погрузчик")
+              .col-sm-6.user.user__rent
+                input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
+              p.warning.col-12
+                | Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
+              button#sendMail.btn.btn-primary.col-lg-2.col-sm-4(type="submit") Отправить
+              #error.error.col
