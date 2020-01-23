@@ -1,4 +1,5 @@
 /*Переменные*/
+let pos;
 let propertiesCommon = { 
     weight: 'Вес',
     boomLength: 'Длина стрелы',
@@ -14,9 +15,9 @@ let propertiesCommon = {
 };
 
 let name = {
-    atkrnUgra: ['Гусеничный кран югра 4671', '/build/img/ugra.jpg', '/technics/autokran.html'],
-    atkrnMaz: ['Автокран МАЗ', '/build/img/maz.jpg', '/technics/autokran.html'],
-    atkrTadano: ['Автокран Tadano GR-550EX', '/build/img/tadano.jpg', '/technics/autokran.html'],
+    atkrnUgra: ['Гусеничный кран югра 4671', '/build/img/ugra.jpg', '/technics/autokranUgra.html'],
+    atkrnMaz: ['Автокран МАЗ', '/build/img/maz.jpg', '/technics/autokranMAZ.html'],
+    atkrTadano: ['Автокран Tadano GR-550EX', '/build/img/tadano.jpg', '/technics/autokranTadano.html'],
     miniSunward: ['Миниэкскаватор Sunward swe-017', '/build/img/card-1.jpeg', '/technics/autokran.html'],
     miniKubota: ['Миниэкскаватор Kubota KX36-3', '/build/img/card-1.jpeg', '/technics/autokran.html'],
     miniJCB: ['Миниэкскаватор JSB 8018', '/build/img/card-1.jpeg', '/technics/autokran.html'],
@@ -36,7 +37,7 @@ let name = {
 
 let all = {
     autokran: { 
-        img: ['/build/img/ugra.jpg', '/build/img/maz.jpg', '/build/img/tadano.jpg'],
+        img: [name.atkrnUgra[1],name.atkrnMaz[1], name.atkrTadano[1]],
         title: [name.atkrnUgra[0],name.atkrnMaz[0], name.atkrTadano[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
@@ -47,10 +48,10 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/autokran.html', './technics/autokran.html', './technics/autokran.html'],
+        link: [name.atkrnUgra[2],name.atkrnMaz[2], name.atkrTadano[2]],
     },
     mini: { 
-        img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg'],
+        img: [name.miniSunward[1], name.miniKubota[1], name.miniJCB[1]],
         title: [name.miniSunward[0], name.miniKubota[0], name.miniJCB[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
@@ -62,11 +63,11 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/autokran.html', './technics/autokran.html', './technics/autokran.html'],
+        link: [name.miniSunward[2], name.miniKubota[2], name.miniJCB[2]],
         
     },
     samosval: { 
-        img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg'],
+        img: [name.smsvlKamaz6520[1], name.smsvlUral[1] ,name.smsvlKamaz65802[1]],
         title: [name.smsvlKamaz6520[0], name.smsvlUral[0] ,name.smsvlKamaz65802[0]],
         description: ['amet consectetur adipisicing elit.'],
         properties: ['weight', 'speed', 'carryingСapacity', 'some1', 'some2', 'some3'],
@@ -77,15 +78,15 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/samosval.html', './technics/samosval.html', './technics/samosval.html'],
+        link: [name.smsvlKamaz6520[2], name.smsvlUral[2] ,name.smsvlKamaz65802[2]],
     },
     ekskGusenich: { 
-        img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg'],
+        img:  [name.egusHitachi330[1], name.egusHitachi300[1], name.egusGCB160[1]],
         title: [name.egusHitachi330[0], name.egusHitachi300[0], name.egusGCB160[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.','amet consectetur adipisicing elit.' ],
         properties: ['weight', 'bucketСapacity', 'trackWidth', 'liftingHeight', 'diggingDepth' , 'some1', 'some2', 'some3'],
         weight: ['32500 кг', '32500 кг', '32500 кг' ],
-        bucketСapacity: ['0.04 м.куб','0.04 м.куб', '0.04 м.куб'],
+        bucketСapacity: ['0.05 м.куб','0.04 м.куб', '0.05 м.куб'],
         trackWidth: ['800 мм', '800 мм','800 мм'],
         liftingHeight: ['2155 см', '2155 см', '2155 см'],
         diggingDepth: ['2155 см', '2155 см', '2155 см'],
@@ -93,10 +94,10 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/ekskavator.html', './technics/ekskavator.html', './technics/ekskavator.html'],
+        link:  [name.egusHitachi330[2], name.egusHitachi300[2], name.egusGCB160[2]],
     },
     ekskKoles: { 
-        img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg',],
+        img: [name.ekolDoosan[1], name.ekolHitachi210[1], name.ekolHitachi160[1]],
         title: [name.ekolDoosan[0], name.ekolHitachi210[0], name.ekolHitachi160[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
@@ -108,10 +109,10 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/ekskavator.html', './technics/ekskavator.html', './technics/ekskavator.html'],
+        link: [name.ekolDoosan[2], name.ekolHitachi210[2], name.ekolHitachi160[2]],
     },
     ekskPogr: { 
-        img: ['/build/img/card-1.jpeg', '/build/img/card-1.jpeg', '/build/img/card-1.jpeg'],
+        img: [name.epogJCB1cx[1], name.epogCase695[1], name.epogMTZ92[1]],
         title: [name.epogJCB1cx[0], name.epogCase695[0], name.epogMTZ92[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
@@ -122,7 +123,7 @@ let all = {
         some1:['4', '5', '6'],
         some2:['4', '5', '6'],
         some3:['4', '5', '6'],
-        link: ['./technics/ekskavator.html', './technics/ekskavator.html', './technics/ekskavator.html'],
+        link: [name.epogJCB1cx[2], name.epogCase695[2], name.epogMTZ92[2]],
     },
 };
 
@@ -211,9 +212,15 @@ $(".techs").click(function() {
         let techics = keyName.filter(name => name.startsWith(partWord));
         $(".tech")
         .append(`<img src=${name[nameTech][1]}>`); 
-        let navMenu = $("<ul class='navbar-nav'></ul>")
+        let navMenu = $("<ul class='technic__selector'></ul>")
             .append( () => techics.map(technic => {
-                let blockMenu = `<li class='nav-item'><a class='nav-link text-dark' href=${name[technic][2]}>${name[technic][0]}</a></li>`
+                let blockMenu='';
+                if (nameTech === technic) {
+                    blockMenu = `<li class='btn btn-info technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                }
+                else {
+                    blockMenu = `<li class='btn btn-info '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                }
                 return blockMenu;
             }));
         $(".nav-menu")
@@ -225,19 +232,17 @@ $(".techs").click(function() {
         let typeOfTech = selectType.attr("id"); 
         let arrTech = all[typeOfTech].title;
         let indexOfTech = arrTech.findIndex(item => item === name[nameTech][0]); 
+        let props ='';
         let tbody = $("<tbody></tbody>")
             .append(() => {
-                let props ='';
                     for (let j = 0; j < all[typeOfTech].properties.length; j++) {
                         let prop = all[typeOfTech].properties[j];
-                        props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><td class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</td><tr>`;
+                        props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
                 }
                 return props;
             });
-        let table =$("<table class='table'></table")
+        let table =$("<table class='table table-hover'></table")
             .append(tbody);
         selectType = $(".card-body")
             .append(table);
-        
-
     }

@@ -1,14 +1,20 @@
+- var reqText = 'Отправить заявку на аренду техники'
+
 section.technic
     .container
       .row
         .col.text-center
           h1.info__title #{subPage}
       .row
-        .col
+        .col.text-center
           +tech(name)
         .col
           .card.bg-light.mb-3
-            .card-header Техниеские характеристики
+            .card-header.text-center Технические характеристики
             +ident(identifikator)
       .row.text-center
         .col.nav-menu
+section.request
+    .container
+      .row
+        include requestForm

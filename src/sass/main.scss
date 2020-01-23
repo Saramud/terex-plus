@@ -449,19 +449,50 @@ $main-color: rgb(255, 198, 26);
 
 /* Отдельная страница под каждую технику */
 
-.technic {
-    min-height: 800px;
+.technic { 
+    min-height: 600px;
+    .technic__selector {
+        align-items: center;
+        margin-left: -40px;
+        margin-top: 40px;
+        li {
+            padding: 0;
+            margin: 5px;
+            line-height: 1;
+            
+        a {
+            font-size: 20px;
+            }
+        }
+    }
+    .technic_active {
+    background-color: #135862;
+    border-color: #135862;
+    }
+    
     h1 {
         font-size: 35px;
-        margin: 40px 0 80px 0;
+        font-weight: 600;
+        margin: 40px 0 40px 0;
         text-transform: uppercase;
+    }
+    .card-body {
+        padding: 0;
+        .table {
+            margin-bottom: 0px;
+        }
+        
+    }
+    
     }
     .tech {
         img {
             width: 400px;
+            margin-top: 40px;
         }
+   
     }
-}
+
 
 @keyframes swing {
 15% {
@@ -552,7 +583,18 @@ $main-color: rgb(255, 198, 26);
     .technics card {
         flex-direction: column;
     }
+    .technic {
+        h1 {
+            margin-bottom: 20px;
+        }
+        .tech {
+            img {
+                width: 300px;
+                margin-top: 0px;
+            }
+        }
     }
+}
 
 @media (max-width: 600px) {
 
@@ -578,6 +620,12 @@ $main-color: rgb(255, 198, 26);
         display: block;
         margin-bottom: 20px;
     }
+    .tech {
+        img {
+            margin-top: 0px;
+        }
+    }
+  
     }
 
 @media (max-width: 576px) {
@@ -605,4 +653,6 @@ $main-color: rgb(255, 198, 26);
 .header .logo img {
     margin-left: -15px;
 }
+
+
 }

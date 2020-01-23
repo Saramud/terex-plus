@@ -48,7 +48,7 @@
                 <ul class="nav nav-tabs custom-nav">
                   <li class="nav-item"><a class="nav-link text-secondary" href="/">Главная</a></li>
                   <li class="nav-item"><a class="nav-link text-secondary" href="/technics.html">Спецтехника</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="/">Гусеничный кран югра 4671</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="/">Экскаватор гусеничный HITACHI 330</a></li>
                 </ul>
               </div>
             </div>
@@ -60,22 +60,57 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <h1 class="info__title">Гусеничный кран югра 4671</h1>
+            <h1 class="info__title">Экскаватор гусеничный HITACHI 330</h1>
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <div class="tech" id="atkrnUgra"></div>
+          <div class="col text-center">
+            <div class="tech" id="egusHitachi330"></div>
           </div>
           <div class="col">
             <div class="card bg-light mb-3">
-              <div class="card-header">Техниеские характеристики</div>
-              <div class="card-body" id="autokran"></div>
+              <div class="card-header text-center">Технические характеристики</div>
+              <div class="card-body" id="ekskGusenich"></div>
             </div>
           </div>
         </div>
         <div class="row text-center">
           <div class="col nav-menu"></div>
+        </div>
+      </div>
+    </section>
+    <section class="request">
+      <div class="container">
+        <div class="row">
+          <form class="request__form col-12" id="requestform" name="request_form">
+            <legend>Отправить заявку на аренду техники</legend>
+            <div class="form-row text-center">
+              <div class="col-sm-6 user user__name">
+                <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
+              </div>
+              <div class="col-sm-6 user user__phone">
+                <input class="form-control" id="phone" type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
+              </div>
+              <div class="col-sm-6 user user__technics">
+                <input class="form-control" id="technics" type="text" list="airports" name="user_technics" value="Экскаватор гусеничный HITACHI 330" placeholder="Тип техники">
+              </div>
+              <datalist id="airports">
+                <!-- Список предопределенных вариантов для ввода-->
+                <option value="Автокран"></option>
+                <option value="Миниэкскаватор"></option>
+                <option value="Самосвал"></option>
+                <option value="Экскаватор Гусеничный"></option>
+                <option value="Экскаватор Колесный"></option>
+                <option value="Экскаватор Погрузчик"></option>
+              </datalist>
+              <div class="col-sm-6 user user__rent">
+                <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды">
+              </div>
+              <p class="warning col-12">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
+              <button class="btn btn-primary col-lg-2 col-sm-4" id="sendMail" type="submit">Отправить</button>
+              <div class="error col" id="error"></div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -129,11 +164,6 @@
                             <div class="error col" id="error" style="line-height:1; color:red;"></div>
                           </div>
                         </form>
-                        <script>
-                          $(document).ready(function() {
-                          $("#phone").mask("+7(999)999-99-99");
-                          })
-                        </script>
                       </div>
                       <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Закрыть</button>

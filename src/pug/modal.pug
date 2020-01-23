@@ -28,10 +28,7 @@
                           p(style="line-height:1; margin-top: 5px; font-size: 10px;")
                             | Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
                           #error.error.col(style="line-height:1; color:red;")
-                      script.
-                        $(document).ready(function() {
-                        $("#phone").mask("+7(999)999-99-99");
-                        })
+                     
                     .modal-footer
                       button.btn.btn-secondary(type="button" data-dismiss="modal") Закрыть
                       button#sendMail.btn.btn-primary(type="button") Отправить
