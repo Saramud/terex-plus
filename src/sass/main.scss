@@ -461,13 +461,15 @@ $main-color: rgb(255, 198, 26);
             line-height: 1;
             
         a {
-            font-size: 20px;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
             }
         }
     }
     .technic_active {
-    background-color: #135862;
-    border-color: #135862;
+    background-color: #053b74;
+    border-color: #053b74;
     }
     
     h1 {
@@ -480,6 +482,12 @@ $main-color: rgb(255, 198, 26);
         padding: 0;
         .table {
             margin-bottom: 0px;
+            font-size: 17px;
+            tr:last-child {
+                margin-bottom: 0px;
+                font-size: 17px;
+                line-height: 1;
+            }
         }
         
     }
@@ -490,7 +498,6 @@ $main-color: rgb(255, 198, 26);
             width: 400px;
             margin-top: 40px;
         }
-   
     }
 
 
@@ -530,7 +537,7 @@ $main-color: rgb(255, 198, 26);
     .header .menu__item {
         margin: 10px 45px;
         
-    }
+    }  
     }
 @media (max-width: 992px) {
     .request .excavator {
@@ -551,7 +558,14 @@ $main-color: rgb(255, 198, 26);
     }
     .header .phone p a {
         font-size: 45px;
-    }        
+    }   
+    .technic {
+        .tech {
+            img {
+                margin-top: 0px;
+            }
+        }
+    }  
     }
 
 @media (max-width: 768px) {
@@ -593,6 +607,13 @@ $main-color: rgb(255, 198, 26);
                 margin-top: 0px;
             }
         }
+        .card-body {
+            .table tr:last-child {
+                margin-bottom: 0px;
+                font-size: 15px;
+            }
+            
+        }
     }
 }
 
@@ -620,12 +641,6 @@ $main-color: rgb(255, 198, 26);
         display: block;
         margin-bottom: 20px;
     }
-    .tech {
-        img {
-            margin-top: 0px;
-        }
-    }
-  
     }
 
 @media (max-width: 576px) {

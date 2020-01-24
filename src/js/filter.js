@@ -40,7 +40,7 @@ let all = {
         img: [name.atkrnUgra[1],name.atkrnMaz[1], name.atkrTadano[1]],
         title: [name.atkrnUgra[0],name.atkrnMaz[0], name.atkrTadano[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [12000, 13000, 25000],
         properties: ['weight', 'boomLength', 'carryingСapacity', 'some1', 'some2', 'some3'],
         weight: ['32500 кг', '32500 кг', '32500 кг' ],
         boomLength: ['7.6-16.5 м', '7.6-16.5 м', '7.6-16.5 м' ],
@@ -216,10 +216,10 @@ $(".techs").click(function() {
             .append( () => techics.map(technic => {
                 let blockMenu='';
                 if (nameTech === technic) {
-                    blockMenu = `<li class='btn btn-info technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn btn-primary technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 else {
-                    blockMenu = `<li class='btn btn-info '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn btn-primary '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 return blockMenu;
             }));
@@ -233,12 +233,13 @@ $(".techs").click(function() {
         let arrTech = all[typeOfTech].title;
         let indexOfTech = arrTech.findIndex(item => item === name[nameTech][0]); 
         let props ='';
-        let tbody = $("<tbody></tbody>")
+        let tbody = $("<tbody class='tbody'></tbody>")
             .append(() => {
                     for (let j = 0; j < all[typeOfTech].properties.length; j++) {
                         let prop = all[typeOfTech].properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
-                }
+                    }
+                props +=`<tr class='bg-secondary'><th class='text-left text-white'>Стоимость</th><th class='text-white text-right'>${all[typeOfTech].price[indexOfTech]}р. за смену (8 часов)</th></tr>`;
                 return props;
             });
         let table =$("<table class='table table-hover'></table")
