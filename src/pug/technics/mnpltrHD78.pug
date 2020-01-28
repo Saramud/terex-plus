@@ -1,0 +1,22 @@
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Манипулятор Hyundai HD 78', value = "Спецтехника", name = 'mnpltrHD78', identifikator = 'mnpltr';
+- 
+
+
+
+
+doctype html
+html(lang="ru")
+    include ../head
+    body
+      include ../header
+      include ../strip
+      include ../technic
+      include ../footer
+      script(src="../build/js/all.js")

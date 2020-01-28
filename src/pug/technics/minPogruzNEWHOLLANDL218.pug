@@ -1,0 +1,20 @@
+
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Мини-погрузчик NEW HOLLAND L 218', value = "Спецтехника", name = 'minPogruzNEWHOLLANDL218', identifikator = 'minPogruz';
+- 
+
+doctype html
+html(lang="ru")
+    include ../head
+    body
+      include ../header
+      include ../strip
+      include ../technic
+      include ../footer
+      script(src="../build/js/all.js")

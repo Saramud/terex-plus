@@ -1,0 +1,20 @@
+
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Автокран Урал КС-55733 ЧЕЛЯБИНЕЦ 32 тонны', value = "Спецтехника", name = 'atkrURAL55733', identifikator = 'autokran';
+- 
+
+doctype html
+html(lang="ru")
+    include ../head
+    body
+      include ../header
+      include ../strip
+      include ../technic
+      include ../footer
+      script(src="../build/js/all.js")
