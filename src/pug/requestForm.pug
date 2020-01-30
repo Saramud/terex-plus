@@ -1,5 +1,4 @@
 
-
 form#requestform.request__form.col-12(name="request_form")
             if requestText
               legend #{requestText}
@@ -18,11 +17,15 @@ form#requestform.request__form.col-12(name="request_form")
               datalist#airports
                 // Список предопределенных вариантов для ввода
                 option(value="Автокран")
-                option(value="Миниэкскаватор")
+                option(value="Манипулятор")
+                option(value="Мини-погрузчик")
+                option(value="Мини-экскаватор")
                 option(value="Самосвал")
-                option(value="Экскаватор Гусеничный")
-                option(value="Экскаватор Колесный")
-                option(value="Экскаватор Погрузчик")
+                option(value="Телескопический погрузчик")
+                option(value="Фронтальный погрузчик")
+                option(value="Экскаватор гусеничный")
+                option(value="Экскаватор колесный")
+                option(value="Экскаватор погрузчик")
               .col-sm-6.user.user__rent
                 input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
               p.warning.col-12

@@ -26,7 +26,7 @@ let propertiesCommon = {
 };
 
 let name = {
-    atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ ВЕЗДЕХОД "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.jpg', '/technics/atkrnKAMAZVEZDEHOD.html'],
+    atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.jpg', '/technics/atkrnKAMAZVEZDEHOD.html'],
     atkrnMaz: ['Автокран МАЗ 14 тонн', '/build/img/atkrnMaz.jpg', '/technics/atkrnMaz.html'],
     atkrURAL55733: ['Автокран Урал КС-55733 ЧЕЛЯБИНЕЦ 32 тонны', '/build/img/atkrURAL55733.jpg', '/technics/atkrURAL55733.html'],
     atkrKAMAZ65115: ['Автокран КАМАЗ-65115 25 тонн', '/build/img/atkrKAMAZ65115.jpg', '/technics/atkrKAMAZ65115.html'],
@@ -67,7 +67,7 @@ let all = {
         img: [name.atkrnKAMAZVEZDEHOD[1],name.atkrnMaz[1], name.atkrURAL55733[1], name.atkrKAMAZ65115[1], name.atkrKAMAZ63501[1]],
         title: [name.atkrnKAMAZVEZDEHOD[0],name.atkrnMaz[0], name.atkrURAL55733[0], name.atkrKAMAZ65115[0], name.atkrKAMAZ63501[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 17000, 11000, 23000],
+        price: [18000, 11000, 17000, 11000, 23000],
         properties: ['weight', 'enginePower', 'netEnginePower', 'maximumReachArrow', 'ogee', 'carryingСapacity'],
         weight: ['22000', '15000', '21300', '20500', '28400'  ],
         enginePower: ['280 ', '230', '230' , '240', '360'],
@@ -96,7 +96,7 @@ let all = {
         img: [name.smsvlKamaz6520[1], name.smsvlKamaz65115[1] ,name.smsvlReanaultKerax[1]],
         title: [name.smsvlKamaz6520[0], name.smsvlKamaz65115[0] ,name.smsvlReanaultKerax[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [11200, 9000, 11200],
         properties: ['weight', 'enginePower', 'netEnginePower', 'carryingСapacity', 'turnRadius', 'bodyVolume'],
         weight: ['12950', '10050', '40000'],
         enginePower: ['342', '300', '412'],
@@ -110,7 +110,7 @@ let all = {
         img:  [name.egusHitachi330[1], name.egusHitachi300[1], name.egusVOLVOEC240[1], name.egusVOLVOEC240LOng[1]],
         title: [name.egusHitachi330[0], name.egusHitachi300[0], name.egusVOLVOEC240[0], name.egusVOLVOEC240LOng[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.','amet consectetur adipisicing elit.' ],
-        price: [18000, 13000, 11000, 13555],
+        price: [18000, 18000, 14400, 17000],
         properties: ['weight', 'bucketСapacity', 'diggingDepth', 'enginePower', 'liftingHeight'],
         weight: ['32500', '29700', '25700',  '27900'],
         bucketСapacity: ['2', '2', '1.45', '0.5'],
@@ -123,7 +123,7 @@ let all = {
         img: [name.ekolDoosan[1], name.ekolJCBJS200W[1], name.ekolVOLVOEW160[1]],
         title: [name.ekolDoosan[0], name.ekolJCBJS200W[0], name.ekolVOLVOEW160[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [13600, 14000, 13600],
         properties: ['weight', 'bucketСapacity', 'diggingDepth', 'enginePower', 'netEnginePower', 'liftingHeight'],
         weight: ['17700', '22809', '17680' ],
         bucketСapacity: ['0.93', '1', '0.65'],
@@ -147,14 +147,13 @@ let all = {
         netEnginePower:['-', '71', '-'],
         liftingHeight:['2.741', '2.64', '2.68'],
         carryingСapacity: ['3.2', '4.64', '3.46',  ],   
-       
         link: [name.epogTLB825[2], name.epogJSB4CX[2], name.epogTEREX860[2]],
     },
     teleskPogr: { 
         img: [name.teleskPogrBobcatT40170[1], name.teleskPogrFaresinFH1442[1], name.teleskPogrJCBAGRI[1]],
         title: [name.teleskPogrBobcatT40170[0], name.teleskPogrFaresinFH1442[0], name.teleskPogrJCBAGRI[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [14000, 13500, 13000],
         properties: ['weight', 'enginePower', 'maximumReachArrow', 'carryingСapacity'],
         weight: ['10970', '11400', '6999' ],
         enginePower: ['100', '102', '145'],
@@ -166,7 +165,7 @@ let all = {
         img: [name.minPogruzWECAN800D[1], name.minPogruzTAKEUCHI[1], name.minPogruzNEWHOLLANDL218[1]],
         title: [name.minPogruzWECAN800D[0], name.minPogruzTAKEUCHI[0], name.minPogruzNEWHOLLANDL218[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [8500, 12000, 8000],
         properties: ['weight', 'bucketСapacity', 'enginePower', 'liftingHeight', 'carryingСapacity'],
         weight: ['2920', '4350', '2660' ],
         bucketСapacity: ['0.47', '0.458', '0.47'],
@@ -179,7 +178,7 @@ let all = {
         img: [name.frontPogruzVOLVOL90F[1], name.frontPogruzLG936L[1], name.frontPogruzLG933L[1]],
         title: [name.frontPogruzVOLVOL90F[0], name.frontPogruzLG936L[0], name.frontPogruzLG933L[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [12000, 12000, 12000],
         properties: ['weight', 'bucketСapacity', 'enginePower', 'liftingHeight', 'carryingСapacity', 'turnRadius'],
         weight: ['15170', '10700', '10700'],
         bucketСapacity: ['2.7', '1.8', '1.8'],
@@ -193,7 +192,7 @@ let all = {
         img: [name.mnpltrHD78[1], name.mnpltrHD120[1], name.mnpltrKamaz[1]],
         title: [name.mnpltrHD78[0], name.mnpltrHD120[0], name.mnpltrKamaz[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
+        price: [7400, 11600, 14000],
         properties: ['bodyCapacity',  'boomLiftingCapacity', 'beadLength','boomLength', 'minimumReach', 'maximumReach'],
         bodyCapacity: ['3', '10' , '12',],
         boomLiftingCapacity: ['2', '5', '7',],
@@ -228,7 +227,7 @@ const getTechnics = (nameTechnics) => {
             .append(`<div class='btn btn-secondary'><a href='${nameTechnics.link[i]}'>Узнать подробнее</a></div>`);
         let newCard = $("<div class='border-warning text-center'></div>")
             .append(`<h3 class='text-dark'>${nameTechnics.title[i]}</h3>`)
-            .append(`<div class='card-header bg-warning '>${nameTechnics.price[i]} руб. за смену</div>`)
+            .append(`<div class='card-header bg-warning '>От ${nameTechnics.price[i]} руб. за смену</div>`)
             .append(`<img class='card-image' src=${nameTechnics.img[i]} 'alt='экскаватор'>`)
             .append(bodyCard);
         
@@ -317,7 +316,7 @@ $(".techs").click(function() {
                         let prop = all[typeOfTech].properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
                     }
-                props +=`<tr class='bg-secondary'><th class='text-left text-white'>Стоимость</th><th class='text-white text-right'> от ${all[typeOfTech].price[indexOfTech]}р. за смену (8 часов)</th></tr>`;
+                props +=`<tr class='bg-secondary'><th class='text-left text-white'>СТОИМОСТЬ</th><th class='text-white text-right'> от ${all[typeOfTech].price[indexOfTech]}р. ЗА СМЕНУ<br> (8 ЧАСОВ)</th></tr>`;
                 return props;
             });
         let table =$("<table class='table table-hover'></table")

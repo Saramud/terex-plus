@@ -1,3 +1,5 @@
+
+
 header.header.header_template
       .container
         .row.align-items-center
@@ -20,7 +22,18 @@ header.header.header_template
                   a(href="/") Главная
                 li.menu__item
                     if page === 'technics' || subPage
-                        a.active(href="/technics.html") Спецтехника
+                        a.sub_menu.active(href="/technics.html") Спецтехника
+                          ul.menu__technic-sub.text-left
+                            li Автокраны
+                            li Манипуляторы
+                            li Мини-погрузчики
+                            li Мини-экскаваторы
+                            li Самосвалы
+                            li Телескопические погрузчики
+                            li Фронтальные погрузчики
+                            li Экскаваторы гусеничные
+                            li Экскаваторы колесные
+                            li Экскаваторы погрузчики
                     else
                         a(href="/technics.html") Спецтехника
                 li.menu__item
