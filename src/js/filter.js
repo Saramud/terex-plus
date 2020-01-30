@@ -1,17 +1,28 @@
 /*Переменные*/
 let pos;
 let propertiesCommon = { 
-    weight: 'Вес',
-    boomLength: 'Длина стрелы',
-    carryingСapacity: 'Грузоподъемность',
-    bucketСapacity: 'Объём ковша',
-    liftingHeight: 'Высота выгрузки',
-    diggingDepth: 'Глубина копания',
-    speed: 'Скорость',
-    trackWidth: 'Ширина гусениц',
-    some1: 'Что-то',
-    some2: 'Что-то2',
-    some3: 'Что-то3'
+
+    beadLength: 'Длина борта, м',
+    bodyVolume: 'Объем кузова, м3',
+    bucketСapacity: 'Объём ковша, м3',
+    boomLiftingCapacity: 'Грузоподъемность стрелы, тонн', 
+    carryingСapacity: 'Грузоподъемность, тонн',
+    bodyCapacity: 'Грузоподъемность кузова, тонн',
+    diggingDepth: 'Максимальная глубина копания, м',
+    diggingHeight: 'Высота копания, м',
+    enginePower: 'Мощность двигателя, л.с.',
+    frontBucketCapacity: 'Объем переднего ковша, м3',
+    netEnginePower: 'Полезная мощность двигателя, кВт',
+    liftingHeight: 'Высота выгрузки, м',
+    maximumReachArrow: 'Максимальный вылет стрелы, м',
+    ogee: 'Гусек, м',
+    rearBucketCapacity: 'Объем заднего ковша, м3',
+    turningRadius: 'Радиус поворота, м',
+    turnRadius: 'Радиус поворота, м', 
+    weight: 'Эксплуатационная масса, кг',
+    boomLength: 'Длина стрелы, м',
+    minimumReach: 'Грузоподъемность на минимальном вылете, т/м',
+    maximumReach: 'Грузоподъемность на максимальном вылете, т/м'
 };
 
 let name = {
@@ -56,29 +67,28 @@ let all = {
         img: [name.atkrnKAMAZVEZDEHOD[1],name.atkrnMaz[1], name.atkrURAL55733[1], name.atkrKAMAZ65115[1], name.atkrKAMAZ63501[1]],
         title: [name.atkrnKAMAZVEZDEHOD[0],name.atkrnMaz[0], name.atkrURAL55733[0], name.atkrKAMAZ65115[0], name.atkrKAMAZ63501[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 2500, 13000, 250000],
-        properties: ['weight', 'boomLength', 'carryingСapacity', 'some1', 'some2', 'some3'],
-        weight: ['32500 кг', '32500 кг', '32500 кг', '32500 кг', '32500 кг'  ],
-        boomLength: ['7.6-16.5 м', '7.6-16.5 м', '7.6-16.5 м' , '7.6-16.5 м', '7.6-16.5 м'],
-        carryingСapacity: ['20 т', '20 т', '20 т', '20 т', '20 т' ],
-        some1:['4', '5', '6', '5', '6'],
-        some2:['4', '5', '6', '5', '6'],
-        some3:['4', '5', '6', '5', '6'],
+        price: [12000, 13000, 17000, 11000, 23000],
+        properties: ['weight', 'enginePower', 'netEnginePower', 'maximumReachArrow', 'ogee', 'carryingСapacity'],
+        weight: ['22000', '15000', '21300', '20500', '28400'  ],
+        enginePower: ['280 ', '230', '230' , '240', '360'],
+        netEnginePower: ['206', '-', '-', '-', '265' ],
+        maximumReachArrow:['28', '14', '26.3', '21.7', '31'],
+        ogee:['9', '7.5', '8', '9', '-'],
+        carryingСapacity:['25', '14', '32', '25', '40'],
         link: [name.atkrnKAMAZVEZDEHOD[2],name.atkrnMaz[2], name.atkrURAL55733[2], name.atkrKAMAZ65115[2], name.atkrKAMAZ63501[2]],
     },
     mine: { 
         img: [name.mineKubota[1], name.mineHitachiEX30[1], name.mineTakeuchiTB016[1]],
         title: [name.mineKubota[0], name.mineHitachiEX30[0], name.mineTakeuchiTB016[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000, , 11000],
-        properties: ['weight', 'bucketСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        weight: ['32500 кг', '32500 кг', '32500 кг', '32500 кг' ],
-        bucketСapacity: ['0.04 м.куб','0.04 м.куб', '0.04 м.куб', '0.04 м.куб'],
-        liftingHeight: ['2155 см', '2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6', '6'],
-        some2:['4', '5', '6', '6'],
-        some3:['4', '5', '6', '6'],
+        price: [11000, 10000, 9500],
+        properties: ['weight', 'bucketСapacity', 'diggingDepth', 'diggingHeight', 'enginePower', 'liftingHeight'],
+        weight: ['5545', '3040', '1615' ],
+        bucketСapacity: ['0.17','0.08', '0.038'],
+        diggingDepth: ['3.89', '2.785', '2.175'],
+        diggingHeight: ['5.83', '-', '1.715'],
+        enginePower:['46', '19', '5.1'],
+        liftingHeight:['4.16', '3.865', '2.575'],
         link: [name.mineKubota[2], name.mineHitachiEX30[2], name.mineTakeuchiTB016[2]],
         
     },
@@ -86,30 +96,27 @@ let all = {
         img: [name.smsvlKamaz6520[1], name.smsvlKamaz65115[1] ,name.smsvlReanaultKerax[1]],
         title: [name.smsvlKamaz6520[0], name.smsvlKamaz65115[0] ,name.smsvlReanaultKerax[0]],
         description: ['amet consectetur adipisicing elit.'],
-        properties: ['weight', 'speed', 'carryingСapacity', 'some1', 'some2', 'some3'],
-        weight: ['32500 кг', '32500 кг', '32500 кг' ],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        speed: ['75 км/ч', '75 км/ч', '75 км/ч'],
         price: [12000, 13000, 11000],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['weight', 'enginePower', 'netEnginePower', 'carryingСapacity', 'turnRadius', 'bodyVolume'],
+        weight: ['12950', '10050', '40000'],
+        enginePower: ['342', '300', '412'],
+        netEnginePower: ['251.7', '221', '-'],
+        carryingСapacity:['20', '15', '32'],
+        turnRadius:['9.3', '9', '-'],
+        bodyVolume:['18', '10-12', '20'],
         link: [name.smsvlKamaz6520[2], name.smsvlKamaz65115[2] ,name.smsvlReanaultKerax[2]],
     },
     ekskGusenich: { 
         img:  [name.egusHitachi330[1], name.egusHitachi300[1], name.egusVOLVOEC240[1], name.egusVOLVOEC240LOng[1]],
         title: [name.egusHitachi330[0], name.egusHitachi300[0], name.egusVOLVOEC240[0], name.egusVOLVOEC240LOng[0]],
         description: ['amet consectetur adipisicing elit.', 'amet consectetur adipisicing elit.','amet consectetur adipisicing elit.' ],
-        properties: ['weight', 'bucketСapacity', 'trackWidth', 'liftingHeight', 'diggingDepth' , 'some1', 'some2', 'some3'],
-        weight: ['32500 кг', '32500 кг', '32500 кг',  '32500 кг'],
-        bucketСapacity: ['0.05 м.куб','0.04 м.куб', '0.05 м.куб', '0.05 м.куб'],
-        trackWidth: ['800 мм', '800 мм','800 мм','800 мм'],
-        liftingHeight: ['2155 см', '2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см', '2155 см'],
-        price: [12000, 13000, 11000, 11000],
-        some1:['4', '5', '6', '6'],
-        some2:['4', '5', '6', '6'],
-        some3:['4', '5', '6', '6'],
+        price: [18000, 13000, 11000, 13555],
+        properties: ['weight', 'bucketСapacity', 'diggingDepth', 'enginePower', 'liftingHeight'],
+        weight: ['32500', '29700', '25700',  '27900'],
+        bucketСapacity: ['2', '2', '1.45', '0.5'],
+        diggingDepth: ['8.18', '9.87', '14.347', '14.35'],
+        enginePower: ['246','246','174', '185'],
+        liftingHeight: ['7.63', '10.62', '12.579', '18.31' ],
         link:  [name.egusHitachi330[2], name.egusHitachi300[2], name.egusVOLVOEC240[2], name.egusVOLVOEC240LOng[2]],
     },
     ekskKoles: { 
@@ -117,28 +124,30 @@ let all = {
         title: [name.ekolDoosan[0], name.ekolJCBJS200W[0], name.ekolVOLVOEW160[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
-        properties: ['weight', 'bucketСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        weight: ['32500 кг', '32500 кг', '32500 кг' ],
-        bucketСapacity: ['0.04 м.куб','0.04 м.куб', '0.04 м.куб'],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['weight', 'bucketСapacity', 'diggingDepth', 'enginePower', 'netEnginePower', 'liftingHeight'],
+        weight: ['17700', '22809', '17680' ],
+        bucketСapacity: ['0.93', '1', '0.65'],
+        diggingDepth: ['6.01', '6.4', '6.56'],
+        enginePower: ['150', '172', '154'],
+        netEnginePower:['-', '125', '-'],
+        liftingHeight:['9.026', '7.3', '9.48'] ,
         link: [name.ekolDoosan[2], name.ekolJCBJS200W[2], name.ekolVOLVOEW160[2]],
     },
     ekskPogr: { 
         img: [name.epogTLB825[1], name.epogJSB4CX[1], name.epogTEREX860[1]],
         title: [name.epogTLB825[0], name.epogJSB4CX[0], name.epogTEREX860[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 13000, 11000],
-        properties: ['carryingСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        price: [12000, 12000, 12000],
+        properties: ['weight', 'frontBucketCapacity', 'rearBucketCapacity', 'diggingDepth', 'enginePower', 'netEnginePower', 'liftingHeight', 'carryingСapacity'],
+        weight: ['8000', '8700', '8000', ],
+        frontBucketCapacity:['1', '1.3', '1.1'],
+        rearBucketCapacity:['0.18', '0.22', '0.233'],
+        diggingDepth:['5.7', '4.3', '5.8', ],
+        enginePower:['101', '100', '101'],
+        netEnginePower:['-', '71', '-'],
+        liftingHeight:['2.741', '2.64', '2.68'],
+        carryingСapacity: ['3.2', '4.64', '3.46',  ],   
+       
         link: [name.epogTLB825[2], name.epogJSB4CX[2], name.epogTEREX860[2]],
     },
     teleskPogr: { 
@@ -146,13 +155,11 @@ let all = {
         title: [name.teleskPogrBobcatT40170[0], name.teleskPogrFaresinFH1442[0], name.teleskPogrJCBAGRI[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
-        properties: ['carryingСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['weight', 'enginePower', 'maximumReachArrow', 'carryingСapacity'],
+        weight: ['10970', '11400', '6999' ],
+        enginePower: ['100', '102', '145'],
+        maximumReachArrow: ['13','14', '3.43'],
+        carryingСapacity:['4', '4.2', '3.6'],
         link: [name.teleskPogrBobcatT40170[2], name.teleskPogrFaresinFH1442[2], name.teleskPogrJCBAGRI[2]],
     },
     minPogruz: { 
@@ -160,13 +167,12 @@ let all = {
         title: [name.minPogruzWECAN800D[0], name.minPogruzTAKEUCHI[0], name.minPogruzNEWHOLLANDL218[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
-        properties: ['carryingСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['weight', 'bucketСapacity', 'enginePower', 'liftingHeight', 'carryingСapacity'],
+        weight: ['2920', '4350', '2660' ],
+        bucketСapacity: ['0.47', '0.458', '0.47'],
+        enginePower: ['61', '60.3', '60'],
+        liftingHeight:['2.445', '3.12', '2.377'],
+        carryingСapacity:['0.8', '2.7' , '0.818'],
         link: [name.minPogruzWECAN800D[2], name.minPogruzTAKEUCHI[2], name.minPogruzNEWHOLLANDL218[2]],
     },
     frontPogruz: { 
@@ -174,13 +180,13 @@ let all = {
         title: [name.frontPogruzVOLVOL90F[0], name.frontPogruzLG936L[0], name.frontPogruzLG933L[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
-        properties: ['carryingСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['weight', 'bucketСapacity', 'enginePower', 'liftingHeight', 'carryingСapacity', 'turnRadius'],
+        weight: ['15170', '10700', '10700'],
+        bucketСapacity: ['2.7', '1.8', '1.8'],
+        enginePower: ['175', '125', '125'],
+        liftingHeight:['2.85', '2.95', '2.95'],
+        carryingСapacity:['5.5', '3', '3'],
+        turnRadius:['5.92', '5.912', '5.912'],
         link: [name.frontPogruzVOLVOL90F[2], name.frontPogruzLG936L[2], name.frontPogruzLG933L[2]],
     },
     mnpltr: { 
@@ -188,13 +194,13 @@ let all = {
         title: [name.mnpltrHD78[0], name.mnpltrHD120[0], name.mnpltrKamaz[0]],
         description: ['amet consectetur adipisicing elit.'],
         price: [12000, 13000, 11000],
-        properties: ['carryingСapacity', 'liftingHeight', 'diggingDepth', 'some1', 'some2', 'some3'],
-        carryingСapacity: ['20 т', '20 т', '20 т' ],
-        liftingHeight: ['2155 см', '2155 см', '2155 см'],
-        diggingDepth: ['2155 см', '2155 см', '2155 см'],
-        some1:['4', '5', '6'],
-        some2:['4', '5', '6'],
-        some3:['4', '5', '6'],
+        properties: ['bodyCapacity',  'boomLiftingCapacity', 'beadLength','boomLength', 'minimumReach', 'maximumReach'],
+        bodyCapacity: ['3', '10' , '12',],
+        boomLiftingCapacity: ['2', '5', '7',],
+        beadLength: ['5', '8.5', '7', ],
+        boomLength:['10', '13.5', '20', ],
+        minimumReach:['3/2',  '5/2.3', '7/2.4',],
+        maximumReach:['0.3/10',  '0.8/13.5', '0.35/20',],
         link: [name.mnpltrHD78[2], name.mnpltrHD120[2], name.mnpltrKamaz[2]],
     },
 };
@@ -208,7 +214,7 @@ const getTechnics = (nameTechnics) => {
         let tbody = $("<tbody></tbody")
             .append(() => {
                 let props ='';
-                let preProperties = 5;
+                let preProperties = 4;
                     for (let j = 0; j < preProperties; j++) {
                         let prop = nameTechnics.properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[nameTechnics.properties[j]]}</td><td class='text-dark text-right'>${nameTechnics[prop][i]}</td><tr>`;
@@ -288,10 +294,10 @@ $(".techs").click(function() {
             .append( () => techics.map(technic => {
                 let blockMenu='';
                 if (nameTech === technic) {
-                    blockMenu = `<li class='btn btn-primary technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn btn-info technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 else {
-                    blockMenu = `<li class='btn btn-primary '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn btn-success '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 return blockMenu;
             }));
@@ -311,7 +317,7 @@ $(".techs").click(function() {
                         let prop = all[typeOfTech].properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
                     }
-                props +=`<tr class='bg-secondary'><th class='text-left text-white'>Стоимость</th><th class='text-white text-right'>${all[typeOfTech].price[indexOfTech]}р. за смену (8 часов)</th></tr>`;
+                props +=`<tr class='bg-secondary'><th class='text-left text-white'>Стоимость</th><th class='text-white text-right'> от ${all[typeOfTech].price[indexOfTech]}р. за смену (8 часов)</th></tr>`;
                 return props;
             });
         let table =$("<table class='table table-hover'></table")

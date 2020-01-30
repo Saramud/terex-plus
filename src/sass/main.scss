@@ -468,8 +468,8 @@ $main-color: rgb(255, 198, 26);
         }
     }
     .technic_active {
-    background-color: #053b74;
-    border-color: #053b74;
+    background-color: #035210;
+    border-color: #035210;
     }
     
     h1 {
@@ -477,6 +477,7 @@ $main-color: rgb(255, 198, 26);
         font-weight: 600;
         margin: 40px 0 40px 0;
         text-transform: uppercase;
+        margin-bottom: 0;
     }
     .card-body {
         padding: 0;

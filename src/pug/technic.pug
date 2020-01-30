@@ -5,15 +5,15 @@ section.technic
       .row
         .col.text-center
           h1.info__title #{subPage}
+      .row.text-center
+        .col.nav-menu
       .row
         .col.text-center
           +tech(name)
-        .col
+        .col-lg-6
           .card.bg-light.mb-3
             .card-header.text-center Технические характеристики
-            +ident(identifikator)
-      .row.text-center
-        .col.nav-menu
+            +ident(identifikator)  
 section.request
     .container
       .row
