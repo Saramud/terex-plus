@@ -1,20 +1,22 @@
+mixin article(title, id, link)
+  a(href=link class='dropdown-item' class=(identifikator==id)?'dropdown_active':null) !{title}
+
+
 
 
 
 button#dropdownMenu2.btn.my_btn.btn-sm.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
 .dropdown-menu.my_dropdown(aria-labelledby='dropdownMenu2')
-  a.dropdown-item(href="/technics/atkrnKAMAZVEZDEHOD.html") Автокраны
-  a.dropdown-item(href="/technics/mnpltrHD78.html") Манипуляторы 
-  a.dropdown-item(href="/technics/minPogruzWECAN800D.html") Мини-погрузчики
-  a.dropdown-item(href="/technics/mineKubota.html") Мини-экскаваторы
-  if identifikator == 'samosval'
-    a.dropdown-item.dropdown_active(href="/technics/smsvlKamaz6520.html") Самосвалы
-  else 
-    a.dropdown-item(href="/technics/smsvlKamaz6520.html") Самосвалы
-  a.dropdown-item(href="/technics/teleskPogrBobcatT40170.html") Телескопические погрузчики
-  a.dropdown-item(href="/technics/frontPogruzVOLVOL90F.html") Фронтальные погрузчики
-  a.dropdown-item(href="/technics/egusHitachi330.html") Экскаваторы гусеничные
-  a.dropdown-item(href="/technics/ekolDoosan.html") Экскаваторы колесные
-  a.dropdown-item(href="/technics/epogTLB825.html") Экскаваторы погрузчики
+  +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html') 
+  +article('Манипуляторы', 'mnpltr', '/technics/mnpltrHD78.html')
+  +article('Мини-погрузчики', 'minPogruz', '/technics/minPogruzWECAN800D.html')
+  +article('Мини-экскаваторы', 'mine', '/technics/mineKubota.html')
+  +article('Самосвалы', 'samosval', '/technics/smsvlKamaz6520.html')
+  +article('Телескопические погрузчики', 'teleskPogr', '/technics/teleskPogrBobcatT40170.html')
+  +article('Фронтальные погрузчики', 'frontPogruz', '/technics/frontPogruzVOLVOL90F.html')
+  +article('Экскаваторы гусеничные', 'ekskGusenich', '/technics/egusHitachi330.html')
+  +article('Экскаваторы колесные', 'ekskKoles', '/technics/ekolDoosan.html')
+  +article('Экскаваторы погрузчики', 'ekskPogr', '/technics/epogTLB825.html')
+
 
   
