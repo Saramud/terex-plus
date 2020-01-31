@@ -24,7 +24,8 @@ html(lang="ru")
                 li.menu__item
                   a.active(href="./") Главная
                 li.menu__item
-                  a(href="./technics.html") Спецтехника
+                  a.sub_menu(href="./technics.html") Спецтехника
+                  include ../techMenu
                 li.menu__item
                   a(href="./about.html") О компании
                 li.menu__item
@@ -34,11 +35,12 @@ html(lang="ru")
             h1 Аренда строительной техники в Санкт-Петербурге
             p
               a(href="tel:+7(812)999-99-99") 8(812)999-99-99
+            .col-lg-12
+              img.excavator(src="/build/img/terex.png" width="800" alt="экскаватор")
     section.request
       .container
         .row
-          .col-lg-12
-            img.excavator(src="/build/img/terex.png" width="800" alt="экскаватор")
+          
         .row
           include ../requestForm
     section.technics

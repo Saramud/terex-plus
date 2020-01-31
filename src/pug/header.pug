@@ -20,22 +20,13 @@ header.header.header_template
               ul.menu.justify-content-center
                 li.menu__item
                   a(href="/") Главная
-                li.menu__item
+                li.menu__item 
                     if page === 'technics' || subPage
                         a.sub_menu.active(href="/technics.html") Спецтехника
-                          ul.menu__technic-sub.text-left
-                            li Автокраны
-                            li Манипуляторы
-                            li Мини-погрузчики
-                            li Мини-экскаваторы
-                            li Самосвалы
-                            li Телескопические погрузчики
-                            li Фронтальные погрузчики
-                            li Экскаваторы гусеничные
-                            li Экскаваторы колесные
-                            li Экскаваторы погрузчики
+                        include techMenu
                     else
-                        a(href="/technics.html") Спецтехника
+                        a.sub_menu(href="/technics.html") Спецтехника
+                        include techMenu
                 li.menu__item
                     if page === 'about'
                         a.active(href="/about.html") О компании

@@ -113,6 +113,36 @@ $main-color: rgb(255, 198, 26);
 }
 .menu__item {
     margin: 10px 65px;
+    .my_btn {
+        padding: 0;
+        color: white;
+        font-size: 25px;
+        line-height: 0;
+        background-color: transparent;
+        text-decoration: none;
+        &:hover {
+            color: $main-color;
+    }
+    
+    }
+    .my_dropdown {
+        padding: 0;
+        box-sizing: border-box;
+        width: 300px;
+        .dropdown-item {
+            color: black;
+            text-transform: none;
+            font-weight: 600;
+            line-height: 2;
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+        .dropdown_active {
+            background-color:$main-color; 
+        }
+    }
+    
     a{
         position: relative;
         display: inline-block;
@@ -124,50 +154,13 @@ $main-color: rgb(255, 198, 26);
         &:hover {
         color: $main-color; 
         }
-        
+       
     }
-     .sub_menu {
-        display: inline-block;
-        .menu__technic-sub {
-            display: inline-block;
-            position: absolute;
-            font-size: 17px;
-            line-height: 2.5;
-            bottom: -450px;
-            left: -1050px;
-            color: white;
-            width: 280px;
-            background-color: $main-color;
-            border-radius: 5px;
-            padding: 10px;
-            margin-left: 10px;
-            opacity:0
-        }
-        &:after {
-            content:'';
-            position: absolute;
-            bottom: 1px;right: -20px;
-            border: 8px solid transparent;
-            border-top: 8px solid $main-color;
-        }
-        &:hover:after {
-            transition: all 0.1s;
-            bottom: 10px;right: -20px;
-            border: 8px solid transparent;
-            border-bottom: 8px solid $main-color;
-        }
-        &:hover.sub_menu .menu__technic-sub {
-            opacity: 1;
-            transition: all .5s;
-            left: -50px;
-            li:hover {
-                transition: all .8s; 
-                color: black;
-            }
-            z-index: 100;
-            // transition: all .7s; 
-    }
-    }
+    .sub_menu {
+   
+    
+}
+   
     
     .active {
         color: $main-color;
@@ -222,6 +215,15 @@ $main-color: rgb(255, 198, 26);
         }
     }
 }
+.excavator{
+    position: absolute;
+    margin-top: -260px;
+    left: 400px;
+    top: 250px;
+    z-index: 2;
+    width: 400px;
+    animation: swing 0.3s ease-in-out 9;
+}
     &::after {
     content: '';
     position: absolute;
@@ -241,15 +243,7 @@ $main-color: rgb(255, 198, 26);
     background-color: #FFC61A;
     min-height: 300px;
     position: relative;
-    .excavator{
-        position: absolute;
-        margin-top: -260px;
-        left: 400px;
-        top: 100px;
-        z-index: 2;
-        width: 400px;
-        animation: swing 0.3s ease-in-out 9;
-    }
+   
     .request__successfull {
         margin-top: 90px;
         font-size: 25px;
@@ -579,9 +573,9 @@ $main-color: rgb(255, 198, 26);
 
 
 @media (max-width: 1200px) {
-    .request .excavator {
+    .header .excavator {
         left: 300px;
-        top: 0px;
+        top: 150px;
         margin-top: -160px;
     }
     .header .menu__item {
@@ -590,9 +584,9 @@ $main-color: rgb(255, 198, 26);
     }  
     }
 @media (max-width: 992px) {
-    .request .excavator {
+    .header .excavator {
         left: 200px;
-        margin-top: -160px;
+        margin-top: -190px;
     }
     .header .menu__item {
         margin: 10px 25px;
@@ -619,12 +613,16 @@ $main-color: rgb(255, 198, 26);
     }
 
 @media (max-width: 768px) {
-    .request .excavator {
-        display: none;
-    } 
+    .header {
+        .excavator {
+            display: none;
+        } 
+    }
+    
     .request .request__form {
         margin-top: 0px;
     }
+   
     .header .menu {
         display: block;
         background-color:rgba(1,1,1,0.1);
