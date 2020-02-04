@@ -404,6 +404,17 @@ $main-color: rgb(255, 198, 26);
         margin: 50px;
         border-bottom: 1px solid black;
     }
+    .advantages {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .advantages_list{
+        list-style: none;
+        font-size: 18px;
+            li {
+                padding-bottom: 10px;
+        }
+    }
 }
 
 /*Footer*/

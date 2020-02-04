@@ -1,4 +1,4 @@
-- var requestText = 'Отправить заявку на аренду/подбор техники'
+- var requestText = 'Отправить заявку на аренду/подбор техники', widthIcon = 65;
 
 doctype html
 html(lang="ru")
@@ -70,6 +70,44 @@ html(lang="ru")
         .row.text-center
           .col
             h2.info__title С НАМИ ВЫГОДНО СОТРУДНИЧАТЬ
+            p.advantages.text-left(align = 'justify')
+              | На сегодняшний день 
+              strong
+              |аренда спецтехники в СПб
+              |является популярной услугой не только у коммерческих строительных организаций, 
+              |но и у индивидуальных предпринимателей, это обуславливается доступностью стоимости 
+              strong услуги аренды спецтехники. 
+              | С минимальными финансовыми вложениями вы сможете арендовать технику и выполнить широкий спектр работ.
+              | У нас вы можете взять в аренду 
+              strong экскаватор погрузчик с гидромолотом, 
+              strong экскаватор полноповортный, 
+              strong автокран 14 тонн, 
+              strong автокран 40 тонн, 
+              strong кран манипулятор 
+              |и так далее.
+              strong
+              br
+              br
+              |Работая с нами Вы получите:
+            ul.text-left.advantages_list
+              li  
+                img(src="src/img/Tilda_Icons_19ad_social_networks.svg" style="padding-right:15px; width: 65px; color:red") 
+                b|100% исправную выбранную Вами модель спецтехники
+              li
+                img(src="src/img/Tilda_Icons_31_format_doc.svg" style="padding-right:15px; width: 65px")
+                b|официальный договор сотрудничества
+              li 
+                img(src="src/img/Tilda_Icons_11mu_calendar.svg" style="padding-right:15px; width: 65px")
+                b|любой срок аренды
+              li
+                img(src="src/img/Tilda_Icons_32_profession_builder.svg" style="padding-right:15px; width: 65px")
+                b|профессионального оператора техники
+              li 
+                img(src="src/img/Tilda_Icons_3st_van.svg" style="padding-right:15px; width: 65px")
+                b|большой выбор техники 
+              li 
+                img(src="src/img/Tilda_Icons_3st_discount2.svg" style="padding-right:15px; width: 65px")
+                b|скидка на второй заказ
           div
             a(href="#header")
               img.logo-rotate(src="build/img/logo_3.png" style="width:150px")
