@@ -13,8 +13,6 @@ const pug = require('gulp-pug');
 const styleFiles = [
     './src/sass/main.scss',
     './src/sass/sections.scss',
-
-    // './src/css/bootstrap.min.css'
 ]
 
 const jsFiles = [
@@ -29,6 +27,7 @@ function pugs(){
         }))
         .pipe(gulp.dest('./'))
 }
+
 function pugsTech(){
     return gulp.src('./src/pug/technics/**/*.pug')
         .pipe(pug({
@@ -41,10 +40,10 @@ function img(){
     return gulp.src('src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/img'))
-};
+}
 
 function styles(){
-    return gulp.src(styleFiles)
+    return gulp.src('./src/sass/**/*.scss')
             .pipe(sass())
             .pipe(concat('all.css'))
             .pipe(autoprefixer({
@@ -55,8 +54,8 @@ function styles(){
                 level: 2
             }))
             .pipe(gulp.dest('./build/css'))
-            .pipe(browserSync.stream());
 }
+
 function scripts(){
     return gulp.src(jsFiles)
         .pipe(babel())
@@ -68,7 +67,6 @@ function scripts(){
         .pipe(browserSync.stream());
 }
 
-
 function watch() {
     browserSync.init({
         server: {
@@ -76,7 +74,7 @@ function watch() {
         },
         tunnel: false,
     });
-    gulp.watch('./src/sass/**/*.scss', styles);
+    gulp.watch('./src/sass/*.scss', styles).on('change', browserSync.reload);
     gulp.watch('./src/js/**/*.js', scripts);
     gulp.watch('./src/img/**/*.jpg', img);
     gulp.watch('./src/pug/**/*.pug', pugsTech);
@@ -87,6 +85,7 @@ function watch() {
 function clean() {
     return del(['build/*']);
 }
+
 gulp.task('pugs', pugs); 
 gulp.task('pugsTech', pugsTech)
 gulp.task('watch', watch);

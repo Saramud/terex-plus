@@ -405,16 +405,41 @@ $main-color: rgb(255, 198, 26);
         border-bottom: 1px solid black;
     }
     .advantages {
-        font-size: 18px;
         line-height: 1.8;
     }
-    .advantages_list{
-        list-style: none;
-        font-size: 18px;
-            li {
-                padding-bottom: 10px;
+    .test {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h4 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
-    }
+        .advantages_list {
+            align-self: center;
+            list-style: none;
+            font-size: 18px;
+            padding: 0;
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    padding-bottom: 10px;
+                    align-items: center;
+                    line-height: 1;
+                    img {
+                        width: 50px;
+                        margin-right: 10px;
+                        padding: 5px;
+                        background-color:$main-color;
+                        border-radius: 5px;
+                        &:hover {
+                            background-color: white;
+                            transform: rotateY(180deg);
+                        }
+                    }
+            }
+        }
+}
 }
 
 /*Footer*/
