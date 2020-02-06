@@ -4,7 +4,7 @@ $("#sendMail").on("click", function(){
     var name = $("#name").val();
     var technics = $("#technics").val();
     var rent = $("#rent").val();
-    var phone = $("#phone").val().replace(/[(),_,-]/g,'');
+	var phone = $("#phone").val().replace(/[(),_,-]/g,'');
     if (phone.length == 0) {
         $("#error").text("Поле обязательно для заполнения!");
         $("#phone").css("border", "2px solid red");

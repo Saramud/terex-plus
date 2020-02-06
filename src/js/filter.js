@@ -281,7 +281,8 @@ $(".techs").click(function() {
 });
 
 /*Наполняем страницу по технике*/
-    if ($(".tech")) {
+    
+if ($(".tech")) {
         let selector = $(".tech");
         let nameTech =  selector.attr("id");
         let partWord = nameTech.slice(0,4);

@@ -41,6 +41,62 @@ $main-color: rgb(255, 198, 26);
     
 }
 
+.contacts {
+    .info__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 20px;
+        margin-bottom: 60px;
+    }
+    .contact {
+        margin-bottom: 15px;
+        .icon {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 20px;
+
+          &:before {
+            color: $main-color;
+            font-family: 'icomoon';
+            font-size:26px;
+            padding-right: 15px;
+        }  
+        }
+        
+        .icon-phone {
+            font-size: 30px;
+            font-weight: 600;
+            &:before {
+            content: "\e942";
+            }
+        }
+        .icon-mail {
+            font-size: 20px;
+            
+            &:before {
+                content: "\e945";
+            }
+        }
+        .icon-address:before {
+            content: "\e947";
+        }
+        .icon-clock {
+            font-size: 45px;
+            font-weight: 600;
+        &:before {
+            content: "\e94e";
+        }
+       
+    }
+
+    } 
+    .contact_request {
+            margin-top: 60px;
+        }
+}
+
 .field {
     height: 10px;
     background: linear-gradient(90deg, rgb(255, 198, 26) 41%, rgb(0, 0, 0) 78%);

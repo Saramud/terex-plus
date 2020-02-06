@@ -8,7 +8,7 @@ form#requestform.request__form.col-12(name="request_form")
               .col-sm-6.user.user__name
                 input#name.form-control(type="text" name="user_name" placeholder="Ваше имя")
               .col-sm-6.user.user__phone
-                input#phone.form-control(type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12")
+                input#phone.form-control(type="tel" name="user_phone" placeholder="+7(999)999-99-99" maxlength="12")
               .col-sm-6.user.user__technics
                 if(subPage)
                   input#technics.form-control(type="text" list="airports" name="user_technics" value=`${subPage}` placeholder="Тип техники")
