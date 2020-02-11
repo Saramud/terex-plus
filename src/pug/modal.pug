@@ -14,15 +14,22 @@
                           .col-sm-6.user.user__phone
                             input#phone.form-control(type="phone" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12")
                           .col-sm-6.user.user__technics
-                            input#technics.form-control(type="text" list="airports" name="user_technics" placeholder="Тип техники")
+                            if(subPage)
+                              input#technics.form-control(type="text" list="airports" name="user_technics" value=`${subPage}` placeholder="Тип техники")
+                            else
+                              input#technics.form-control(type="text" list="airports" name="user_technics" placeholder="Тип техники")
                           datalist#airports
                             // Список предопределенных вариантов для ввода
                             option(value="Автокран")
-                            option(value="Миниэкскаватор")
+                            option(value="Манипулятор")
+                            option(value="Мини-погрузчик")
+                            option(value="Мини-экскаватор")
                             option(value="Самосвал")
-                            option(value="Экскаватор Гусеничный")
-                            option(value="Экскаватор Колесный")
-                            option(value="Экскаватор Погрузчик")
+                            option(value="Телескопический погрузчик")
+                            option(value="Фронтальный погрузчик")
+                            option(value="Экскаватор гусеничный")
+                            option(value="Экскаватор колесный")
+                            option(value="Экскаватор погрузчик")
                           .col-sm-6.user.user__rent
                             input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
                           p(style="line-height:1; margin-top: 5px; font-size: 10px;")

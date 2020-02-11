@@ -36,17 +36,20 @@ $main-color: rgb(255, 198, 26);
         }
         li {
             flex: 3 1 400px;
+            margin-right: 15px;
+            margin-bottom: 20px;
         }
     }
     
 }
 
 .contacts {
+    margin-bottom: 40px;
     .info__title {
         text-transform: uppercase;
         font-weight: 600;
         margin: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     .contact {
         margin-bottom: 15px;
@@ -71,30 +74,89 @@ $main-color: rgb(255, 198, 26);
             &:before {
             content: "\e942";
             }
+            &:hover {
+                color: $main-color;
+            }
         }
         .icon-mail {
             font-size: 20px;
-            
+            &:hover {
+                color: $main-color;
+            }
             &:before {
                 content: "\e945";
             }
         }
-        .icon-address:before {
+        .icon-address {
+            &:hover {
+                color: $main-color;
+            }
+            &:before {
+            color: darkgray;
             content: "\e947";
+            }
+        }
+        .icon-telegram {
+            &:before {
+                content: "\ea95";
+                color: #0088cc;
+            }
+            &:hover {
+                color: $main-color;
+            }
+        }
+        .icon-whatsapp {
+            &:before {
+                content: "\ea93";
+                color: #25d366;
+            }
+            &:hover {
+                color: $main-color;
+            }
         }
         .icon-clock {
-            font-size: 45px;
+            font-size: 48px;
             font-weight: 600;
         &:before {
             content: "\e94e";
         }
-       
     }
-
+        &:last-child {
+            margin-bottom: 50px;
+        }
     } 
     .contact_request {
             margin-top: 60px;
         }
+    .contact__feedback {
+        margin-top: 25px;
+        h4 {
+            font-weight: 600;
+        }
+        .warning {
+            line-height: 1;
+            color: grey;
+            font-size: 10px;
+        }
+        .request__form {
+            button {
+                background-color: $main-color;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 18px;
+                height: 50px;
+                &:hover {
+                background-color: grey;
+                color: $main-color;
+                }
+            }
+            .user {
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
 }
 
 .field {

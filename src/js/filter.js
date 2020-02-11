@@ -228,7 +228,7 @@ const getTechnics = (nameTechnics) => {
         let newCard = $("<div class='border-warning text-center'></div>")
             .append(`<h3 class='text-dark'>${nameTechnics.title[i]}</h3>`)
             .append(`<div class='card-header bg-warning '>От ${nameTechnics.price[i]} руб. за смену</div>`)
-            .append(`<img class='card-image' src=${nameTechnics.img[i]} 'alt='экскаватор'>`)
+            .append(`<img class='card-image' src=${nameTechnics.img[i]} alt='${nameTechnics.title[i]}'>`)
             .append(bodyCard);
         
         let linkCard = $(`<a id='tech' class='card border-warning ' href='${nameTechnics.link[i]}'></a>`)
@@ -280,16 +280,29 @@ $(".techs").click(function() {
     }
 });
 
-/*Наполняем страницу по технике*/
+/*Наполняем страницу техники*/
     
 if ($(".tech")) {
+
+        /*Полифиллл startsWith */
+        if (!String.prototype.startsWith) {
+            Object.defineProperty(String.prototype, 'startsWith', {
+            enumerable: false,
+            configurable: false,
+            writable: false,
+            value: function(searchString, position) {
+                position = position || 0;
+                return this.indexOf(searchString, position) === position;
+            }
+            });
+        }
         let selector = $(".tech");
         let nameTech =  selector.attr("id");
         let partWord = nameTech.slice(0,4);
         let keyName = Object.keys(name);
         let techics = keyName.filter(name => name.startsWith(partWord));
         $(".tech")
-        .append(`<img src=${name[nameTech][1]}>`); 
+        .append(`<img src=${name[nameTech][1]} alt='${name[nameTech][0]}'>`); 
         let navMenu = $("<ul class='technic__selector'></ul>")
             .append( () => techics.map(technic => {
                 let blockMenu='';
@@ -305,7 +318,29 @@ if ($(".tech")) {
             .append(navMenu);
 
         //Наполняем таблицу свойствами
+        //Полифилл findIndex
+        if (!Array.prototype.findIndex) {
+            Array.prototype.findIndex = function(predicate) {
+            if (this == null) {
+            throw new TypeError('Array.prototype.findIndex called on null or undefined');
+            }
+            if (typeof predicate !== 'function') {
+            throw new TypeError('predicate must be a function');
+            }
+            var list = Object(this);
+            var length = list.length >>> 0;
+            var thisArg = arguments[1];
+            var value;
         
+            for (var i = 0; i < length; i++) {
+            value = list[i];
+            if (predicate.call(thisArg, value, i, list)) {
+                return i;
+            }
+            }
+            return -1;
+        };
+        }
         let selectType = $(".card-body");
         let typeOfTech = selectType.attr("id"); 
         let arrTech = all[typeOfTech].title;

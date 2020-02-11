@@ -1,10 +1,15 @@
 
 
+
+//Отравка в телеграмм
 $("#sendMail").on("click", function(){
     var name = $("#name").val();
     var technics = $("#technics").val();
     var rent = $("#rent").val();
 	var phone = $("#phone").val().replace(/[(),_,-]/g,'');
+	var mail = $("#mail").val();
+	var text = $("#text").val();
+	console.log(text);
     if (phone.length == 0) {
         $("#error").text("Поле обязательно для заполнения!");
         $("#phone").css("border", "2px solid red");
@@ -20,10 +25,10 @@ $("#sendMail").on("click", function(){
         url:'/telegram.php',
         type: 'POST',
         cache: false,
-        data: { 'name': name, 'technics': technics, 'rent': rent, 'phone': phone},
+        data: { name, technics, rent, phone, mail, text},
         dataType: 'html',
         beforeSend: function() {
-            $("#sendMail").text('Заявка отправлена');
+            $("#sendMail").text('Отправлено');
             $("#sendMail").css({'background':'#28a745', 'border-color': '#28a745', 'color': 'white'});
             $("#sendMail").prop("disabled", true);
         },
@@ -33,7 +38,7 @@ $("#sendMail").on("click", function(){
             // }
             // else {
                 $("#requestform").trigger("reset");
-                $("#sendMail").text('Отправка');
+                $("#sendMail").text('Отправить');
                 $("#sendMail").css('background', '#007bff');
             $("#sendMail").prop("disabled", false);
             // }

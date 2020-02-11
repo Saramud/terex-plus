@@ -14,7 +14,7 @@ section.technic
           .card.bg-light.mb-3
             .card-header.text-center Технические характеристики
             +ident(identifikator)  
-section.request
-    .container
-      .row
-        include requestForm
+          .orderTech.text-right
+            button.btn.btn-warning.text-right(type="button" data-toggle="modal" data-target="#exampleModalCenter") Заказать
+            include ./modal
+      hr

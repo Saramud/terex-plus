@@ -156,10 +156,7 @@ $main-color: rgb(255, 198, 26);
         }
        
     }
-    .sub_menu {
-   
-    
-}
+
    
     
     .active {
@@ -180,7 +177,6 @@ $main-color: rgb(255, 198, 26);
     color: white;
     font-size: 26px;
     font-weight: 600;
-    font-family: 'Comfortaa', cursive;
     .sub {
         margin-top: -10px;
         display: block;
@@ -477,9 +473,9 @@ $main-color: rgb(255, 198, 26);
     } 
 }
     .footer__contact {
-        .info a{
-            line-height: 2;
+        a{
             display: block;
+            line-height: 2;
             color: $main-color;
             font-size: 16px;
             text-decoration: none;
@@ -574,7 +570,16 @@ $main-color: rgb(255, 198, 26);
         }
         
     }
-    
+    .orderTech {
+        button {
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 60px;
+            padding: 10px 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
     }
     .tech {
         img {
@@ -639,9 +644,15 @@ $main-color: rgb(255, 198, 26);
     .header .logo img {
         margin-bottom: -20px;
     }
-    .header .phone p a {
+    .header .phone { 
+        h1 {
+         
+
+        }
+        p a {
         font-size: 45px;
     }   
+}
     .technic {
         .tech {
             img {

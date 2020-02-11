@@ -6,7 +6,7 @@ mixin tech(name)
 mixin ident(identifikator)
   div(id="" + identifikator class="card-body")
 
-- var subPage= 'Автокран КАМАЗ-65115 25 тонн', value = "Спецтехника", name = 'atkrKAMAZ65115', identifikator = 'autokran';
+- var subPage= 'Автокран КАМАЗ-65115 "Клинцы" КС-55713-1К-3 25 тонн', value = "Спецтехника", name = 'atkrKAMAZ65115', identifikator = 'autokran', modalHidden = true;
 - 
 
 doctype html
@@ -16,5 +16,18 @@ html(lang="ru")
       include ../header
       include ../strip
       include ../technic
+      section.description
+        .container
+          .row.descr
+            .col
+              p.advantages
+              | Автокран "Клинцы" стрелового типа КС-55713-1К-3 грузоподъемностью 25 тонн на шасси КамАЗ-65115. 
+              | Выполняет строительно-монтажные и погрузочно-разгрузочные работы. Шасси хорошей маневренности и легкостью 
+              | управления, эти преимущества позволяют использовать кран на объектах с различными типами подъездных путей, 
+              | а небольшие габариты делают его пригодным для эксплуатации в стесненных условиях современных городов.
+              | Дополнительное оснащение стрелы гуськом длиной 9 м обеспечивает большую зону облсуживания. 
+              | Кран может производить работы с грузами в круговой зоне 360 градусов.
+              
+
       include ../footer
       script(src="../build/js/all.js")

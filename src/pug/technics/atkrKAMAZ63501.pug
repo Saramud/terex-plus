@@ -6,7 +6,7 @@ mixin tech(name)
 mixin ident(identifikator)
   div(id="" + identifikator class="card-body")
 
-- var subPage= 'Автокран КАМАЗ-63501 40 тонн', value = "Спецтехника", name = 'atkrKAMAZ63501', identifikator = 'autokran';
+- var subPage= 'Автокран КАМАЗ-63501 40 тонн', value = "Спецтехника", name = 'atkrKAMAZ63501', identifikator = 'autokran', modalHidden = true;
 - 
 
 doctype html
@@ -16,5 +16,8 @@ html(lang="ru")
       include ../header
       include ../strip
       include ../technic
+      .row.descr
+        .col
+          p 
       include ../footer
       script(src="../build/js/all.js")
