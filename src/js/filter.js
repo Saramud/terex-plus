@@ -29,8 +29,8 @@ let name = {
     atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.jpg', '/technics/atkrnKAMAZVEZDEHOD.html'],
     atkrnMaz: ['Автокран МАЗ 14 тонн', '/build/img/atkrnMaz.jpg', '/technics/atkrnMaz.html'],
     atkrURAL55733: ['Автокран Урал КС-55733 ЧЕЛЯБИНЕЦ 32 тонны', '/build/img/atkrURAL55733.jpg', '/technics/atkrURAL55733.html'],
-    atkrKAMAZ65115: ['Автокран КАМАЗ-65115 25 тонн', '/build/img/atkrKAMAZ65115.jpg', '/technics/atkrKAMAZ65115.html'],
-    atkrKAMAZ63501: ['Автокран КАМАЗ-63501 40 тонн', '/build/img/atkrKAMAZ63501.jpg', '/technics/atkrKAMAZ63501.html'],
+    atkrKAMAZ65115: ['АВТОКРАН КАМАЗ-65115 "КЛИНЦЫ" КС-55713-1К-3 25 ТОНН', '/build/img/atkrKAMAZ65115.jpg', '/technics/atkrKAMAZ65115.html'],
+    atkrKAMAZ63501: ['АВТОКРАН КАМАЗ-63501 «КЛИНЦЫ» КС-65719-1К 40 ТОНН', '/build/img/atkrKAMAZ63501.jpg', '/technics/atkrKAMAZ63501.html'],
     mineKubota: ['Мини-экскаватор Kubota KX057-4', '/build/img/mineKubota.jpg', '/technics/mineKubota.html'],
     mineHitachiEX30: ['Мини-экскаватор HITACHI EX30 UR2', '/build/img/mineHitachiEX30.jpg', '/technics/mineHitachiEX30.html'],
     mineTakeuchiTB016: ['Мини-экскаватор TAKEUCHI TB016', '/build/img/mineTakeuchiTB016.jpg', '/technics/mineTakeuchiTB016.html'],
@@ -142,7 +142,7 @@ let all = {
         weight: ['8000', '8700', '8000', ],
         frontBucketCapacity:['1', '1.3', '1.1'],
         rearBucketCapacity:['0.18', '0.22', '0.233'],
-        diggingDepth:['5.7', '4.3', '5.8', ],
+        diggingDepth:['5.7', '5.3', '5.8', ],
         enginePower:['101', '100', '101'],
         netEnginePower:['-', '71', '-'],
         liftingHeight:['2.741', '2.64', '2.68'],
@@ -352,7 +352,7 @@ if ($(".tech")) {
                         let prop = all[typeOfTech].properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
                     }
-                props +=`<tr class='bg-secondary'><th class='text-left text-white'>СТОИМОСТЬ</th><th class='text-white text-right'> от ${all[typeOfTech].price[indexOfTech]}р. ЗА СМЕНУ<br> (8 ЧАСОВ)</th></tr>`;
+                props +=`<tr class='bg-secondary'><th class='text-left text-black'>СТОИМОСТЬ</th><th class='text-black text-right'> от ${all[typeOfTech].price[indexOfTech]} руб. ЗА СМЕНУ<br> (8 ЧАСОВ)</th></tr>`;
                 return props;
             });
         let table =$("<table class='table table-hover'></table")
