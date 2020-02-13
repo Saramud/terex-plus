@@ -167,9 +167,9 @@ $main-color: rgb(255, 198, 26);
     padding-top: 20px;
     img {
         display: inline-block;
-        margin-right: -20px;
-        padding-right: 0;
-        margin-left: -45px;
+        margin-right: 20px;
+        margin-left: 0;
+        padding-bottom: 15px;
     }
 }
 .logo_name {
@@ -562,10 +562,14 @@ $main-color: rgb(255, 198, 26);
         .table {
             margin-bottom: 0px;
             font-size: 17px;
+            tr {
+                line-height: 1;
+            }
             tr:last-child {
                 margin-bottom: 0px;
                 font-size: 17px;
                 line-height: 1;
+                color: yellow;
             }
         }
         
@@ -762,9 +766,6 @@ $main-color: rgb(255, 198, 26);
 }
 .header .phone p a{
     font-size: 42px;
-}
-.header .logo img {
-    margin-left: -15px;
 }
 
 

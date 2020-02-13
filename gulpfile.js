@@ -56,7 +56,7 @@ function styles(){
                 overrideBrowserslist: ['last 2 versions'],
                 cascade: false
             }))
-            .pipe(cleanCSS({compatibility: 'ie8'}))
+            // .pipe(cleanCSS({compatibility: 'ie8'}))
             .pipe(gulp.dest('./build/css'))
 }
 

@@ -352,7 +352,7 @@ if ($(".tech")) {
                         let prop = all[typeOfTech].properties[j];
                         props += `<tr><td class='text-dark text-left'>${propertiesCommon[all[typeOfTech].properties[j]]}</td><th class='text-dark text-right'>${all[typeOfTech][prop][indexOfTech]}</th></tr>`;
                     }
-                props +=`<tr class='bg-secondary'><th class='text-left text-black'>СТОИМОСТЬ</th><th class='text-black text-right'> от ${all[typeOfTech].price[indexOfTech]} руб. ЗА СМЕНУ<br> (8 ЧАСОВ)</th></tr>`;
+                props +=`<tr class='bg-secondary'><th class='text-left'>СТОИМОСТЬ</th><th class='text-right'> от ${all[typeOfTech].price[indexOfTech]} руб. ЗА СМЕНУ<br> (8 ЧАСОВ)</th></tr>`;
                 return props;
             });
         let table =$("<table class='table table-hover'></table")

@@ -3,6 +3,7 @@ head
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible" content="ie=edge") 
   meta(name="description" content=descr)
+  meta(name='robots', content='index, follow')
   title !{subPage ? subPage + ' в аренду': false || title}
   link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
   link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
@@ -28,4 +29,49 @@ head
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="https://unpkg.com/popper.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js")
+  script(type='application/ld+json').
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Терекс-Плюс",
+      "image": "https://terex-plus.ru/build/img/logo_3.png",
+      "url": "https://terex-plus.ru",
+      "telephone": "+7(812)989-03-32",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ТАЛЛИНСКОЕ ШОССЕ, 153/3",
+        "addressLocality": "Санкт-Петербург",
+        "addressCountry": "RU"
+      },
+      "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "59.8124485",
+      "longitude": "30.16469691"
+      },
+      "description": "Компания 'Терекс-Плюс' предоставляет в аренду дорожную и строительную технику по Санкт-Петербургу и Ленинградской области",
+      "openingHours": [
+      "Mo-Su 00:00-24:00"
+      ]
+    }
+  script(type='application/ld+json').
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Терекс-Плюс",
+        "url": "https://terex-plus.ru",
+        "logo": "https://terex-plus.ru/build/img/logo_3.png",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+7(812)989-03-32",
+                "contactType": "customer service",
+                "email": "info@terex-plus.ru",
+                "availableLanguage": [
+                    "Русский"
+                ]
+            }
+        ]
+    }
+  if (page != 'about' && page != 'contacts')
+    include metaOG
   
