@@ -3,11 +3,12 @@ head
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible" content="ie=edge") 
   meta(name="description" content=descr)
+  meta(name="keywords" content=keyWords)
   meta(name='robots', content='index, follow')
   title !{subPage ? subPage + ' в аренду': false || title}
-  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-  link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
-  link(href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet")
+  //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  //- link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
+  //- link(href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet")
   link(rel="stylesheet" href="/build/css/all.css")
   // Yandex.Metrika counter
   script(type='text/javascript').
@@ -25,16 +26,17 @@ head
       img(src='https://mc.yandex.ru/watch/57454633' style='position:absolute; left:-9999px;' alt='')
   // /Yandex.Metrika counter
 
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
+  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
+  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  //- script(src="https://unpkg.com/popper.js")
+  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-  script(src="https://unpkg.com/popper.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js")
   script(type='application/ld+json').
     {
       "@context": "http://schema.org",
       "@type": "LocalBusiness",
       "name": "Терекс-Плюс",
-      "image": "https://terex-plus.ru/build/img/logo_3.png",
+      "image": "https://terex-plus.ru/build/img/logo_3.webp",
       "url": "https://terex-plus.ru",
       "telephone": "+7(812)989-03-32",
       "address": {
@@ -59,7 +61,7 @@ head
         "@type": "Organization",
         "name": "Терекс-Плюс",
         "url": "https://terex-plus.ru",
-        "logo": "https://terex-plus.ru/build/img/logo_3.png",
+        "logo": "https://terex-plus.ru/build/img/logo_3.webp",
         "contactPoint": [
             {
                 "@type": "ContactPoint",

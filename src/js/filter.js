@@ -1,3 +1,5 @@
+
+
 /*Переменные*/
 let pos;
 let propertiesCommon = { 
@@ -26,39 +28,39 @@ let propertiesCommon = {
 };
 
 let name = {
-    atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.jpg', '/technics/atkrnKAMAZVEZDEHOD.html'],
-    atkrnMaz: ['Автокран МАЗ 14 тонн', '/build/img/atkrnMaz.jpg', '/technics/atkrnMaz.html'],
-    atkrURAL55733: ['Автокран Урал КС-55733 ЧЕЛЯБИНЕЦ 32 тонны', '/build/img/atkrURAL55733.jpg', '/technics/atkrURAL55733.html'],
-    atkrKAMAZ65115: ['АВТОКРАН КАМАЗ-65115 "КЛИНЦЫ" КС-55713-1К-3 25 ТОНН', '/build/img/atkrKAMAZ65115.jpg', '/technics/atkrKAMAZ65115.html'],
-    atkrKAMAZ63501: ['АВТОКРАН КАМАЗ-63501 «КЛИНЦЫ» КС-65719-1К 40 ТОНН', '/build/img/atkrKAMAZ63501.jpg', '/technics/atkrKAMAZ63501.html'],
-    mineKubota: ['Мини-экскаватор Kubota KX057-4', '/build/img/mineKubota.jpg', '/technics/mineKubota.html'],
-    mineHitachiEX30: ['Мини-экскаватор HITACHI EX30 UR2', '/build/img/mineHitachiEX30.jpg', '/technics/mineHitachiEX30.html'],
-    mineTakeuchiTB016: ['Мини-экскаватор TAKEUCHI TB016', '/build/img/mineTakeuchiTB016.jpg', '/technics/mineTakeuchiTB016.html'],
-    smsvlKamaz6520: ['Самосвал КАМАЗ 6520', '/build/img/smsvlKamaz6520.jpg', '/technics/smsvlKamaz6520.html'],
-    smsvlKamaz65115: ['Самосвал КАМАЗ 65115', '/build/img/smsvlKamaz65115.jpg', '/technics/smsvlKamaz65115.html'],
-    smsvlReanaultKerax: ['Самосвал RENAULT KERAX 8Х4', '/build/img/smsvlReanaultKerax.jpg', '/technics/smsvlReanaultKerax.html'],
-    egusHitachi330: ['Экскаватор гусеничный HITACHI 330', '/build/img/egusHitachi330.jpg', '/technics/egusHitachi330.html'],
-    egusHitachi300: ['Экскаватор гусеничный HITACHI 300', '/build/img/egusHitachi300.jpg', '/technics/egusHitachi300.html'],
-    egusVOLVOEC240: ['Экскаватор гусеничный VOLVO EC 240 PRAIM', '/build/img/egusVOLVOEC240.jpg', '/technics/egusVOLVOEC240.html'],
-    egusVOLVOEC240LOng: ['Экскаватор гусеничный длиннорукий VOLVO EC 240', '/build/img/egusVOLVOEC240LOng.jpg', '/technics/egusVOLVOEC240LOng.html'],
-    ekolDoosan: ['Экскаватор колёсный DOOSAN SOLAR 180', '/build/img/ekolDoosan.png', '/technics/ekolDoosan.html'],
-    ekolJCBJS200W: ['Экскаватор колёсный JCB JS200W', '/build/img/ekolJCBJS200W.jpg', '/technics/ekolJCBJS200W.html'],
-    ekolVOLVOEW160: ['Экскаватор колёсный VOLVO EW 160', '/build/img/ekolVOLVOEW160.png', '/technics/ekolVOLVOEW160.html'], 
-    epogTLB825: ['Экскаватор погрузчик terex TLB 825', '/build/img/epogTLB825.png', '/technics/epogTLB825.html'],
-    epogJSB4CX: ['Экскаватор погрузчик JCB 4CX', '/build/img/epogJSB4CX.jpg', '/technics/epogJSB4CX.html'],
-    epogTEREX860: ['Экскаватор погрузчик TEREX 860' ,'/build/img/epogTEREX860.png', '/technics/epogTEREX860.html'],
-    teleskPogrBobcatT40170: ['Телескопический погрузчик BOBCAT T40170', '/build/img/teleskPogrBobcatT40170.jpg', '/technics/teleskPogrBobcatT40170.html' ],
-    teleskPogrFaresinFH1442: ['Телескопический погрузчик FARESIN FH 14.42', '/build/img/teleskPogrFaresinFH1442.jpg', '/technics/teleskPogrFaresinFH1442.html' ],
-    teleskPogrJCBAGRI: ['Телескопический погрузчик JCB AGRI 536-60', '/build/img/teleskPogrJCBAGRI.jpg', '/technics/teleskPogrJCBAGRI.html' ],
-    minPogruzWECAN800D:  ['Мини-погрузчик WECAN 800D', '/build/img/minPogruzWECAN800D.jpg', '/technics/minPogruzWECAN800D.html' ],
-    minPogruzTAKEUCHI:  ['Мини-погрузчик TAKEUCHI TL140', '/build/img/minPogruzTAKEUCHI.jpeg', '/technics/minPogruzTAKEUCHI.html' ],
-    minPogruzNEWHOLLANDL218:  ['Мини-погрузчик NEW HOLLAND L 218', '/build/img/minPogruzNEWHOLLANDL218.jpg', '/technics/minPogruzNEWHOLLANDL218.html' ],
-    frontPogruzVOLVOL90F: ['Фронтальный погрузчик VOLVO L90F', '/build/img/frontPogruzVOLVOL90F.jpg', '/technics/frontPogruzVOLVOL90F.html' ],
-    frontPogruzLG936L: ['Фронтальный погрузчик LG936L', '/build/img/frontPogruzLG936L.jpg', '/technics/frontPogruzLG936L.html' ],
-    frontPogruzLG933L: ['Фронтальный погрузчик LG933L', '/build/img/frontPogruzLG933L.jpg', '/technics/frontPogruzLG933L.html' ],
-    mnpltrHD78: ['Манипулятор Hyundai HD 78', '/build/img/mnpltrHD78.jpg', '/technics/mnpltrHD78.html'],
-    mnpltrHD120: ['Манипулятор Hyundai HD 120', '/build/img/mnpltrHD120.jpg', '/technics/mnpltrHD120.html'],
-    mnpltrKamaz: ['Манипулятор КАМАЗ', '/build/img/mnpltrKamaz.jpg', '/technics/mnpltrKamaz.html'],
+    atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.webp', '/technics/atkrnKAMAZVEZDEHOD.html'],
+    atkrnMaz: ['Автокран МАЗ 14 тонн', '/build/img/atkrnMaz.webp', '/technics/atkrnMaz.html'],
+    atkrURAL55733: ['Автокран Урал КС-55733 ЧЕЛЯБИНЕЦ 32 тонны', '/build/img/atkrURAL55733.webp', '/technics/atkrURAL55733.html'],
+    atkrKAMAZ65115: ['АВТОКРАН КАМАЗ-65115 "КЛИНЦЫ" КС-55713-1К-3 25 ТОНН', '/build/img/atkrKAMAZ65115.webp', '/technics/atkrKAMAZ65115.html'],
+    atkrKAMAZ63501: ['АВТОКРАН КАМАЗ-63501 «КЛИНЦЫ» КС-65719-1К 40 ТОНН', '/build/img/atkrKAMAZ63501.webp', '/technics/atkrKAMAZ63501.html'],
+    mineKubota: ['Мини-экскаватор Kubota KX057-4', '/build/img/mineKubota.webp', '/technics/mineKubota.html'],
+    mineHitachiEX30: ['Мини-экскаватор HITACHI EX30 UR2', '/build/img/mineHitachiEX30.webp', '/technics/mineHitachiEX30.html'],
+    mineTakeuchiTB016: ['Мини-экскаватор TAKEUCHI TB016', '/build/img/mineTakeuchiTB016.webp', '/technics/mineTakeuchiTB016.html'],
+    smsvlKamaz6520: ['Самосвал КАМАЗ 6520', '/build/img/smsvlKamaz6520.webp', '/technics/smsvlKamaz6520.html'],
+    smsvlKamaz65115: ['Самосвал КАМАЗ 65115', '/build/img/smsvlKamaz65115.webp', '/technics/smsvlKamaz65115.html'],
+    smsvlReanaultKerax: ['Самосвал RENAULT KERAX 8Х4', '/build/img/smsvlReanaultKerax.webp', '/technics/smsvlReanaultKerax.html'],
+    egusHitachi330: ['Экскаватор гусеничный HITACHI 330', '/build/img/egusHitachi330.webp', '/technics/egusHitachi330.html'],
+    egusHitachi300: ['Экскаватор гусеничный HITACHI 300', '/build/img/egusHitachi300.webp', '/technics/egusHitachi300.html'],
+    egusVOLVOEC240: ['Экскаватор гусеничный VOLVO EC 240 PRAIM', '/build/img/egusVOLVOEC240.webp', '/technics/egusVOLVOEC240.html'],
+    egusVOLVOEC240LOng: ['Экскаватор гусеничный длиннорукий VOLVO EC 240', '/build/img/egusVOLVOEC240LOng.webp', '/technics/egusVOLVOEC240LOng.html'],
+    ekolDoosan: ['Экскаватор колёсный DOOSAN SOLAR 180', '/build/img/ekolDoosan.webp', '/technics/ekolDoosan.html'],
+    ekolJCBJS200W: ['Экскаватор колёсный JCB JS200W', '/build/img/ekolJCBJS200W.webp', '/technics/ekolJCBJS200W.html'],
+    ekolVOLVOEW160: ['Экскаватор колёсный VOLVO EW 160', '/build/img/ekolVOLVOEW160.webp', '/technics/ekolVOLVOEW160.html'], 
+    epogTLB825: ['Экскаватор погрузчик terex TLB 825', '/build/img/epogTLB825.webp', '/technics/epogTLB825.html'],
+    epogJSB4CX: ['Экскаватор погрузчик JCB 4CX', '/build/img/epogJSB4CX.webp', '/technics/epogJSB4CX.html'],
+    epogTEREX860: ['Экскаватор погрузчик TEREX 860' ,'/build/img/epogTEREX860.webp', '/technics/epogTEREX860.html'],
+    teleskPogrBobcatT40170: ['Телескопический погрузчик BOBCAT T40170', '/build/img/teleskPogrBobcatT40170.webp', '/technics/teleskPogrBobcatT40170.html' ],
+    teleskPogrFaresinFH1442: ['Телескопический погрузчик FARESIN FH 14.42', '/build/img/teleskPogrFaresinFH1442.webp', '/technics/teleskPogrFaresinFH1442.html' ],
+    teleskPogrJCBAGRI: ['Телескопический погрузчик JCB AGRI 536-60', '/build/img/teleskPogrJCBAGRI.webp', '/technics/teleskPogrJCBAGRI.html' ],
+    minPogruzWECAN800D:  ['Мини-погрузчик WECAN 800D', '/build/img/minPogruzWECAN800D.webp', '/technics/minPogruzWECAN800D.html' ],
+    minPogruzTAKEUCHI:  ['Мини-погрузчик TAKEUCHI TL140', '/build/img/minPogruzTAKEUCHI.webp', '/technics/minPogruzTAKEUCHI.html' ],
+    minPogruzNEWHOLLANDL218:  ['Мини-погрузчик NEW HOLLAND L 218', '/build/img/minPogruzNEWHOLLANDL218.webp', '/technics/minPogruzNEWHOLLANDL218.html' ],
+    frontPogruzVOLVOL90F: ['Фронтальный погрузчик VOLVO L90F', '/build/img/frontPogruzVOLVOL90F.webp', '/technics/frontPogruzVOLVOL90F.html' ],
+    frontPogruzLG936L: ['Фронтальный погрузчик LG936L', '/build/img/frontPogruzLG936L.webp', '/technics/frontPogruzLG936L.html' ],
+    frontPogruzLG933L: ['Фронтальный погрузчик LG933L', '/build/img/frontPogruzLG933L.webp', '/technics/frontPogruzLG933L.html' ],
+    mnpltrHD78: ['Манипулятор Hyundai HD 78', '/build/img/mnpltrHD78.webp', '/technics/mnpltrHD78.html'],
+    mnpltrHD120: ['Манипулятор Hyundai HD 120', '/build/img/mnpltrHD120.webp', '/technics/mnpltrHD120.html'],
+    mnpltrKamaz: ['Манипулятор КАМАЗ', '/build/img/mnpltrKamaz.webp', '/technics/mnpltrKamaz.html'],
 
 };
 
@@ -239,15 +241,14 @@ const getTechnics = (nameTechnics) => {
 }
 
 /*Создаем список техники по умолчанию на страницах "Главная" и "Техника" */
-
-    if ($('#allTechnics').length === 0) {
-            let defaultList = (selectedTechnic === null || selectedTechnic === 'allTechnics' ) ? all.autokran: all[selectedTechnic];
-            let choiceList = (selectedTechnic === null || selectedTechnic === 'allTechnics') ? 'autokran': selectedTechnic;
+    let defaultList = (selectedTechnic === null || selectedTechnic === 'allTechnics' ) ? all.autokran: all[selectedTechnic];
+    let choiceList = (selectedTechnic === null || selectedTechnic === 'allTechnics') ? 'autokran': selectedTechnic;
+    if ($('#allTechnics').length === 0) {  
             $(`#${choiceList}`).addClass("techs-active");
             getTechnics(defaultList);
     }
     else if ($('#allTechnics').length !== 0) {
-            if (selectedTechnic === null || selectedTechnic === 'allTechnics' ) {
+            if (selectedTechnic === 'allTechnics' ) {
                 for (let key in all) {
                     let defaultList = all[key];
                     $('#allTechnics').addClass("techs-active");
@@ -255,8 +256,8 @@ const getTechnics = (nameTechnics) => {
                 }
             }
             else {
-                $(`#${selectedTechnic}`).addClass("techs-active");
-                getTechnics(all[selectedTechnic]);
+                $(`#${choiceList}`).addClass("techs-active");
+                getTechnics(defaultList);
             }
     }
 
@@ -307,10 +308,10 @@ if ($(".tech")) {
             .append( () => techics.map(technic => {
                 let blockMenu='';
                 if (nameTech === technic) {
-                    blockMenu = `<li class='btn btn-info technic_active'><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn technic_active'><a class='nav-link' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 else {
-                    blockMenu = `<li class='btn btn-success '><a class='nav-link text-white' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
+                    blockMenu = `<li class='btn btn-secondary '><a class='nav-link' href=${name[technic][2]}>${name[technic][0]}</a></li>`;
                 }
                 return blockMenu;
             }));
@@ -360,3 +361,5 @@ if ($(".tech")) {
         selectType = $(".card-body")
             .append(table);
     }
+
+    

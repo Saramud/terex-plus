@@ -182,7 +182,7 @@ reveal-modal-bg {
     left: 50%;
     margin-left: -300px;
     width: 520px;
-    background: #eee url(modal-gloss.png) no-repeat -200px -80px;
+    background: #eee url(modal-gloss.webp) no-repeat -200px -80px;
     position: absolute;
     z-index: 101;
     padding: 30px 40px 34px;
@@ -210,3 +210,9 @@ reveal-modal-bg {
     font-weight: bold;
     cursor: pointer;
     } 
+
+.strip {
+    .custom-nav {
+        line-height: 1;
+    }
+}

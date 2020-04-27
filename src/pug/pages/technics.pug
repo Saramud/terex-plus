@@ -1,5 +1,5 @@
 - var page = 'technics', name = 'Спецтехника', title = 'Каталог спецтехники в аренду. Долгосрочная аренда по выгодным ценам в компании "Терекс-Плюс". На нашем сайте удобная форма отправки заявки!', descr = 'Аренда разных типов спецтехники от компании "Терекс-Плюс". Строительная техника, дорожная, манипуляторы, мини-погрузчики. Предоставляем выгодные условия по аренде.'
-
+- var keyWords = 'аренда спецтехники,аренда спецтехники в Санкт-Петербурге,Стоимость аренды';
 doctype html
 html(lang="ru")
   include ../head
@@ -27,7 +27,9 @@ html(lang="ru")
               li#ekskGusenich.btn.btn-info.techs Экскаваторы Гусеничные
               li#ekskKoles.btn.btn-info.techs Экскаваторы Колесные
               li#ekskPogr.btn.btn-info.techs Экскаваторы Погрузчики
+              
         .row.justify-content-center
           .technics__menu-item
     include ../footer 
-    script(src="build/js/all.js")
+    script(src="build/js/all.js" async)
+    
