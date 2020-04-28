@@ -1,9 +1,11 @@
 
 form#requestform.request__form.col-12(name="request_form")
             if requestText
-              legend #{requestText}
+              fieldset
+                h2.legend #{requestText}
             else
-              legend #{reqText}
+              fieldset
+                h2.legend #{reqText}
             .form-row.text-center
               .col-sm-6.user.user__name
                 input#name.form-control(type="text" name="user_name" placeholder="Ваше имя")

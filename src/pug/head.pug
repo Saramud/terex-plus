@@ -6,13 +6,10 @@ head
   meta(name="keywords" content=keyWords)
   meta(name='robots', content='index, follow')
   title !{subPage ? subPage + ' в аренду': false || title}
-  //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-  //- link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
-  //- link(href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet")
   link(rel="stylesheet" href="/build/css/all.css")
-  
-  //- script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
-  //- script(src="https://unpkg.com/popper.js")
+  if page='index'
+    link(rel="icon" href="https://terex-plus.ru/favicon.ico" type="image/x-icon")
+    meta(name='google-site-verification', content='gXVs0NLswo4D7iBsL9nx21Zy6MF5UmIT4_nihLKJw_Q')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(type='application/ld+json').
     {
@@ -60,18 +57,4 @@ head
   
   if (page != 'about' && page != 'contacts')
     include metaOG
-  // Yandex.Metrika counter
-  script(type='text/javascript' async).
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(57454633, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-    });
-  noscript
-    div
-      img(src='https://mc.yandex.ru/watch/57454633' style='position:absolute; left:-9999px;' alt='')
-    // Yandex.Metrika counter
+

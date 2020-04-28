@@ -1,12 +1,9 @@
 - var requestText = 'Отправить заявку на аренду/подбор техники', widthIcon = 65, title = 'Аренда спецтехники в Санкт-Петербурге Терекс-Плюс', descr = "На нашем сайте по аренде спецтехники компании 'Терекс-Плюс' представлен большой выбор техники от мини-погрузчиков до автокранов 40 тонн. Если не нашли нужную Вам технику в общем каталоге - воспользуйтесь нашей удобной формой для отправки заявки!";
 - var page = 'index', keyWords = 'аренда спецтехники, аренда строительной техники, спецтехника в аренду, аренда дорожной техники, аренда спецтехники в Санкт-Петербурге, аренда гусеничного экскаватора';
-
+- index = true;
 doctype html
 html(lang="ru")
   include ../head
-  link(rel="icon" href="https://terex-plus.ru/favicon.ico" type="image/x-icon")
-  meta(name='google-site-verification', content='gXVs0NLswo4D7iBsL9nx21Zy6MF5UmIT4_nihLKJw_Q')
-
   body
     header#header.header
       .container
@@ -20,7 +17,7 @@ html(lang="ru")
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
             a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
             a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
-            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20.") Написать в Whatsapp
+            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=.") Написать в Whatsapp
         .row
           .col-12.text-center
             nav
@@ -74,7 +71,7 @@ html(lang="ru")
         .row.text-center
           .col
             h2.info__title С НАМИ ВЫГОДНО СОТРУДНИЧАТЬ
-            p.advantages(align = 'justify')
+            p.advantages
               | На сегодняшний день 
               strong
               |аренда спецтехники в СПб
@@ -113,5 +110,5 @@ html(lang="ru")
                 li 
                   img(src="build/img/Tilda_Icons_3st_discount2.webp" alt = "Скидка на второй заказ")
                   b|скидка на второй заказ
-  include ../footer
-  script(src="build/js/all.js" async)
+    include ../footer
+    script(src="build/js/all.js" async)

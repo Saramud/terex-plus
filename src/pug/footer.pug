@@ -13,7 +13,7 @@ footer.footer
               a(href="/about.html") О компании
             li.footer-menu__item
               a(href="/contacts.html") Контакты
-            if (page === 'index')
+            if (index)
               li.footer-menu__item
                 a(href='#requestform') Оставить завку
             else if !modalHidden
@@ -28,7 +28,7 @@ footer.footer
           a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
           a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
           a.icon.icon-telegram(href="tg://telegram.me=SSaramud") Написать в Telegram
-          a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу%.") Написать в Whatsapp
+          a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=") Написать в Whatsapp
       .col-lg-4.md-12
         h4 АДРЕС
         .footer__contact
@@ -38,6 +38,18 @@ footer.footer
         p 2019 © «Терекс-Плюс». Все права защищены
 
 script(src="https://unpkg.com/popper.js")
-
-   
+// Yandex.Metrika counter
+script.
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(57454633, "init", {
+  clickmap:true,
+  trackLinks:true,
+  accurateTrackBounce:true
+  });
+noscript
+  div
+    img(src='https://mc.yandex.ru/watch/57454633' style='position:absolute; left:-9999px;' alt='')
+// Yandex.Metrika counter
        

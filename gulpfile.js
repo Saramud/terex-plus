@@ -90,7 +90,7 @@ gulp.task('pugs', pugs);
 gulp.task('pugsTech', pugsTech)
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean,
-                    gulp.parallel(styles, scripts, img)
+                    gulp.parallel(pugs, pugsTech, styles, scripts, img)
                     ));
 gulp.task('dev', gulp.series('build', 'watch'));
 

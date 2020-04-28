@@ -13,7 +13,7 @@ header.header.header_template
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
             a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
             a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
-            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=Здравствуйте.%20Вопрос%20по%20поводу.") Написать в Whatsapp
+            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=") Написать в Whatsapp
         .row
           .col-12.text-center
             nav
@@ -21,19 +21,19 @@ header.header.header_template
                 li.menu__item
                   a(href="/") Главная
                 li.menu__item 
-                    if page === 'technics' || subPage
-                        a.sub_menu.active(href="/technics.html") Спецтехника
-                        include techMenu
-                    else
-                        a.sub_menu(href="/technics.html") Спецтехника
-                        include techMenu
+                  if technics || subPage
+                    a.sub_menu.active(href="/technics.html") Спецтехника
+                    include techMenu
+                  else
+                    a.sub_menu(href="/technics.html") Спецтехника
+                    include techMenu
                 li.menu__item
-                    if page === 'about'
-                        a.active(href="/about.html") О компании
-                    else
-                        a(href="/about.html") О компании
+                  if about
+                    a.active(href="/about.html") О компании
+                  else
+                    a(href="/about.html") О компании
                 li.menu__item
-                    if page === 'contacts'
+                    if contacts
                         a.active(href="./contacts.html") Контакты
                     else
                         a(href="/contacts.html") Контакты

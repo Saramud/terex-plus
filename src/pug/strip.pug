@@ -1,18 +1,16 @@
-html
-  body
-    section.field
-    section.strip.bg-light
-      .container
-        .row
-          .col
-            ul.nav.nav-tabs.custom-nav
-              li.nav-item
-                a.nav-link.text-secondary(href="/") Главная
-              if subPage
-                li.nav-item
-                  a.nav-link.text-secondary(href="/technics.html") Спецтехника
-                li.nav-item
-                  a.nav-link.active(href="/") #{subPage}
-              else
-                li.nav-item
-                  a.nav-link.active(href="/technics.html") #{name}
+section.field
+section.strip.bg-light
+  .container
+    .row
+      .col
+        ul.nav.nav-tabs.custom-nav
+          li.nav-item
+            a.nav-link.text-secondary(href="/") Главная
+          if subPage
+            li.nav-item
+              a.nav-link.text-secondary(href="/technics.html") Спецтехника
+            li.nav-item
+              a.nav-link.active(href="/") #{subPage}
+          else
+            li.nav-item
+              a.nav-link.active(href="/technics.html") #{name}
