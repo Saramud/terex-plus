@@ -5,9 +5,9 @@ mixin article(title, id, link)
 
 
 
-button#dropdownMenu2.btn.my_btn.btn-sm.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-.dropdown-menu.my_dropdown(aria-labelledby='dropdownMenu2')
-  +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html') 
+div.btn.my_btn(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+#collapseExample.collapse.my_dropdown
+  +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html')
   +article('Манипуляторы', 'mnpltr', '/technics/mnpltrHD78.html')
   +article('Мини-погрузчики', 'minPogruz', '/technics/minPogruzWECAN800D.html')
   +article('Мини-экскаваторы', 'mine', '/technics/mineKubota.html')

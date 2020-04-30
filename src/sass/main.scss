@@ -247,27 +247,39 @@ $main-color: rgb(255, 198, 26);
 }
 .menu__item {
     margin: 10px 65px;
+    position: relative;
     .my_btn {
-        padding: 0;
-        color: white;
+        position: absolute;
+        background: contain no-repeat url('../../build/img/Tilda_Icons_33_interior_list.webp');
+        top: 7px;
+        right: -20px;
+        padding: 5px;
+        color: black;
+        background-color: black;
+        width: 15px;
+        height: 15px;
         font-size: 25px;
         line-height: 0;
-        background-color: transparent;
         text-decoration: none;
         &:hover {
-            color: $main-color;
+            background: $main-color;
     }
     
     }
     .my_dropdown {
         padding: 0;
         box-sizing: border-box;
+        position: absolute;
         width: 300px;
+        background-color: white;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        z-index: 100;
         .dropdown-item {
             color: black;
             text-transform: none;
             font-weight: 600;
-            line-height: 2;
+            line-height: 1.5;
             &:hover {
                 background-color: $main-color;
             }
@@ -276,6 +288,7 @@ $main-color: rgb(255, 198, 26);
             background-color:$main-color; 
         }
     }
+ 
     
     a{
         position: relative;

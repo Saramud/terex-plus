@@ -1,6 +1,5 @@
 
 
-
 //Отравка в телеграмм
 $("#sendMail").on("click", function(){
     var name = $("#name").val();
