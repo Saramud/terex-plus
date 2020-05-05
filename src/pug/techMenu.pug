@@ -1,22 +1,63 @@
-mixin article(title, id, link)
-  a(href=link class='dropdown-item' class=(identifikator==id)?'dropdown_active':null) !{title}
+mixin collapse(id, head, title)
+  .panel-heading(id = head role='tab')
+    a.collapsed.dropdown-item.list-group-item(data-toggle='collapse', data-parent='#' + head, href='#' +id, aria-expanded='false', aria-controls=id) !{title}
+      i.fa.fa-angle-down(aria-hidden='true')
+  .panel-collapse.collapse(id=id role='tabpanel', aria-labelledby=head)
+   
 
 
 
 
+#accordion(role='tablist', aria-multiselectable='true')
+  .panel.panel-default
+    #heading7.panel-heading(role='tab')
+      a.collapsed.list-group-item.my_btn(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.fa.fa-angle-down(aria-hidden='true')
+    #collapse7.panel-collapse.my_dropdown.collapse(role='tabpanel', aria-labelledby='heading7')
+      
 
-div.btn.my_btn(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-#collapseExample.collapse.my_dropdown
-  +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html')
-  +article('Манипуляторы', 'mnpltr', '/technics/mnpltrHD78.html')
-  +article('Мини-погрузчики', 'minPogruz', '/technics/minPogruzWECAN800D.html')
-  +article('Мини-экскаваторы', 'mine', '/technics/mineKubota.html')
-  +article('Самосвалы', 'samosval', '/technics/smsvlKamaz6520.html')
-  +article('Телескопические погрузчики', 'teleskPogr', '/technics/teleskPogrBobcatT40170.html')
-  +article('Фронтальные погрузчики', 'frontPogruz', '/technics/frontPogruzVOLVOL90F.html')
-  +article('Экскаваторы гусеничные', 'ekskGusenich', '/technics/egusHitachi330.html')
-  +article('Экскаваторы колесные', 'ekskKoles', '/technics/ekolDoosan.html')
-  +article('Экскаваторы погрузчики', 'ekskPogr', '/technics/epogTLB825.html')
+      +collapse('autokran', 'autokranHead', 'Автокраны')
+      +collapse('mnpltr', 'mnpltrHead', 'Манипуляторы')
+      +collapse('minPogruz', 'minPogruzHead', 'Мини-погрузчики')
+        //- a.dropdown-item(href='#') Ленточные пилы
+        //- a.dropdown-item(href='#') Токарные станки
+        //- a.dropdown-item(href='#') Токарно-фрезерные станки
+        //- a.dropdown-item(href='#') Фрезерные станки
+      +collapse('mine', 'mineHead', 'Мини-экскаваторы')
+      +collapse('samosval', 'samosvalHead', 'Самосвалы')
+      +collapse('teleskPogr', 'teleskPogrHead', 'Телескопические погрузчики')
+      +collapse('frontPogruz', 'frontPogruzHead', 'Фронтальные погрузчики')
+      +collapse('ekskGusenich', 'ekskGusenichHead', 'Экскаваторы гусеничные')
+      +collapse('ekskKoles', 'ekskKolesHead', 'Экскаваторы колесные')
+      +collapse('ekskPogr', 'ekskPogrHead', 'Экскаваторы погрузчики')
+      
+
+      
+
+      
+
+//- div.my_btn( data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample', aria-multiselectable="true")
+//- #collapseExample.collapse.my_dropdown
+//-   +dropdown('Автокраны', 'autokran')
+//-     #collapseTech.collapse.my_dropdown
+//-       +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html')
+//-       +article('Манипуляторы', 'mnpltr', '/technics/mnpltrHD78.html')
+//-       +article('Мини-погрузчики', 'minPogruz', '/technics/minPogruzWECAN800D.html')
+//-       +article('Мини-экскаваторы', 'mine', '/technics/mineKubota.html')
+//-       +article('Самосвалы', 'samosval', '/technics/smsvlKamaz6520.html')
+//-   +dropdown('Манипуляторы', 'mnpltr')
+//-   +dropdown('Мини-погрузчики', 'minPogruz')
+//-   +dropdown('Мини-экскаваторы', 'mine' )
+//-   +dropdown('Самосвалы', 'samosval' )
+//-   +dropdown('Телескопические погрузчики', 'teleskPogr' )
+//-   +dropdown('Фронтальные погрузчики', 'frontPogruz' )
+//-   +dropdown('Экскаваторы гусеничные', 'ekskGusenich')
+//-   +dropdown('Экскаваторы колесные', 'ekskKoles' )
+//-   +dropdown('Экскаваторы погрузчики', 'ekskPogr' )
+
+
+//-!!!!!!!!! пример https://jsfiddle.net/rh4o1kqy/
+
 
 
   
