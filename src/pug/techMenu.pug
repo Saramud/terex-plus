@@ -1,9 +1,75 @@
-mixin collapse(id, head, title)
+
+mixin collapse(id, head, title, array)
   .panel-heading(id = head role='tab')
-    a.collapsed.dropdown-item.list-group-item(data-toggle='collapse', data-parent='#' + head, href='#' +id, aria-expanded='false', aria-controls=id) !{title}
+    a.collapsed.dropdown-item(class=(identifikator==id)?'dropdown_active':null data-toggle='collapse', data-parent='#' + head, href='#' +id, aria-expanded='false', aria-controls=id) !{title}
       i.fa.fa-angle-down(aria-hidden='true')
   .panel-collapse.collapse(id=id role='tabpanel', aria-labelledby=head)
-   
+    each val in array
+      a.dropdown-item.dropdown-child(class = (subPage==val.name)?'dropdown_active-item':null href=val.href) !{val.name}
+
+-
+  var autokran = [
+    {name: 'Автокран КАМАЗ "Галичанин" 25 тонн', href :'/technics/atkrnKAMAZVEZDEHOD.html'},
+    {name: 'Автокран МАЗ 14 тонн', href :'/technics/atkrnMaz.html'},
+    {name: 'Автокран ЧЕЛЯБИНЕЦ 32 тонны', href :'/technics/atkrURAL55733.html'},
+    {name: 'Автокран КАМАЗ-65115 "КЛИНЦЫ" 25 ТОНН', href: '/technics/atkrKAMAZ65115.html'},
+    {name: 'Автокран КАМАЗ-63501 "КЛИНЦЫ" 40 ТОНН', href: '/technics/atkrKAMAZ63501.html'},
+  ];
+
+   var mnpltr = [
+    {name: 'Манипулятор Hyundai HD 78', href :'/technics/mnpltrHD78.html'},
+    {name: 'Манипулятор Hyundai HD 120', href :'/technics/mnpltrHD120.html'},
+    {name: 'Манипулятор КАМАЗ', href :'/technics/mnpltrKamaz.html'},
+  ];
+
+  var min = [
+    {name: 'Мини-погрузчик WECAN 800D', href :'/technics/minPogruzWECAN800D.html'},
+    {name: 'Мини-погрузчик TAKEUCHI TL140', href :'/technics/minPogruzTAKEUCHI.html'},
+    {name: 'Мини-погрузчик NEW HOLLAND L 218', href :'/technics/minPogruzNEWHOLLANDL218.html'},
+  ];
+  
+  var mine = [
+    {name: 'Мини-экскаватор Kubota KX057-4', href :'/technics/mineKubota.html'},
+    {name: 'Мини-экскаватор HITACHI EX30 UR2', href :'/technics/mineHitachiEX30.html'},
+    {name: 'Мини-экскаватор TAKEUCHI TB016', href :'/technics/mineTakeuchiTB016.html'},
+  ];
+
+  var samosval = [
+    {name: 'Самосвал КАМАЗ 6520', href :'/technics/smsvlKamaz6520.html'},
+    {name: 'Самосвал КАМАЗ 65115', href :'/technics/smsvlKamaz65115.html'},
+    {name: 'Самосвал RENAULT KERAX 8Х4', href :'/technics/smsvlReanaultKerax.html'},
+  ];
+
+  var teleskPogr = [
+    {name: 'Телескопический погрузчик BOBCAT T40170', href :'/technics/teleskPogrBobcatT40170.html'},
+    {name: 'Телескопический погрузчик FARESIN FH 14.42', href :'/technics/teleskPogrFaresinFH1442.html'},
+    {name: 'Телескопический погрузчик JCB AGRI 536-60', href :'/technics/teleskPogrJCBAGRI.html'},
+  ];
+
+  var frontPogruz = [
+    {name: 'Фронтальный погрузчик VOLVO L90F', href :'/technics/frontPogruzVOLVOL90F.html'},
+    {name: 'Фронтальный погрузчик LG936L', href :'/technics/frontPogruzLG936L.html'},
+    {name: 'Фронтальный погрузчик LG933L', href :'/technics/frontPogruzLG933L.html'},
+  ];
+
+  var ekskGusenich = [
+    {name: 'Экскаватор гусеничный HITACHI 330', href :'/technics/egusHitachi330.html'},
+    {name: 'Экскаватор гусеничный HITACHI 300', href :'/technics/egusHitachi300.html'},
+    {name: 'Экскаватор гусеничный VOLVO EC 240 PRAIM', href :'/technics/egusVOLVOEC240.html'},
+    {name: 'Экскаватор гусеничный VOLVO EC 240 LONG', href :'/technics/egusVOLVOEC240LOng.html'},
+  ];
+
+  var ekskKoles = [
+    {name: 'Экскаватор колёсный DOOSAN SOLAR 180', href :'/technics/ekolDoosan.html'},
+    {name: 'Экскаватор колёсный JCB JS200W', href :'/technics/ekolJCBJS200W.html'},
+    {name: 'Экскаватор колёсный VOLVO EW 160', href :'/technics/ekolVOLVOEW160.html'},
+  ];
+
+   var ekskPogr = [
+    {name: 'Экскаватор погрузчик TEREX TLB 825', href :'/technics/epogTLB825.html'},
+    {name: 'Экскаватор погрузчик JCB 4CX', href :'/technics/epogJSB4CX.html'},
+    {name: 'Экскаватор погрузчик TEREX 860', href :'/technics/epogTEREX860.html'},
+  ];
 
 
 
@@ -11,53 +77,22 @@ mixin collapse(id, head, title)
 #accordion(role='tablist', aria-multiselectable='true')
   .panel.panel-default
     #heading7.panel-heading(role='tab')
-      a.collapsed.list-group-item.my_btn(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+      a.collapsed.my_btn(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
         i.fa.fa-angle-down(aria-hidden='true')
     #collapse7.panel-collapse.my_dropdown.collapse(role='tabpanel', aria-labelledby='heading7')
+      +collapse('autokran', 'autokranHead', 'Автокраны', autokran)
+      +collapse('mnpltr', 'mnpltrHead', 'Манипуляторы', mnpltr)
+      +collapse('minPogruz', 'minHead', 'Мини-погрузчики', min)
+      +collapse('mine', 'mineHead', 'Мини-экскаваторы', mine)
+      +collapse('samosval', 'samosvalHead', 'Самосвалы', samosval)
+      +collapse('teleskPogr', 'teleskPogrHead', 'Телескопичеcкие погрузчики', teleskPogr)
+      +collapse('frontPogruz', 'frontPogruzHead', 'Фронтальные погрузчики', frontPogruz)
+      +collapse('ekskGusenich', 'ekskGusenichHead', 'Экскаваторы гусеничные', ekskGusenich)
+      +collapse('ekskKoles', 'ekskKolesHead', 'Экскаваторы колесные', ekskKoles)
+      +collapse('ekskPogr', 'ekskPogrHead', 'Экскаваторы погрузчики', ekskPogr)
       
 
-      +collapse('autokran', 'autokranHead', 'Автокраны')
-      +collapse('mnpltr', 'mnpltrHead', 'Манипуляторы')
-      +collapse('minPogruz', 'minPogruzHead', 'Мини-погрузчики')
-        //- a.dropdown-item(href='#') Ленточные пилы
-        //- a.dropdown-item(href='#') Токарные станки
-        //- a.dropdown-item(href='#') Токарно-фрезерные станки
-        //- a.dropdown-item(href='#') Фрезерные станки
-      +collapse('mine', 'mineHead', 'Мини-экскаваторы')
-      +collapse('samosval', 'samosvalHead', 'Самосвалы')
-      +collapse('teleskPogr', 'teleskPogrHead', 'Телескопические погрузчики')
-      +collapse('frontPogruz', 'frontPogruzHead', 'Фронтальные погрузчики')
-      +collapse('ekskGusenich', 'ekskGusenichHead', 'Экскаваторы гусеничные')
-      +collapse('ekskKoles', 'ekskKolesHead', 'Экскаваторы колесные')
-      +collapse('ekskPogr', 'ekskPogrHead', 'Экскаваторы погрузчики')
-      
-
-      
-
-      
-
-//- div.my_btn( data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample', aria-multiselectable="true")
-//- #collapseExample.collapse.my_dropdown
-//-   +dropdown('Автокраны', 'autokran')
-//-     #collapseTech.collapse.my_dropdown
-//-       +article('Автокраны', 'autokran', '/technics/atkrnKAMAZVEZDEHOD.html')
-//-       +article('Манипуляторы', 'mnpltr', '/technics/mnpltrHD78.html')
-//-       +article('Мини-погрузчики', 'minPogruz', '/technics/minPogruzWECAN800D.html')
-//-       +article('Мини-экскаваторы', 'mine', '/technics/mineKubota.html')
-//-       +article('Самосвалы', 'samosval', '/technics/smsvlKamaz6520.html')
-//-   +dropdown('Манипуляторы', 'mnpltr')
-//-   +dropdown('Мини-погрузчики', 'minPogruz')
-//-   +dropdown('Мини-экскаваторы', 'mine' )
-//-   +dropdown('Самосвалы', 'samosval' )
-//-   +dropdown('Телескопические погрузчики', 'teleskPogr' )
-//-   +dropdown('Фронтальные погрузчики', 'frontPogruz' )
-//-   +dropdown('Экскаваторы гусеничные', 'ekskGusenich')
-//-   +dropdown('Экскаваторы колесные', 'ekskKoles' )
-//-   +dropdown('Экскаваторы погрузчики', 'ekskPogr' )
-
-
-//-!!!!!!!!! пример https://jsfiddle.net/rh4o1kqy/
-
+    
 
 
   

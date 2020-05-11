@@ -250,43 +250,61 @@ $main-color: rgb(255, 198, 26);
     position: relative;
     .my_btn {
         position: absolute;
-        background: contain no-repeat url('../../build/img/Tilda_Icons_33_interior_list.webp');
-        top: 7px;
-        right: -20px;
-        padding: 5px;
-        color: black;
-        background-color: black;
-        width: 15px;
-        height: 15px;
-        font-size: 25px;
-        line-height: 0;
-        text-decoration: none;
+        top: 8px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        transform: rotate(45deg);
+        padding: 3px;
+        left: 115px;
         &:hover {
-            background: $main-color;
-    }
-    
-    }
+            border-color: $main-color;
+        }
+}
     .my_dropdown {
         padding: 0;
         box-sizing: border-box;
         position: absolute;
-        width: 300px;
         background-color: white;
         border: 1px solid $main-color;
+        width: 300px;
         border-radius: 5px;
         color: black;
         z-index: 100;
+        .panel-collapse {
+            // box-shadow: inset 0 0 4px grey;
+            background-color: #fafafa;
+        }
         .dropdown-item {
+            position: relative;
             color: black;
             text-transform: none;
             font-weight: 600;
-            line-height: 1.5;
+            font-size: 15px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: left;
+            padding: 8px 6px;
             &:hover {
                 background-color: $main-color;
             }
         }
+        .dropdown-child {
+            font-size: 14px;
+            text-align: left;
+            padding:6px 10px;
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: none;
+           
+        }
         .dropdown_active {
             background-color:$main-color; 
+        }
+        .dropdown_active-item {
+            text-decoration: underline; 
+            text-decoration-color: $main-color;
+            text-decoration-style: double;
         }
     }
  
@@ -387,6 +405,7 @@ $main-color: rgb(255, 198, 26);
     background-color: #FFC61A;
     min-height: 300px;
     position: relative;
+    z-index: 1;
    
     .request__successfull {
         margin-top: 90px;
@@ -810,6 +829,7 @@ $main-color: rgb(255, 198, 26);
         p a {
         font-size: 45px;
     }   
+  
 }
     .technic {
         .tech {
@@ -820,12 +840,16 @@ $main-color: rgb(255, 198, 26);
     }  
     }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header {
         .excavator {
             display: none;
         } 
+           
+     
     }
+
+    
     
     .request .request__form {
         margin-top: 0px;
@@ -836,6 +860,9 @@ $main-color: rgb(255, 198, 26);
         background-color:rgba(1,1,1,0.1);
         margin-top: 30px;
         border-radius: 50px;
+        .my_btn {
+            left: 292px;
+        }
     }
     .header .phone {
         margin-top: 80px;
@@ -874,6 +901,7 @@ $main-color: rgb(255, 198, 26);
     .maps {
         display: none;
     }
+   
 }
 
 @media (max-width: 600px) {
@@ -889,6 +917,8 @@ $main-color: rgb(255, 198, 26);
             font-size: 25px;
         }
     }
+
+
     .header .logo {
         text-align: center;
     }
@@ -900,10 +930,18 @@ $main-color: rgb(255, 198, 26);
         display: block;
         margin-bottom: 20px;
     }
+
+    
     }
 
 @media (max-width: 576px) {
-    
+
+.header .menu {
+    .my_btn {
+        left: 310px;
+    }
+}
+
 .header .info {
     text-align: center!important;
     .icon {
@@ -948,4 +986,61 @@ $main-color: rgb(255, 198, 26);
 }
 
 }
+
+
+@media (max-width: 510px) {
+
+    .header .menu {
+        .my_btn {
+            left: 265px;
+        }
+    }
+    }
+
+@media (max-width: 490px) {
+
+    .header .menu {
+        .my_btn {
+            left: 265px;
+        }
+    }
+    }
+
+@media (max-width: 450px) {
+
+    .header .menu {
+        .my_btn {
+            left: 235px;
+        }
+    }
+    }
+
+@media (max-width: 420px) {
+
+    .header .menu {
+        .my_btn {
+            left: 235px;
+        }
+    }
+    }
+
+@media (max-width: 376px) {
+
+    .header .menu {
+        .my_btn {
+            left: 210px;
+        }
+    }
+    }
+
+@media (max-width: 326px) {
+
+    .header .menu {
+        .my_btn {
+            left: 195px;
+        }
+    }
+    }
+
+    
 
