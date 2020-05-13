@@ -71,7 +71,59 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm logo"><a href="/" title="На главную"><img src="/build/img/logo_3.webp" width="100" alt="Лого Терекс-Плюс"><span class="logo_name">ТЕРЕКС-ПЛЮС  <span class="sub">Аренда Спецтехники в СПб</span></span></a></div>
-          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)989-03-32">8(812)989-03-32</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=">Написать в Whatsapp</a></div>
+          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)989-03-32">8(812)989-03-32</a>
+            <div class="icon icon-mail header_button" data-toggle="modal" data-target="#exampleModalCenter">Отправить заявку</div>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-warning">
+                    <h5 class="modal-title ml-auto text-uppercase" id="exampleModalLongTitle">Отправить заявку на аренду/подбор техники</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="request__form col-12" id="requestform" name="request_form">
+                      <fieldset>
+                        <legend></legend>
+                      </fieldset>
+                      <div class="form-row text-center">
+                        <div class="col-sm-6 user user__name">
+                          <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
+                        </div>
+                        <div class="col-sm-6 user user__phone">
+                          <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
+                        </div>
+                        <div class="col-sm-6 user user__technics">
+                          <input class="form-control" id="technics" type="text" list="airports" name="user_technics" value="Мини-погрузчик TAKEUCHI TL140" placeholder="Тип техники">
+                        </div>
+                        <datalist id="airports">
+                          <!-- Список предопределенных вариантов для ввода-->
+                          <option value="Автокран"></option>
+                          <option value="Манипулятор"></option>
+                          <option value="Мини-погрузчик"></option>
+                          <option value="Мини-экскаватор"></option>
+                          <option value="Самосвал"></option>
+                          <option value="Телескопический погрузчик"></option>
+                          <option value="Фронтальный погрузчик"></option>
+                          <option value="Экскаватор гусеничный"></option>
+                          <option value="Экскаватор колесный"></option>
+                          <option value="Экскаватор погрузчик"></option>
+                        </datalist>
+                        <div class="col-sm-6 user user__rent">
+                          <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды">
+                        </div>
+                        <p style="line-height:1; margin-top: 5px; font-size: 10px;">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
+                        <div class="error col" id="error" style="line-height:1; color:red;"></div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Закрыть</button>
+                    <button class="btn btn-primary" id="sendMail" type="button">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="col-12 text-center">

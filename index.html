@@ -71,7 +71,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm logo"><img src="build/img/logo_3.webp" width="100" alt="Аренда спецтехники в Сакт-Петербурге"><span class="logo_name">ТЕРЕКС-ПЛЮС  <span class="sub">Аренда Спецтехники в СПб</span></span></div>
-          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)989-03-32">8(812)989-03-32</a><a class="icon icon-mail" href="mailto:info@terex-plus.ru">info@terex-plus.ru</a><a class="icon icon-telegram" href="tg://resolve?domain=SSaramud">Написать в Telegram</a><a class="icon icon-whatsapp" href="https://wa.me/79681938577?text=.">Написать в Whatsapp</a></div>
+          <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)989-03-32">8(812)989-03-32</a>
+            <div class="icon icon-mail header_button indexPage" href="#requestform">Отправить заявку</div>
+          </div>
         </div>
         <div class="row">
           <div class="col-12 text-center">
@@ -132,48 +134,6 @@
         </div>
       </div>
     </header>
-    <section class="request">
-      <div class="container">
-        <div class="row"></div>
-        <div class="row">
-          <form class="request__form col-12" id="requestform" name="request_form">
-            <fieldset>
-              <h2 class="legend">Отправить заявку на аренду/подбор техники</h2>
-            </fieldset>
-            <div class="form-row text-center">
-              <div class="col-sm-6 user user__name">
-                <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
-              </div>
-              <div class="col-sm-6 user user__phone">
-                <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" maxlength="12">
-              </div>
-              <div class="col-sm-6 user user__technics">
-                <input class="form-control" id="technics" type="text" list="airports" name="user_technics" placeholder="Тип техники">
-              </div>
-              <datalist id="airports">
-                <!-- Список предопределенных вариантов для ввода-->
-                <option value="Автокран"></option>
-                <option value="Манипулятор"></option>
-                <option value="Мини-погрузчик"></option>
-                <option value="Мини-экскаватор"></option>
-                <option value="Самосвал"></option>
-                <option value="Телескопический погрузчик"></option>
-                <option value="Фронтальный погрузчик"></option>
-                <option value="Экскаватор гусеничный"></option>
-                <option value="Экскаватор колесный"></option>
-                <option value="Экскаватор погрузчик"></option>
-              </datalist>
-              <div class="col-sm-6 user user__rent">
-                <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды">
-              </div>
-              <p class="warning col-12">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
-              <button class="btn btn-primary col-lg-2 col-sm-4" id="sendMail" type="submit">Отправить</button>
-              <div class="error col" id="error"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
     <section class="technics">
       <div class="container">
         <div class="row text-center">
@@ -184,16 +144,16 @@
         <div class="row text-center">
           <div class="techics__menu col-12">
             <ul class="technics__menu">
-              <li class="btn btn-info techs" id="autokran">Автокраны</li>
-              <li class="btn btn-info techs" id="mnpltr">Манипуляторы</li>
-              <li class="btn btn-info techs" id="minPogruz">Мини-погрузчики</li>
-              <li class="btn btn-info techs" id="mine">Мини-экскаваторы</li>
-              <li class="btn btn-info techs" id="samosval">Самосвалы</li>
-              <li class="btn btn-info techs" id="teleskPogr">Телескопические погрузчики</li>
-              <li class="btn btn-info techs" id="frontPogruz">Фронтальные погрузчики</li>
-              <li class="btn btn-info techs" id="ekskGusenich">Экскаваторы Гусеничные</li>
-              <li class="btn btn-info techs" id="ekskKoles">Экскаваторы Колесные</li>
-              <li class="btn btn-info techs" id="ekskPogr">Экскаваторы Погрузчики</li>
+              <li class="btn techs" id="autokran">Автокраны</li>
+              <li class="btn techs" id="mnpltr">Манипуляторы</li>
+              <li class="btn techs" id="minPogruz">Мини-погрузчики</li>
+              <li class="btn techs" id="mine">Мини-экскаваторы</li>
+              <li class="btn techs" id="samosval">Самосвалы</li>
+              <li class="btn techs" id="teleskPogr">Телескопические погрузчики</li>
+              <li class="btn techs" id="frontPogruz">Фронтальные погрузчики</li>
+              <li class="btn techs" id="ekskGusenich">Экскаваторы Гусеничные</li>
+              <li class="btn techs" id="ekskKoles">Экскаваторы Колесные</li>
+              <li class="btn techs" id="ekskPogr">Экскаваторы Погрузчики</li>
             </ul>
           </div>
         </div>
@@ -226,6 +186,48 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="request">
+      <div class="container">
+        <div class="row">  </div>
+        <div class="row">
+          <form class="request__form col-12" id="requestform" name="request_form">
+            <fieldset>
+              <h2 class="legend">Отправить заявку на аренду/подбор техники</h2>
+            </fieldset>
+            <div class="form-row text-center">
+              <div class="col-sm-6 user user__name">
+                <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
+              </div>
+              <div class="col-sm-6 user user__phone">
+                <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" maxlength="12">
+              </div>
+              <div class="col-sm-6 user user__technics">
+                <input class="form-control" id="technics" type="text" list="airports" name="user_technics" placeholder="Тип техники">
+              </div>
+              <datalist id="airports">
+                <!-- Список предопределенных вариантов для ввода-->
+                <option value="Автокран"></option>
+                <option value="Манипулятор"></option>
+                <option value="Мини-погрузчик"></option>
+                <option value="Мини-экскаватор"></option>
+                <option value="Самосвал"></option>
+                <option value="Телескопический погрузчик"></option>
+                <option value="Фронтальный погрузчик"></option>
+                <option value="Экскаватор гусеничный"></option>
+                <option value="Экскаватор колесный"></option>
+                <option value="Экскаватор погрузчик"></option>
+              </datalist>
+              <div class="col-sm-6 user user__rent">
+                <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды (количество смен)">
+              </div>
+              <p class="warning col-12">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
+              <button class="btn col-lg-2 col-sm-4" id="sendMail" type="submit">Отправить</button>
+              <div class="error col" id="error"></div>
+            </div>
+          </form>
         </div>
       </div>
     </section>

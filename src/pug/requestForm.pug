@@ -29,8 +29,8 @@ form#requestform.request__form.col-12(name="request_form")
                 option(value="Экскаватор колесный")
                 option(value="Экскаватор погрузчик")
               .col-sm-6.user.user__rent
-                input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
+                input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды (количество смен)")
               p.warning.col-12
                 | Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
-              button#sendMail.btn.btn-primary.col-lg-2.col-sm-4(type="submit") Отправить
+              button#sendMail.btn.col-lg-2.col-sm-4(type="submit") Отправить
               #error.error.col

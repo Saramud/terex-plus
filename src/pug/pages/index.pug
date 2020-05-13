@@ -15,9 +15,10 @@ html(lang="ru")
               span.sub Аренда Спецтехники в СПб
           .col-sm.info.text-right
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
-            a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
-            a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
-            a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=.") Написать в Whatsapp
+            div.icon.icon-mail.header_button.indexPage(href='#requestform') Отправить заявку
+            //- a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
+            //- a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
+            //- a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=.") Написать в Whatsapp
         .row
           .col-12.text-center
             nav
@@ -38,12 +39,7 @@ html(lang="ru")
               a(href="tel:+7(812)989-03-32") 8(812)989-03-32
             .col-lg-12
               img.excavator(src="/build/img/terex.webp" width="800" alt="Экскаватор в аренду")
-    section.request
-      .container
-        .row
-          
-        .row
-          include ../requestForm
+    
     section.technics
       .container
         .row.text-center
@@ -52,16 +48,16 @@ html(lang="ru")
         .row.text-center
           .techics__menu.col-12
             ul.technics__menu
-              li#autokran.btn.btn-info.techs Автокраны
-              li#mnpltr.btn.btn-info.techs Манипуляторы
-              li#minPogruz.btn.btn-info.techs Мини-погрузчики
-              li#mine.btn.btn-info.techs Мини-экскаваторы
-              li#samosval.btn.btn-info.techs Самосвалы
-              li#teleskPogr.btn.btn-info.techs Телескопические погрузчики
-              li#frontPogruz.btn.btn-info.techs Фронтальные погрузчики
-              li#ekskGusenich.btn.btn-info.techs Экскаваторы Гусеничные
-              li#ekskKoles.btn.btn-info.techs Экскаваторы Колесные
-              li#ekskPogr.btn.btn-info.techs Экскаваторы Погрузчики
+              li#autokran.btn.techs Автокраны
+              li#mnpltr.btn.techs Манипуляторы
+              li#minPogruz.btn.techs Мини-погрузчики
+              li#mine.btn.techs Мини-экскаваторы
+              li#samosval.btn.techs Самосвалы
+              li#teleskPogr.btn.techs Телескопические погрузчики
+              li#frontPogruz.btn.techs Фронтальные погрузчики
+              li#ekskGusenich.btn.techs Экскаваторы Гусеничные
+              li#ekskKoles.btn.techs Экскаваторы Колесные
+              li#ekskPogr.btn.techs Экскаваторы Погрузчики
               
         .row.justify-content-center
           .technics__menu-items.text-center
@@ -110,5 +106,10 @@ html(lang="ru")
                 li 
                   img(src="build/img/Tilda_Icons_3st_discount2.webp" alt = "Скидка на второй заказ")
                   b|скидка на второй заказ
+    section.request
+      .container
+        .row   
+        .row
+          include ../requestForm
     include ../footer
     script(src="build/js/all.js" async)
