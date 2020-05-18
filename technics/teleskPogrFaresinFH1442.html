@@ -77,7 +77,7 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header bg-warning">
-                    <h5 class="modal-title ml-auto text-uppercase" id="exampleModalLongTitle">Отправить заявку на аренду/подбор техники</h5>
+                    <h5 class="modal-title ml-auto font-weight-bold" id="exampleModalLongTitle">Отправить заявку</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                   </div>
                   <div class="modal-body">
@@ -86,13 +86,13 @@
                         <legend></legend>
                       </fieldset>
                       <div class="form-row text-center">
-                        <div class="col-sm-6 user user__name">
+                        <div class="col-sm-12 user user__name">
                           <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
                         </div>
-                        <div class="col-sm-6 user user__phone">
+                        <div class="col-sm-12 user user__phone">
                           <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
                         </div>
-                        <div class="col-sm-6 user user__technics">
+                        <div class="col-sm-12 user user__technics">
                           <input class="form-control" id="technics" type="text" list="airports" name="user_technics" value="Телескопический погрузчик FARESIN FH 14.42" placeholder="Тип техники">
                         </div>
                         <datalist id="airports">
@@ -108,8 +108,8 @@
                           <option value="Экскаватор колесный"></option>
                           <option value="Экскаватор погрузчик"></option>
                         </datalist>
-                        <div class="col-sm-6 user user__rent">
-                          <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды">
+                        <div class="col-sm-12 user user__rent">
+                          <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды (количество смен)">
                         </div>
                         <p style="line-height:1; margin-top: 5px; font-size: 10px;">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
                         <div class="error col" id="error" style="line-height:1; color:red;"></div>
@@ -117,8 +117,7 @@
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Закрыть</button>
-                    <button class="btn btn-primary" id="sendMail" type="button">Отправить</button>
+                    <button class="btn btn_modal text-left" id="sendMail" type="button">Отправить</button>
                   </div>
                 </div>
               </div>
@@ -218,7 +217,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header bg-warning">
-                      <h5 class="modal-title ml-auto text-uppercase" id="exampleModalLongTitle">Отправить заявку на аренду/подбор техники</h5>
+                      <h5 class="modal-title ml-auto font-weight-bold" id="exampleModalLongTitle">Отправить заявку</h5>
                       <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
@@ -227,13 +226,13 @@
                           <legend></legend>
                         </fieldset>
                         <div class="form-row text-center">
-                          <div class="col-sm-6 user user__name">
+                          <div class="col-sm-12 user user__name">
                             <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
                           </div>
-                          <div class="col-sm-6 user user__phone">
+                          <div class="col-sm-12 user user__phone">
                             <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
                           </div>
-                          <div class="col-sm-6 user user__technics">
+                          <div class="col-sm-12 user user__technics">
                             <input class="form-control" id="technics" type="text" list="airports" name="user_technics" value="Телескопический погрузчик FARESIN FH 14.42" placeholder="Тип техники">
                           </div>
                           <datalist id="airports">
@@ -249,8 +248,8 @@
                             <option value="Экскаватор колесный"></option>
                             <option value="Экскаватор погрузчик"></option>
                           </datalist>
-                          <div class="col-sm-6 user user__rent">
-                            <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды">
+                          <div class="col-sm-12 user user__rent">
+                            <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды (количество смен)">
                           </div>
                           <p style="line-height:1; margin-top: 5px; font-size: 10px;">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
                           <div class="error col" id="error" style="line-height:1; color:red;"></div>
@@ -258,8 +257,7 @@
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Закрыть</button>
-                      <button class="btn btn-primary" id="sendMail" type="button">Отправить</button>
+                      <button class="btn btn_modal text-left" id="sendMail" type="button">Отправить</button>
                     </div>
                   </div>
                 </div>

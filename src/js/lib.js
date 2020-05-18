@@ -53,7 +53,7 @@ $("#sendMail").on("click", function(){
         e.preventDefault();
         let t = 1000;
         let d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $("#sendMail").css( "animation", "blink 0.7s ease-in-out 3" );
+        $("#sendMail").css("animation", "blink 0.7s ease-in-out 3");
         $('html,body').stop().animate({ scrollTop: $(d).offset().top -300 }, t);
     });
 

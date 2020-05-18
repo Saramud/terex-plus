@@ -144,44 +144,44 @@
     font-style: normal;
     font-display: block;
 }
-/*Скроллбар */
-::-webkit-scrollbar-button {
-    background-image:url('');
-    background-repeat:no-repeat;
-    width:6px;
-    height:0px
-    }
+// /*Скроллбар */
+// ::-webkit-scrollbar-button {
+//     background-image:url('');
+//     background-repeat:no-repeat;
+//     width:6px;
+//     height:0px
+//     }
     
-    ::-webkit-scrollbar-track {
-    background-color:#32312e;
-    box-shadow:0px 0px 3px #000 inset;
-    }
+//     ::-webkit-scrollbar-track {
+//     background-color:#32312e;
+//     box-shadow:0px 0px 3px #000 inset;
+//     }
     
-    ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color:#ffcb17;
-    box-shadow:0px 1px 1px #fff inset;
-    background-position:center;
-    background-repeat:no-repeat;
-    }
+//     ::-webkit-scrollbar-thumb {
+//     -webkit-border-radius: 5px;
+//     border-radius: 5px;
+//     background-color:#ffcb17;
+//     box-shadow:0px 1px 1px #fff inset;
+//     background-position:center;
+//     background-repeat:no-repeat;
+//     }
     
-    ::-webkit-resizer{
-    background-image:url('');
-    background-repeat:no-repeat;
-    width:7px;
-    height:0px
-    }
+//     ::-webkit-resizer{
+//     background-image:url('');
+//     background-repeat:no-repeat;
+//     width:7px;
+//     height:0px
+//     }
     
-    ::-webkit-scrollbar{
-    width: 11px;
-    }
+//     ::-webkit-scrollbar{
+//     width: 11px;
+//     }
 
 
 /* Спецификация */
 * {
     font-family: 'Fira Sans Condensed', sans serif; 
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 $main-color: rgb(255, 198, 26);
@@ -448,6 +448,7 @@ $main-color: rgb(255, 198, 26);
             text-transform: uppercase;
             background-color: white;
             border: 2px solid black;
+            border-radius: 0;
             font-weight: 600;
             font-size: 15px;
             &:hover {
@@ -492,9 +493,9 @@ $main-color: rgb(255, 198, 26);
 }
 
 @keyframes blink {
-    50% { background-color: rgb(0, 48, 100); }
-    51% { background-color: rgb(40, 167, 69); border-color: rgb(40, 167, 69); }
-    100% { background-color: rgb(0, 48, 100); }
+    50% { background-color: rgb(129, 127, 124); }
+    51% { background-color: rgb(154, 156, 155); border-color: rgb(74, 75, 74); }
+    100% { background-color: rgb(92, 92, 92); }
 }
 
 /*Каталог техники */
@@ -502,6 +503,7 @@ $main-color: rgb(255, 198, 26);
 
 .technics {
     min-height: 800px;
+    // box-shadow: inset 0px -9px 4px -1px rgb(214, 214, 214);
     a {
         text-decoration: none;
         color: white;
@@ -594,6 +596,7 @@ $main-color: rgb(255, 198, 26);
 
 .information {
     position: relative;
+    // box-shadow: inset 0px -9px 4px -1px rgb(161, 161, 161);
     .logo-rotate {
         position: absolute;
         bottom: 0;
@@ -605,7 +608,7 @@ $main-color: rgb(255, 198, 26);
     }
     min-height: 500px;
     background-color: rgb(189, 189, 189);
-    box-shadow: inset 0px -9px 4px -1px rgba(163,163,163,1);
+    // box-shadow: inset 0px -9px 4px -1px rgba(163,163,163,1);
     .info__title {
         font-size: 30px;
         font-weight: 600;
@@ -617,7 +620,7 @@ $main-color: rgb(255, 198, 26);
         line-height: 1.8;
         text-align: left;
     }
-    .test {
+    .prop {
         h4 {
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -626,7 +629,6 @@ $main-color: rgb(255, 198, 26);
             
             display: flex;
             flex-wrap: wrap;
-
             list-style: none;
             font-size: 18px;
             padding: 0;
@@ -634,25 +636,55 @@ $main-color: rgb(255, 198, 26);
                     display: flex;
                     align-items: center;
                     flex: 3 1 400px;
+                    .text-change {
+                    .second {
+                        display: none;
+                    }
                     &:hover img {
                         background-color: white;
+                        border: 3px solid $main-color;
                         transform: rotateY(180deg);
+                        transition: all 0.6s;
+                    }
+                    &:hover .first{
+                        display: none;
+                    }
+                    &:hover .second{
+                        display: inline;
                     }
                     
                     img {  
+                        position: relative;
                         width: 70px;
                         margin: 10px;
                         padding: 10px;
-                        border: 5px solid $main-color;
+                        border: 1px solid black;
                         border-radius: 20%;
                         background-color: $main-color;
-                        &:hover {
-                            transform: rotateY(180deg);
-                        }
+                       
                     }
             }
         }
+        }
 }
+}
+
+.information-second {
+    position: relative;
+    min-height: 500px;
+    background-color: white;
+    // box-shadow: inset 0px -9px 4px -1px rgb(226, 226, 226);
+    .info__title {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 50px;
+        border-bottom: 1px solid black;
+    }
+    .advantages {
+        line-height: 1.8;
+        text-align: left;
+    }
 }
 
 /*Footer*/
@@ -683,7 +715,19 @@ $main-color: rgb(255, 198, 26);
             color:rgb(139, 108, 12);
             }    
             }
+
+            .footer_button {
+                background-color: rgb(255, 198, 26);
+                display: inline-block;
+                cursor: pointer;
+                margin-top: 5px;
+                box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.75) 0px 0px 0px 1px inset;
+                color: rgb(0, 0, 0) !important;
+                padding: 2px 10px;
+                border-radius: 1px;
+            }
         }
+        
     } 
 }
     .footer__contact {
@@ -892,12 +936,7 @@ $main-color: rgb(255, 198, 26);
         .excavator {
             display: none;
         } 
-           
-     
     }
-
-    
-    
     .request .request__form {
         margin-top: 10px;
     }
@@ -906,7 +945,7 @@ $main-color: rgb(255, 198, 26);
         display: block;
         background-color:rgba(1,1,1,0.1);
         margin-top: 30px;
-        border-radius: 50px;
+       
         .my_btn {
             left: 292px;
         }

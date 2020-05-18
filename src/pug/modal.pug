@@ -2,7 +2,7 @@
                 .modal-dialog.modal-dialog-centered(role="document")
                   .modal-content
                     .modal-header.bg-warning
-                      h5#exampleModalLongTitle.modal-title.ml-auto.text-uppercase Отправить заявку на аренду/подбор техники
+                      h5#exampleModalLongTitle.modal-title.ml-auto.font-weight-bold Отправить заявку
                       button.close(type="button" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true") ×
                     .modal-body
@@ -10,11 +10,11 @@
                         fieldset
                           legend
                         .form-row.text-center
-                          .col-sm-6.user.user__name
+                          .col-sm-12.user.user__name
                             input#name.form-control(type="text" name="user_name" placeholder="Ваше имя")
-                          .col-sm-6.user.user__phone
+                          .col-sm-12.user.user__phone
                             input#phone.form-control(type="tel" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12")
-                          .col-sm-6.user.user__technics
+                          .col-sm-12.user.user__technics
                             if(subPage)
                               input#technics.form-control(type="text" list="airports" name="user_technics" value=`${subPage}` placeholder="Тип техники")
                             else
@@ -31,12 +31,11 @@
                             option(value="Экскаватор гусеничный")
                             option(value="Экскаватор колесный")
                             option(value="Экскаватор погрузчик")
-                          .col-sm-6.user.user__rent
-                            input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды")
+                          .col-sm-12.user.user__rent
+                            input#rent.form-control(type="text" name="user_rent" placeholder="Срок аренды (количество смен)")
                           p(style="line-height:1; margin-top: 5px; font-size: 10px;")
                             | Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
                           #error.error.col(style="line-height:1; color:red;")
                      
                     .modal-footer
-                      button.btn.btn-secondary(type="button" data-dismiss="modal") Закрыть
-                      button#sendMail.btn.btn-primary(type="button") Отправить
+                      button#sendMail.btn.btn_modal.text-left(type="button") Отправить
