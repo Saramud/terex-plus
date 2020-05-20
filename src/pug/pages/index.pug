@@ -71,40 +71,52 @@ html(lang="ru")
               ul.advantages_list.text-left
                 li 
                   div.text-change
-                    img(src="build/img/Tilda_Icons_3st_van.webp" alt="Большой выбор техники")
-                    b.first|большой выбор техники
-                    b.second|большой выбор техники !!!!!! 
+                    div
+                      img(src="build/img/Tilda_Icons_3st_van.webp" alt="Большой выбор техники")
+                    div  
+                      b.first|большой выбор техники
+                      b.second|от мини-погрузчиков до самосвалов большетонников
                 li  
                   div.text-change
-                    img(src="build/img/Tilda_Icons_19ad_social_networks.webp" alt="Исправная техника") 
-                    b.first|100% исправную выбранную Вами модель спецтехники
-                    b.second|большой выбор техники !!!!!!
+                    div
+                      img(src="build/img/Tilda_Icons_19ad_social_networks.webp" alt="Исправная техника") 
+                    div  
+                      b.first|100% исправную выбранную Вами модель спецтехники
+                      b.second|у нас работают квалифицированные механики, ежедневно поддерживающие технику
                 li
                   div.text-change
-                    img(src="build/img/Tilda_Icons_31_format_doc.webp" alt="Договор сотрудничества" )
-                    b.first|официальный договор сотрудничества
-                    b.second|большой выбор техники !!!!!!
+                    div
+                      img(src="build/img/Tilda_Icons_31_format_doc.webp" alt="Договор сотрудничества" )
+                    div
+                      b.first|официальный договор сотрудничества
+                      b.second|договор - гарантия того, что будут выполнены все обязательства
                 li
                   div.text-change 
-                    img(src="build/img/Tilda_Icons_11mu_calendar.webp" alt="Любой срок аренды")
-                    b.first|любой срок аренды
-                    b.second|большой выбор техники !!!!!!
+                    div
+                      img(src="build/img/Tilda_Icons_11mu_calendar.webp" alt="Любой срок аренды")
+                    div  
+                      b.first|любой срок аренды
+                      b.second|от одной смены до постоянного сотрудничества
                 li
                   div.text-change
-                    img(src="build/img/Tilda_Icons_32_profession_builder.webp" alt ="Оператор техники")
-                    b.first|профессионального оператора техники
-                    b.second|большой выбор техники !!!!!!
+                    div
+                      img(src="build/img/Tilda_Icons_32_profession_builder.webp" alt ="Оператор техники")
+                    div  
+                      b.first|профессионального оператора техники
+                      b.second|в нашем штате трудятся профессиональные специалисты, имеющие за плечами большой опыт
                 li
                   div.text-change 
-                    img(src="build/img/Tilda_Icons_3st_discount2.webp" alt = "Скидка на второй заказ")
-                    b.first|скидку на второй заказ
-                    b.second|большой выбор техники !!!!!!
+                    div
+                      img(src="build/img/Tilda_Icons_3st_discount2.webp" alt = "Скидка на второй заказ")
+                    div  
+                      b.first|скидку на второй заказ
+                      b.second|да-да! вы помогаете нам развиваться заказывая у нас технику, мы вам дарим скидку!
     section.information-second
       .container
         .row.text-center
           .col
-            h2.info__title С НАМИ ВЫГОДНО СОТРУДНИЧАТЬ
-            p.advantages
+            h2.info__title СОТРУДНИЧАТЬ С НАМИ ВЫГОДНО!
+            p.advantages.text-justify
               | На сегодняшний день 
               strong
               |аренда спецтехники в СПб
@@ -122,6 +134,10 @@ html(lang="ru")
               strong
               br
               br
+              div.embed-responsive.embed-responsive-16by9.col-lg-6.video
+                video(width='400', height='300', controls='controls' poster='/build/img/preload.webp')
+                  source(src="/video/terex-plus.mp4" type='video/mp4')
+
     section.request
       .container
         .row   

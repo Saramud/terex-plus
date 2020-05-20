@@ -637,6 +637,8 @@ $main-color: rgb(255, 198, 26);
                     align-items: center;
                     flex: 3 1 400px;
                     .text-change {
+                        display: flex;
+                        align-items: center;
                     .second {
                         display: none;
                     }
@@ -685,6 +687,10 @@ $main-color: rgb(255, 198, 26);
         line-height: 1.8;
         text-align: left;
     }
+     .video {
+       margin: auto!important;
+    }
+    
 }
 
 /*Footer*/
