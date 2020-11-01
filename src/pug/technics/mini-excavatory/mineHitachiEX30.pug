@@ -1,0 +1,22 @@
+
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Мини-экскаватор HITACHI EX30 UR2', value = "Спецтехника", name = 'mineHitachiEX30', identifikator = 'mineM', modalHidden = true;
+- var descr = 'Нужна спецтехника, но рабочее пространство ограничено? Аренда мини-экскаватора HITACHI EX30 UR2 в "Терекс-Плюс" является отличным решением. Данный мини-экскаватора HITACHI EX30 UR2 может потребоваться при большинстве видов землеройных работ. Арендовать этот мини-экскаватор можно у нас от 10000р. за смену.';
+- var image = 'https://terex-plus.ru/build/img/' + name + '.webp';
+- var keyWords = 'мини-экскаватор хитачи в аренду,мини-экскаватор hitachi аренда';
+
+doctype html
+html(lang="ru")
+    include ../../head
+    body
+      include ../../header
+      include ../../strip
+      include ../../technic
+      include ../../footer
+      script(src="../../build/js/all.js")

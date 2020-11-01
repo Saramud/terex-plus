@@ -72,56 +72,6 @@
         <div class="row align-items-center">
           <div class="col-sm logo"><a href="/" title="На главную"><img src="/build/img/logo_3.webp" width="100" alt="Лого Терекс-Плюс"><span class="logo_name">ТЕРЕКС-ПЛЮС  <span class="sub">Аренда Спецтехники в СПб</span></span></a></div>
           <div class="col-sm info text-right"><a class="icon icon-phone" href="tel:8(812)989-03-32">8(812)989-03-32</a>
-            <div class="icon icon-mail header_button" data-toggle="modal" data-target="#exampleModalCenter">Отправить заявку</div>
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header bg-warning">
-                    <h5 class="modal-title ml-auto font-weight-bold" id="exampleModalLongTitle">Отправить заявку</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="request__form col-12" id="requestform" name="request_form">
-                      <fieldset>
-                        <legend></legend>
-                      </fieldset>
-                      <div class="form-row text-center">
-                        <div class="col-sm-12 user user__name">
-                          <input class="form-control" id="name" type="text" name="user_name" placeholder="Ваше имя">
-                        </div>
-                        <div class="col-sm-12 user user__phone">
-                          <input class="form-control" id="phone" type="tel" name="user_phone" placeholder="+7(999)999-99-99" value="+7" maxlength="12">
-                        </div>
-                        <div class="col-sm-12 user user__technics">
-                          <input class="form-control" id="technics" type="text" list="airports" name="user_technics" placeholder="Тип техники">
-                        </div>
-                        <datalist id="airports">
-                          <!-- Список предопределенных вариантов для ввода-->
-                          <option value="Автокран"></option>
-                          <option value="Манипулятор"></option>
-                          <option value="Мини-погрузчик"></option>
-                          <option value="Мини-экскаватор"></option>
-                          <option value="Самосвал"></option>
-                          <option value="Телескопический погрузчик"></option>
-                          <option value="Фронтальный погрузчик"></option>
-                          <option value="Экскаватор гусеничный"></option>
-                          <option value="Экскаватор колесный"></option>
-                          <option value="Экскаватор погрузчик"></option>
-                        </datalist>
-                        <div class="col-sm-12 user user__rent">
-                          <input class="form-control" id="rent" type="text" name="user_rent" placeholder="Срок аренды (количество смен)">
-                        </div>
-                        <p style="line-height:1; margin-top: 5px; font-size: 10px;">Нажимая кнопку "Отправить", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.</p>
-                        <div class="error col" id="error" style="line-height:1; color:red;"></div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn btn_modal text-left" id="sendMail" type="button">Отправить</button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="row">
@@ -135,7 +85,7 @@
                       <div class="panel-heading" id="heading7" role="tab"><a class="collapsed my_btn" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
                       <div class="panel-collapse my_dropdown collapse" id="collapse7" role="tabpanel" aria-labelledby="heading7">
                                           <div class="panel-heading" id="autokranHead" role="tab"><a class="collapsed dropdown-item" data-toggle="collapse" data-parent="#autokranHead" href="#autokran" aria-expanded="false" aria-controls="autokran">Автокраны<i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-                                          <div class="panel-collapse collapse" id="autokran" role="tabpanel" aria-labelledby="autokranHead"><a class="dropdown-item dropdown-child" href="/technics/atkrnKAMAZVEZDEHOD.html">Автокран КАМАЗ "Галичанин" 25 тонн</a><a class="dropdown-item dropdown-child" href="/technics/atkrnMaz.html">Автокран МАЗ 14 тонн</a><a class="dropdown-item dropdown-child" href="/technics/atkrURAL55733.html">Автокран ЧЕЛЯБИНЕЦ 32 тонны</a><a class="dropdown-item dropdown-child" href="/technics/atkrKAMAZ65115.html">Автокран КАМАЗ-65115 "КЛИНЦЫ" 25 ТОНН</a><a class="dropdown-item dropdown-child" href="/technics/atkrKAMAZ63501.html">Автокран КАМАЗ-63501 "КЛИНЦЫ" 40 ТОНН</a>
+                                          <div class="panel-collapse collapse" id="autokran" role="tabpanel" aria-labelledby="autokranHead"><a class="dropdown-item dropdown-child" href="/autokrans.html">Автокран КАМАЗ "Галичанин" 25 тонн</a>
                                           </div>
                                           <div class="panel-heading" id="mnpltrHead" role="tab"><a class="collapsed dropdown-item" data-toggle="collapse" data-parent="#mnpltrHead" href="#mnpltr" aria-expanded="false" aria-controls="mnpltr">Манипуляторы<i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
                                           <div class="panel-collapse collapse" id="mnpltr" role="tabpanel" aria-labelledby="mnpltrHead"><a class="dropdown-item dropdown-child" href="/technics/mnpltrHD78.html">Манипулятор Hyundai HD 78</a><a class="dropdown-item dropdown-child" href="/technics/mnpltrHD120.html">Манипулятор Hyundai HD 120</a><a class="dropdown-item dropdown-child" href="/technics/mnpltrKamaz.html">Манипулятор КАМАЗ</a>
@@ -246,7 +196,7 @@
             <div class="footer__reference"> 
               <h4>ТЕРЕКС-ПЛЮС       </h4>
               <h5 class="text-white">аренда спецтехники в СПБ</h5>
-              <div class="col-sm logo"><img src="/build/img/logo_3.webp" width="100" alt="Аренда спецтехники в Сакт-Петербурге"></div>
+              <div class="col-sm logo"><a href="/" title="На главную"><img src="/build/img/logo_3.webp" width="100" alt="Аренда спецтехники в Сакт-Петербурге"></a></div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 order-sm-1">

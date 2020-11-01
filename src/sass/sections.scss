@@ -141,9 +141,9 @@ $main-color: rgb(255, 198, 26);
         .request__form {
             button {
                 background-color: $main-color;
-                border-radius: 20px;
                 text-transform: uppercase;
                 font-weight: 600;
+                box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px rgba(0,0,0,.75);
                 font-size: 18px;
                 height: 50px;
                 &:hover {

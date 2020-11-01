@@ -1,0 +1,24 @@
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Манипулятор Hyundai HD 78', value = "Спецтехника", name = 'mnpltrHD78', identifikator = 'mnpltrM', modalHidden = true;
+- var descr = 'Манипулятор Hyundai HD 78 сочетает в себе достоинства бортового авто с низкой платформой. Аренда манипулятора c грузоподъемностью стрелы 2 тонны HYUNDAI HD-170 – это выгодно. Отдаём в аренду от 7400 за смену.' ;
+- var image = 'https://terex-plus.ru/build/img/' + name + '.webp';
+- var keyWords = 'Аренда манипулятора 3 тонны Hyundai HD 78,Аренда манипулятора 3 тонны Hyundai HD 78 в Санкт-Петербурге, Аренда манипулятора 3 тонны Hyundai HD 78';
+
+
+
+
+doctype html
+html(lang="ru")
+    include ../../head
+    body
+      include ../../header
+      include ../../strip
+      include ../../technic
+      include ../../footer
+      script(src="../../build/js/all.js")

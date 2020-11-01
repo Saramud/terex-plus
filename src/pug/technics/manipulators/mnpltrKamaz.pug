@@ -1,0 +1,25 @@
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Манипулятор КАМАЗ', value = "Спецтехника", name = 'mnpltrKamaz', identifikator = 'mnpltrM', modalHidden = true;
+- var descr = 'Нужна универсальная техника? Арендовав манипулятор КАМАЗ с грузоподъемностью борта 12 тонн и грузоподъемностью стрелы 7 тонн вы получите то что нужно. "Терекс-Плюс" предостваляет услугу аренды манипулятора КАМАЗ от 11600р. за смену.';
+- var image = 'https://terex-plus.ru/build/img/' + name + '.webp';
+- var keyWords = 'Аренда манипулятора 10 тонн КАМАЗ, Аренда манипулятора 10 тонн КАМАЗ в Санкт-Петербурге, Аренда манипулятора 10 тонн КАМАЗ';
+
+
+
+
+
+doctype html
+html(lang="ru")
+    include ../../head
+    body
+      include ../../header
+      include ../../strip
+      include ../../technic
+      include ../../footer
+      script(src="../../build/js/all.js")

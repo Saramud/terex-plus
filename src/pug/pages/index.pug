@@ -1,6 +1,6 @@
 - var requestText = 'Отправить заявку на аренду/подбор техники', widthIcon = 65, title = 'Аренда спецтехники в Санкт-Петербурге Терекс-Плюс', descr = "На нашем сайте по аренде спецтехники компании 'Терекс-Плюс' представлен большой выбор техники от мини-погрузчиков до автокранов 40 тонн. Если не нашли нужную Вам технику в общем каталоге - воспользуйтесь нашей удобной формой для отправки заявки!";
 - var page = 'index', keyWords = 'аренда спецтехники, аренда строительной техники, спецтехника в аренду, аренда дорожной техники, аренда спецтехники в Санкт-Петербурге, аренда гусеничного экскаватора';
-- index = true;
+- var index = true;
 doctype html
 html(lang="ru")
   include ../head
@@ -44,20 +44,20 @@ html(lang="ru")
       .container
         .row.text-center
           .col-sm
-            h2.technics__title Каталог спецтехники
+            h2.technics__title#mainPageCatalog Каталог спецтехники
         .row.text-center
           .techics__menu.col-12
             ul.technics__menu
-              li#autokran.btn.techs Автокраны
-              li#mnpltr.btn.techs Манипуляторы
-              li#minPogruz.btn.techs Мини-погрузчики
-              li#mine.btn.techs Мини-экскаваторы
-              li#samosval.btn.techs Самосвалы
-              li#teleskPogr.btn.techs Телескопические погрузчики
-              li#frontPogruz.btn.techs Фронтальные погрузчики
-              li#ekskGusenich.btn.techs Экскаваторы Гусеничные
-              li#ekskKoles.btn.techs Экскаваторы Колесные
-              li#ekskPogr.btn.techs Экскаваторы Погрузчики
+              li#autokranM.btn.techs Автокраны
+              li#mnpltrM.btn.techs Манипуляторы
+              li#minPogruzM.btn.techs Мини-погрузчики
+              li#mineM.btn.techs Мини-экскаваторы
+              li#samosvalM.btn.techs Самосвалы
+              li#teleskPogrM.btn.techs Телескопические погрузчики
+              li#frontPogruzM.btn.techs Фронтальные погрузчики
+              li#ekskGusenichM.btn.techs Экскаваторы Гусеничные
+              li#ekskKolesM.btn.techs Экскаваторы Колесные
+              li#ekskPogrM.btn.techs Экскаваторы Погрузчики
               
         .row.justify-content-center
           .technics__menu-items.text-center

@@ -11,8 +11,9 @@ header.header.header_template
                 span.sub Аренда Спецтехники в СПб
           .col-sm.info.text-right
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
-            div.icon.icon-mail.header_button(data-toggle="modal" data-target="#exampleModalCenter") Отправить заявку
-            include ./modal
+            if !contacts
+              div.icon.icon-mail.header_button(data-toggle="modal" data-target="#exampleModalCenter") Отправить заявку
+              include ./modal
             //- a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
             //- a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
             //- a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=") Написать в Whatsapp

@@ -1,0 +1,24 @@
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage= 'Автокран КАМАЗ "Галичанин" 25 тонн', value = "Спецтехника", name = 'atkrnKAMAZVEZDEHOD', identifikator = 'autokranM', modalHidden = true;
+- var descr = 'Аренда автокрана Галичанин - 25 тонн в Санкт-Петерубрге и Ленинградской области. Цена за смену от 18 000 руб. Окончательная стоимость аренды автокрана вездеход Галичанин 25 тонн формируется после уточнения требуемых объемов работ.';
+- var image = 'https://terex-plus.ru/build/img/' + name + '.webp';
+- var keyWords = 'автокран 28 метров, автокран 25 тонн, аренда автокрана 28 метров, аренда автокрана 25 т Галичанин - Вездеход, аренда автокрана 25 тонн в Санкт-Петербурге';
+
+
+
+doctype html
+html(lang="ru")
+    include ../../head
+    body
+      include ../../header
+      include ../../strip
+      include ../../technic
+      include ../../footer
+      script(src="../../build/js/all.js")
+
