@@ -10,7 +10,14 @@ section.strip.bg-light
             li.nav-item
               a.nav-link.text-secondary(href="/technics.html") Спецтехника
             li.nav-item
+              a.nav-link.text-secondary(href=`/technics/${mainTechnicPageUrl}`) #{mainTechnicPage}
+            li.nav-item
               a.nav-link.active(href="/") #{subPage}
+          else if mainTechnicPage
+            li.nav-item
+              a.nav-link.text-secondary(href="/technics.html") Спецтехника
+            li.nav-item
+              a.nav-link.text-secondary(href=`/technics/${mainTechnicPageUrl}`) #{mainTechnicPage}
           else
             li.nav-item
               a.nav-link.active(href="/technics.html") #{name}
