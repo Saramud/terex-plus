@@ -24,12 +24,7 @@ header.header.header_template
                 li.menu__item
                   a(href="/") Главная
                 li.menu__item 
-                  if technics || subPage
-                    a.sub_menu.active(href="/technics.html") Спецтехника
-                    include techMenu
-                  else
-                    a.sub_menu(href="/technics.html") Спецтехника
-                    include techMenu
+                  include techMenu
                 li.menu__item
                   if services
                     a.active(href="#") Услуги

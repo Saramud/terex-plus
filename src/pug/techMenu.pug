@@ -9,20 +9,24 @@ mixin collapse(id, head, title)
 #accordion(role='tablist', aria-multiselectable='true')
   .panel.panel-default
     #heading7.panel-heading(role='tab')
-      a.collapsed.my_btn(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
-        i.fa.fa-angle-down(aria-hidden='true')
-    #collapse7.panel-collapse.my_dropdown.collapse(role='tabpanel', aria-labelledby='heading7')
-      +collapse('/technics/autokrans.html', 'autokranHead', 'Автокраны')
-      +collapse('/technics/manipulators.html', 'mnpltrHead', 'Манипуляторы')
-      +collapse('/technics/mini-pogruzchiki.html', 'minHead', 'Мини-погрузчики')
-      +collapse('/technics/mini-excavatory.html', 'mineHead', 'Мини-экскаваторы')
-      +collapse('/technics/samosvals.html', 'samosvalHead', 'Самосвалы')
-      +collapse('/technics/teleskopicheskie-pogruzchiki.html', 'teleskPogrHead', 'Телескопичеcкие погрузчики')
-      +collapse('/technics/frontalnye-pogruzchiki.html', 'frontPogruzHead', 'Фронтальные погрузчики')
-      +collapse('/technics/excavatory-gusenichnye.html', 'ekskGusenichHead', 'Экскаваторы гусеничные')
-      +collapse('/technics/excavatory-kolesnye.html', 'ekskKolesHead', 'Экскаваторы колесные')
-      +collapse('/technics/excavatory-pogruzchiki.html', 'ekskPogrHead', 'Экскаваторы погрузчики')
-      
+      if technics || subPage || mainTechnicPage
+        a.sub_menu.active.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7') Спецтехника
+          i.fa.fa-angle-down(aria-hidden='true')
+      else
+        a.sub_menu.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded='false', aria-controls='collapse7') Спецтехника
+          i.fa.fa-angle-down(aria-hidden='true')
+      #collapse7.panel-collapse.my_dropdown.collapse(role='tabpanel', aria-labelledby='heading7')
+        +collapse('/technics/autokrans.html', 'autokranHead', 'Автокраны')
+        +collapse('/technics/manipulators.html', 'mnpltrHead', 'Манипуляторы')
+        +collapse('/technics/mini-pogruzchiki.html', 'minHead', 'Мини-погрузчики')
+        +collapse('/technics/mini-excavatory.html', 'mineHead', 'Мини-экскаваторы')
+        +collapse('/technics/samosvals.html', 'samosvalHead', 'Самосвалы')
+        +collapse('/technics/teleskopicheskie-pogruzchiki.html', 'teleskPogrHead', 'Телескопичеcкие погрузчики')
+        +collapse('/technics/frontalnye-pogruzchiki.html', 'frontPogruzHead', 'Фронтальные погрузчики')
+        +collapse('/technics/excavatory-gusenichnye.html', 'ekskGusenichHead', 'Экскаваторы гусеничные')
+        +collapse('/technics/excavatory-kolesnye.html', 'ekskKolesHead', 'Экскаваторы колесные')
+        +collapse('/technics/excavatory-pogruzchiki.html', 'ekskPogrHead', 'Экскаваторы погрузчики')
+        
 
     
 
