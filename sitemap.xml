@@ -15,138 +15,191 @@
   <loc>https://terex-plus.ru/technics.html</loc>
   <priority>0.80</priority>
 </url>
+
+
 <url>
-  <loc>https://terex-plus.ru/technics/atkrnKAMAZVEZDEHOD.html</loc>
+<loc>https://terex-plus.ru/technics/autokrans.html</loc>
+<lastmod>2020-11-03T21:00:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/manipulators.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/mini-pogruzchiki.html</loc>
+<lastmod>2020-11-03T21:00:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/mini-excavatory.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/samosvals.html</loc>
+<lastmod>2020-11-03T21:00:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/teleskopicheskie-pogruzchiki.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/frontalnye-pogruzchiki.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/excavatory-gusenichnye.html</loc>
+<lastmod>2020-11-03T21:00:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/excavatory-kolesnye.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://terex-plus.ru/technics/excavatory-pogruzchiki.html</loc>
+<lastmod>2020-11-03T21:00:20+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://terex-plus.ru/technics/autokrans/atkrnKAMAZVEZDEHOD.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/atkrnMaz.html</loc>
+  <loc>https://terex-plus.ru/technics/autokrans/atkrnMaz.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/atkrURAL55733.html</loc>
+  <loc>https://terex-plus.ru/technics/autokrans/atkrURAL55733.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/atkrKAMAZ65115.html</loc>
+  <loc>https://terex-plus.ru/technics/autokrans/atkrKAMAZ65115.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/atkrKAMAZ63501.html</loc>
+  <loc>https://terex-plus.ru/technics/autokrans/atkrKAMAZ63501.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mnpltrHD78.html</loc>
+  <loc>https://terex-plus.ru/technics/manipulators/mnpltrHD78.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mnpltrHD120.html</loc>
+  <loc>https://terex-plus.ru/technics/manipulators/mnpltrHD120.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mnpltrKamaz.html</loc>
+  <loc>https://terex-plus.ru/technics/manipulators/mnpltrKamaz.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/minPogruzWECAN800D.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-pogruzchiki/minPogruzWECAN800D.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/minPogruzTAKEUCHI.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-pogruzchiki/minPogruzTAKEUCHI.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/minPogruzNEWHOLLANDL218.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-pogruzchiki/minPogruzNEWHOLLANDL218.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mineKubota.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-excavatory/mineKubota.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mineHitachiEX30.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-excavatory/mineHitachiEX30.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/mineTakeuchiTB016.html</loc>
+  <loc>https://terex-plus.ru/technics/mini-excavatory/mineTakeuchiTB016.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/smsvlKamaz6520.html</loc>
+  <loc>https://terex-plus.ru/technics/samosvals/smsvlKamaz6520.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/smsvlKamaz65115.html</loc>
+  <loc>https://terex-plus.ru/technics/samosvals/smsvlKamaz65115.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/smsvlReanaultKerax.html</loc>
+  <loc>https://terex-plus.ru/technics/samosvals/smsvlReanaultKerax.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/teleskPogrBobcatT40170.html</loc>
+  <loc>https://terex-plus.ru/technics/teleskopicheskie-pogruzchiki/teleskPogrBobcatT40170.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/teleskPogrFaresinFH1442.html</loc>
+  <loc>https://terex-plus.ru/technics/teleskopicheskie-pogruzchiki/teleskPogrFaresinFH1442.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/teleskPogrJCBAGRI.html</loc>
+  <loc>https://terex-plus.ru/technics/teleskopicheskie-pogruzchiki/teleskPogrJCBAGRI.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/frontPogruzVOLVOL90F.html</loc>
+  <loc>https://terex-plus.ru/technics/frontalnye-pogruzchiki/frontPogruzVOLVOL90F.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/frontPogruzLG936L.html</loc>
+  <loc>https://terex-plus.ru/technics/frontalnye-pogruzchiki/frontPogruzLG936L.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/frontPogruzLG933L.html</loc>
+  <loc>https://terex-plus.ru/technics/frontalnye-pogruzchiki/frontPogruzLG933L.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/egusHitachi330.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-gusenichnye/egusHitachi330.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/egusHitachi300.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-gusenichnye/egusHitachi300.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/egusVOLVOEC240.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-gusenichnye/egusVOLVOEC240.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/egusVOLVOEC240LOng.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-gusenichnye/egusVOLVOEC240LOng.html</loc>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://terex-plus.ru/technics/ekolDoosan.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-kolesnye/ekolDoosan.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/ekolJCBJS200W.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-kolesnye/ekolJCBJS200W.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/ekolVOLVOEW160.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-kolesnye/ekolVOLVOEW160.html</loc>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://terex-plus.ru/technics/epogTLB825.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-pogruzchiki/epogTLB825.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/epogJSB4CX.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-pogruzchiki/epogJSB4CX.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://terex-plus.ru/technics/epogTEREX860.html</loc>
+  <loc>https://terex-plus.ru/technics/excavatory-pogruzchiki/epogTEREX860.html</loc>
   <priority>0.80</priority>
 </url>
 

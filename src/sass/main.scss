@@ -875,8 +875,12 @@ $main-color: rgb(255, 198, 26);
     }
     }
 
+    strong {
+        text-align: left;
+        font-size: 18px;
+    }
     .technic_description {
-        ul, p {
+        ul, p, ol, u {
             text-align: left;
             font-size: 18px;
         }

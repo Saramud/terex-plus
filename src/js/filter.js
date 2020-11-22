@@ -25,7 +25,7 @@ let propertiesCommon = {
     minimumReach: 'Грузоподъемность на минимальном вылете, т/м',
     maximumReach: 'Грузоподъемность на максимальном вылете, т/м'
 };
-//!!!!! ВНИМАТЕЛЬНО, БАЗА ТЕХНИКИ ЕЩЕ ЕСТЬ В techMenu.pug, при зименении нужно сверять
+//!!!!! ВНИМАТЕЛЬНО, БАЗА ТЕХНИКИ ЕЩЕ ЕСТЬ В techMenu.pug, при изменении нужно сверять
 let name = {
     atkrnKAMAZVEZDEHOD: ['Автокран КАМАЗ "Галичанин" 25 тонн', '/build/img/atkrnKAMAZVEZDEHOD.webp', '/technics/autokrans/atkrnKAMAZVEZDEHOD.html'],
     atkrnMaz: ['Автокран МАЗ 14 тонн', '/build/img/atkrnMaz.webp', '/technics/autokrans/atkrnMaz.html'],
