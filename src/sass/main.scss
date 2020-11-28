@@ -881,7 +881,7 @@ $main-color: rgb(255, 198, 26);
     }
     .technic_description {
         ul, p, ol, u {
-            text-align: left;
+            text-align: justify;
             font-size: 18px;
         }
         li {
@@ -896,7 +896,7 @@ $main-color: rgb(255, 198, 26);
     .tech {
         img {
             width: 400px;
-            margin-top: 40px;
+            // margin-top: 40px;
         }
     }
 
@@ -957,15 +957,11 @@ $main-color: rgb(255, 198, 26);
         margin-bottom: -20px;
     }
     .header .phone { 
-        h1 {
-         
-
-        }
         p a {
         font-size: 45px;
     }   
   
-}
+    }
     .technic {
         .tech {
             img {
@@ -978,6 +974,8 @@ $main-color: rgb(255, 198, 26);
              padding-top: 20px;
         } 
     }
+    
+}
 
 @media (max-width: 767px) {
     .header {
@@ -1020,6 +1018,7 @@ $main-color: rgb(255, 198, 26);
     .technics card {
         flex-direction: column;
     }
+
     .technic {
         h1 {
             margin-bottom: 20px;
@@ -1080,10 +1079,7 @@ $main-color: rgb(255, 198, 26);
     }
    
    }
-    .footer {
-        padding-left: 0;
-    }
-    }
+
 
 @media (max-width: 576px) {
 

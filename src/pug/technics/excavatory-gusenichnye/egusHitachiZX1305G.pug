@@ -1,0 +1,23 @@
+
+mixin tech(name)
+  div(id="" + name class="tech")
+
+mixin ident(identifikator)
+  div(id="" + identifikator class="card-body")
+
+- var subPage = 'Экскаватор гусеничный Hitachi ZX130-5G', mainTechnicPage = 'Экскаваторы гусеничные', mainTechnicPageUrl = 'excavatory-gusenichnye.html', value = "Спецтехника", name = 'egusHitachiZX1305G', identifikator = 'ekskGusenichM', modalHidden = true;
+- var descr = 'Экскаватор гусеничный Hitachi ZX130-5G даёт хорошие результаты при землеройных работах на неустойчивом грунте. При больших сроках аренды, предоставляем скидки!';
+- var image = 'https://terex-plus.ru/build/img/' + name + '.webp';
+- var keyWords = 'Экскаватор гусеничный Hitachi ZX130-5G, аренда гусеничный экскаватора Hitachi ZX130-5G, аренда Гусеничные экскаваторы';
+
+
+
+doctype html
+html(lang="ru")
+    include ../../head
+    body
+      include ../../header
+      include ../../strip
+      include ../../technic
+      include ../../footer
+      script(src="../../build/js/all.js")
