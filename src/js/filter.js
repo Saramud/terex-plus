@@ -160,7 +160,7 @@ let all = {
         img: [name.epogTLB825[1], name.epogJSB4CX[1], name.epogTEREX860[1], name.epogNewHollandB110B[1], name.epogJohnDeere325SL[1], name.epogJCB2CX[1], name.epogJCB3CX[1], name.epogJCB4CX[1], name.epogHyundaiH940S[1], name.epogVolvoBL71B[1]],
         title: [name.epogTLB825[0], name.epogJSB4CX[0], name.epogTEREX860[0], name.epogNewHollandB110B[0], name.epogJohnDeere325SL[0], name.epogJCB2CX[0], name.epogJCB3CX[0], name.epogJCB4CX[0], name.epogHyundaiH940S[0], name.epogVolvoBL71B[0]],
         description: ['amet consectetur adipisicing elit.'],
-        price: [12000, 12000, 12000, 11000, 12000, 10000, 10500, 12000, 11000],
+        price: [12000, 12000, 12000, 11000, 12000, 10000, 10500, 12000, 11000, 12000],
         properties: ['weight', 'frontBucketCapacity', 'rearBucketCapacity', 'diggingDepth', 'enginePower', 'netEnginePower', 'liftingHeight', 'carryingСapacity'],
         weight: ['8000', '8700', '8000', '8190', '8545', '5595', '8070', '8660', '11000', '11500'],
         frontBucketCapacity: ['1', '1.3', '1.1', '1.2', '1', '0.8', '1.1', '1.3', '1.1', '1'],
@@ -170,7 +170,7 @@ let all = {
         netEnginePower: ['-', '71', '-', '82', '70', '54', '59', '71', '-', '-'],
         liftingHeight: ['2.741', '2.64', '2.68', '2693/3930-4585', '2680', '2.42', '3.19', '2.64', '2.71', '3.98'],
         carryingСapacity: ['3.2', '4.64', '3.46', '3.5', '2.9', '2.2', '1', '4.378', '2.8', '3.39'],
-        link: [name.epogTLB825[2], name.epogJSB4CX[2], name.epogTEREX860[2]],
+        link: [name.epogTLB825[2], name.epogJSB4CX[2], name.epogTEREX860[2], name.epogNewHollandB110B[2], name.epogJohnDeere325SL[2], name.epogJCB2CX[2], name.epogJCB3CX[2], name.epogJCB4CX[2], name.epogHyundaiH940S[2], name.epogVolvoBL71B[2]],
     },
     teleskPogrM: {
         img: [name.teleskPogrBobcatT40170[1], name.teleskPogrFaresinFH1442[1], name.teleskPogrJCBAGRI[1]],
