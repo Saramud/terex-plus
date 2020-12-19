@@ -1,5 +1,5 @@
     
-- var mainTechnicPage = 'Экскаваторы погрузчики', mainTechnicPageUrl = 'excavatory-pogruzchiki.html', title = 'ТЕРЕКС-ПЛЮС: аренда экскаватора-погрузчика в Санкт-Петербурге (СПб) и Ленинградской области, арендовать онлайн', descr = 'Аренда экскаватора-погрузчика в Санкт-Петербурге (СПб) в компании ТЕРЕКС-ПЛЮС. Большой выбор спецтехники. Вы можете взять в аренду экскаватор-погрузчик по хорошей цене. Подробности по телефону: +7 (812) 989-03-32.';
+- var mainTechnicPage = 'Экскаваторы-погрузчики', mainTechnicPageUrl = 'excavatory-pogruzchiki.html', title = 'ТЕРЕКС-ПЛЮС: аренда экскаватора-погрузчика в Санкт-Петербурге (СПб) и Ленинградской области, арендовать онлайн', descr = 'Аренда экскаватора-погрузчика в Санкт-Петербурге (СПб) в компании ТЕРЕКС-ПЛЮС. Большой выбор спецтехники. Вы можете взять в аренду экскаватор-погрузчик по хорошей цене. Подробности по телефону: +7 (812) 989-03-32.';
 - var keyWords = 'аренда спецтехники,аренда спецтехники в Санкт-Петербурге,Стоимость аренды';
 - var modalHidden = false;
 doctype html
@@ -11,6 +11,11 @@ html(lang="ru")
     
     section.technics#mainTechnicPage.technic_description
       .container
+        .row.text-center
+            .col-sm
+              h2.technics__title.bc-techs#excavatory-pogruzchiki Экскаваторы-погрузчики            
+        .row.justify-content-center
+          .technics__menu-item
         .row
           .col-12.text-center
             h1.technics__title ЭКСКАВАТОРЫ-ПОГРУЗЧИКИ В АРЕНДУ
@@ -76,10 +81,6 @@ html(lang="ru")
             u.
               Экскаваторы-погрузчики в аренду от ТЕРЕКС-ПЛЮС можно зарезервировать по телефону в Санкт-Петербурге +7 (812) 989-03-32
 
-        .row.text-center
-          .col-sm
-            h2.technics__title.bc-techs#excavatory-pogruzchiki Наша техника - Экскаваторы погрузчики            
-        .row.justify-content-center
-          .technics__menu-item
+        
     include ../footer 
     script(src="../build/js/all.js" async)

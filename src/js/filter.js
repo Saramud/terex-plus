@@ -247,7 +247,7 @@ const getTechnics = (nameTechnics) => {
             .append(tbody);
         let bodyCard = $("<div class='card-body'></div")
             .append(properties)
-            .append(`<div class='btn btn-information'><a href='${nameTechnics.link[i]}'>Узнать подробнее</a></div>`);
+            .append(`<div class='btn btn-information'><a href='${nameTechnics.link[i]}'>Взять в аренду</a></div>`);
         let newCard = $("<div class='border-warning text-center'></div>")
             .append(`<img class='card-image' src=${nameTechnics.img[i]} alt='${nameTechnics.title[i]}'>`)
             .append(`<h3 class='text-dark'>${nameTechnics.title[i]}</h3>`)
