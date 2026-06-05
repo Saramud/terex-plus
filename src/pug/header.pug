@@ -5,14 +5,14 @@ header.header.header_template
         .row.align-items-center
           .col-sm.logo
             a(href="/" title="На главную")
-              img(src="/build/img/logo_3.webp" width="100" alt="Лого Терекс-Плюс")
+              img(src="/img/logo_3.webp" width="100" alt="Лого Терекс-Плюс")
               span.logo_name
                 | ТЕРЕКС-ПЛЮС  
                 span.sub Аренда Спецтехники в СПб
           .col-sm.info.text-right
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
             if !contacts
-              div.icon.icon-mail.header_button(data-toggle="modal" data-target="#exampleModalCenter") Отправить заявку
+              div.icon.icon-mail.header_button(data-modal="#exampleModalCenter") Отправить заявку
               include ./modal
             //- a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
             //- a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram

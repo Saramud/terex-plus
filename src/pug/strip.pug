@@ -1,23 +1,39 @@
+-
+  var _breadcrumbItems = [{"@type":"ListItem","position":1,"name":"Главная","item":"https://terex-plus.ru/"}];
+  if (subPage && mainTechnicPage && mainTechnicPageUrl) {
+    _breadcrumbItems.push({"@type":"ListItem","position":2,"name":"Спецтехника","item":"https://terex-plus.ru/technics.html"});
+    _breadcrumbItems.push({"@type":"ListItem","position":3,"name":mainTechnicPage,"item":"https://terex-plus.ru/technics/"+mainTechnicPageUrl});
+    _breadcrumbItems.push({"@type":"ListItem","position":4,"name":subPage});
+  } else if (mainTechnicPage && mainTechnicPageUrl) {
+    _breadcrumbItems.push({"@type":"ListItem","position":2,"name":"Спецтехника","item":"https://terex-plus.ru/technics.html"});
+    _breadcrumbItems.push({"@type":"ListItem","position":3,"name":mainTechnicPage});
+  } else if (name) {
+    _breadcrumbItems.push({"@type":"ListItem","position":2,"name":name});
+  }
+  var _breadcrumbLD = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":_breadcrumbItems};
+
+script(type='application/ld+json') !{JSON.stringify(_breadcrumbLD)}
 section.field
 section.strip.bg-light
   .container
     .row
       .col
-        ul.nav.nav-tabs.custom-nav
-          li.nav-item
-            a.nav-link.text-secondary(href="/") Главная
-          if subPage
+        nav(aria-label="Хлебные крошки")
+          ul.nav.nav-tabs.custom-nav
             li.nav-item
-              a.nav-link.text-secondary(href="/technics.html") Спецтехника
-            li.nav-item
-              a.nav-link.text-secondary(href=`/technics/${mainTechnicPageUrl}`) #{mainTechnicPage}
-            li.nav-item
-              a.nav-link.active(href="/") #{subPage}
-          else if mainTechnicPage
-            li.nav-item
-              a.nav-link.text-secondary(href="/technics.html") Спецтехника
-            li.nav-item
-              a.nav-link.active.text-secondary(href=`/technics/${mainTechnicPageUrl}`) #{mainTechnicPage}
-          else
-            li.nav-item
-              a.nav-link.active(href="/technics.html") #{name}
+              a.nav-link.text-secondary(href="/") Главная
+            if subPage
+              li.nav-item
+                a.nav-link.text-secondary(href="/technics.html") Спецтехника
+              li.nav-item
+                a.nav-link.text-secondary(href=`/technics/${mainTechnicPageUrl}`) #{mainTechnicPage}
+              li.nav-item
+                span.nav-link.active #{subPage}
+            else if mainTechnicPage
+              li.nav-item
+                a.nav-link.text-secondary(href="/technics.html") Спецтехника
+              li.nav-item
+                span.nav-link.active.text-secondary #{mainTechnicPage}
+            else
+              li.nav-item
+                span.nav-link.active #{name}

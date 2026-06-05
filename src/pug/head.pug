@@ -1,60 +1,64 @@
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  meta(http-equiv="X-UA-Compatible" content="ie=edge") 
+  meta(http-equiv="X-UA-Compatible" content="ie=edge")
   meta(name="description" content=descr)
   meta(name="keywords" content=keyWords)
   meta(name='robots', content='index, follow')
-  title !{subPage ? subPage + ' в аренду': false || title}
-  link(rel="stylesheet" href="/build/css/all.css")
-  if page='index'
-    link(rel="icon" href="https://terex-plus.ru/favicon.ico" type="image/x-icon")
-    meta(name='google-site-verification', content='gXVs0NLswo4D7iBsL9nx21Zy6MF5UmIT4_nihLKJw_Q')
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  -
+    var baseUrl = 'https://terex-plus.ru';
+    var pageTitle = subPage
+      ? ('Аренда ' + subPage + ' в СПб — Терекс-Плюс')
+      : title;
+    var canonical = pageUrl
+      ? (baseUrl + pageUrl)
+      : (subPage && mainTechnicPageUrl && name
+          ? (baseUrl + '/technics/' + mainTechnicPageUrl.replace('.html','') + '/' + name + '.html')
+          : (mainTechnicPage && mainTechnicPageUrl && !subPage
+              ? (baseUrl + '/technics/' + mainTechnicPageUrl)
+              : null));
+  title #{pageTitle}
+  link(rel="icon" href="/favicon.ico" type="image/x-icon")
+  if canonical
+    link(rel="canonical" href=canonical)
+  meta(name='google-site-verification', content='gXVs0NLswo4D7iBsL9nx21Zy6MF5UmIT4_nihLKJw_Q')
+  link(rel="preconnect" href="https://mc.yandex.ru")
+  include metaOG
   script(type='application/ld+json').
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Терекс-Плюс",
-      "image": "https://terex-plus.ru/build/img/logo_3.webp",
+      "image": "https://terex-plus.ru/img/logo_3.webp",
       "url": "https://terex-plus.ru",
       "telephone": "+7(812)989-03-32",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ТАЛЛИНСКОЕ ШОССЕ, 153/3",
+        "streetAddress": "Таллинское шоссе, 153/3",
         "addressLocality": "Санкт-Петербург",
         "addressCountry": "RU"
       },
       "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "59.8124485",
-      "longitude": "30.16469691"
+        "@type": "GeoCoordinates",
+        "latitude": "59.8124485",
+        "longitude": "30.16469691"
       },
-      "description": "Компания 'Терекс-Плюс' предоставляет в аренду дорожную и строительную технику по Санкт-Петербургу и Ленинградской области",
-      "openingHours": [
-      "Mo-Su 00:00-24:00"
-      ]
+      "description": "Компания «Терекс-Плюс» предоставляет в аренду дорожную и строительную технику по Санкт-Петербургу и Ленинградской области",
+      "openingHours": ["Mo-Su 00:00-24:00"]
     }
   script(type='application/ld+json').
     {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Терекс-Плюс",
-        "url": "https://terex-plus.ru",
-        "logo": "https://terex-plus.ru/build/img/logo_3.webp",
-        "contactPoint": [
-            {
-                "@type": "ContactPoint",
-                "telephone": "+7(812)989-03-32",
-                "contactType": "customer service",
-                "email": "info@terex-plus.ru",
-                "availableLanguage": [
-                    "Русский"
-                ]
-            }
-        ]
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Терекс-Плюс",
+      "url": "https://terex-plus.ru",
+      "logo": "https://terex-plus.ru/img/logo_3.webp",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+7(812)989-03-32",
+        "contactType": "customer service",
+        "email": "info@terex-plus.ru",
+        "availableLanguage": ["Russian"]
+      }]
     }
-  
-  if (page != 'about' && page != 'contacts')
-    include metaOG
-
+  script(type="module" src="/src/ts/main.ts")

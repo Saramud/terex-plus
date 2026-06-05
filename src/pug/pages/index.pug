@@ -1,6 +1,6 @@
-- var requestText = 'Отправить заявку на аренду/подбор техники', widthIcon = 65, title = 'Аренда спецтехники в Санкт-Петербурге Терекс-Плюс', descr = "На нашем сайте по аренде спецтехники компании 'Терекс-Плюс' представлен большой выбор техники от мини-погрузчиков до автокранов 40 тонн. Если не нашли нужную Вам технику в общем каталоге - воспользуйтесь нашей удобной формой для отправки заявки!";
+- var requestText = 'Отправить заявку на аренду/подбор техники', widthIcon = 65, title = 'Аренда спецтехники в Санкт-Петербурге — Терекс-Плюс', descr = "На нашем сайте по аренде спецтехники компании 'Терекс-Плюс' представлен большой выбор техники от мини-погрузчиков до автокранов 40 тонн. Если не нашли нужную Вам технику в общем каталоге - воспользуйтесь нашей удобной формой для отправки заявки!";
 - var page = 'index', keyWords = 'аренда спецтехники, аренда строительной техники, спецтехника в аренду, аренда дорожной техники, аренда спецтехники в Санкт-Петербурге, аренда гусеничного экскаватора';
-- var index = true;
+- var index = true, pageUrl = '/';
 doctype html
 html(lang="ru")
   include ../head
@@ -9,16 +9,13 @@ html(lang="ru")
       .container
         .row.align-items-center
           .col-sm.logo
-            img(src="build/img/logo_3.webp" width="100" alt="Аренда спецтехники в Сакт-Петербурге")
+            img(src="/img/logo_3.webp" width="100" alt="Аренда спецтехники в Санкт-Петербурге")
             span.logo_name
-              | ТЕРЕКС-ПЛЮС  
+              | ТЕРЕКС-ПЛЮС
               span.sub Аренда Спецтехники в СПб
           .col-sm.info.text-right
             a.icon.icon-phone(href="tel:8(812)989-03-32") 8(812)989-03-32
             div.icon.icon-mail.header_button.indexPage(href='#requestform') Отправить заявку
-            //- a.icon.icon-mail(href="mailto:info@terex-plus.ru") info@terex-plus.ru
-            //- a.icon.icon-telegram(href="tg://resolve?domain=SSaramud") Написать в Telegram
-            //- a.icon.icon-whatsapp(href="https://wa.me/79681938577?text=.") Написать в Whatsapp
         .row
           .col-12.text-center
             nav
@@ -27,8 +24,6 @@ html(lang="ru")
                   a.active(href="./") Главная
                 li.menu__item
                   include ../techMenu
-                //- li.menu__item
-                //-   a(href="#") Услуги
                 li.menu__item
                   a(href="./about.html") О компании
                 li.menu__item
@@ -39,110 +34,107 @@ html(lang="ru")
             p
               a(href="tel:+7(812)989-03-32") 8(812)989-03-32
             .col-lg-12
-              img.excavator(src="/build/img/terex.webp" width="800" alt="Экскаватор в аренду")
-    
-    section.technics
-      .container
-        .row.text-center
-          .col-sm
-            h2.technics__title#mainPageCatalog Каталог спецтехники
-        .row.text-center
-          .techics__menu.col-12
-            ul.technics__menu
-              li#autokranM.btn.techs Автокраны
-              li#mnpltrM.btn.techs Манипуляторы
-              li#minPogruzM.btn.techs Мини-погрузчики
-              li#mineM.btn.techs Мини-экскаваторы
-              li#samosvalM.btn.techs Самосвалы
-              li#teleskPogrM.btn.techs Телескопические погрузчики
-              li#frontPogruzM.btn.techs Фронтальные погрузчики
-              li#ekskGusenichM.btn.techs Экскаваторы Гусеничные
-              li#ekskKolesM.btn.techs Экскаваторы Колесные
-              li#ekskPogrM.btn.techs Экскаваторы-Погрузчики
-              
-        .row.justify-content-center
-          .technics__menu-items.text-center
-            .technics__menu-item
-    section.information
-      .container
-        .row.text-center
-          .col
-            h2.info__title Работая с нами Вы получите
-            div.prop
-              ul.advantages_list.text-left
-                li 
-                  div.text-change
-                    div
-                      img(src="build/img/Tilda_Icons_3st_van.webp" alt="Большой выбор техники")
-                    div  
-                      b.first|большой выбор техники
-                      b.second|от мини-погрузчиков до самосвалов большетонников
-                li  
-                  div.text-change
-                    div
-                      img(src="build/img/Tilda_Icons_19ad_social_networks.webp" alt="Исправная техника") 
-                    div  
-                      b.first|100% исправную выбранную Вами модель спецтехники
-                      b.second|у нас работают квалифицированные механики, ежедневно поддерживающие технику
-                li
-                  div.text-change
-                    div
-                      img(src="build/img/Tilda_Icons_31_format_doc.webp" alt="Договор сотрудничества" )
-                    div
-                      b.first|официальный договор сотрудничества
-                      b.second|договор - гарантия того, что будут выполнены все обязательства
-                li
-                  div.text-change 
-                    div
-                      img(src="build/img/Tilda_Icons_11mu_calendar.webp" alt="Любой срок аренды")
-                    div  
-                      b.first|любой срок аренды
-                      b.second|от одной смены до постоянного сотрудничества
-                li
-                  div.text-change
-                    div
-                      img(src="build/img/Tilda_Icons_32_profession_builder.webp" alt ="Оператор техники")
-                    div  
-                      b.first|профессионального оператора техники
-                      b.second|в нашем штате трудятся профессиональные специалисты, имеющие за плечами большой опыт
-                li
-                  div.text-change 
-                    div
-                      img(src="build/img/Tilda_Icons_3st_discount2.webp" alt = "Скидка на второй заказ")
-                    div  
-                      b.first|скидку на второй заказ
-                      b.second|да-да! вы помогаете нам развиваться заказывая у нас технику, мы вам дарим скидку!
-    section.information-second
-      .container
-        .row.text-center
-          .col
-            h2.info__title СОТРУДНИЧАТЬ С НАМИ ВЫГОДНО!
-            p.advantages.text-justify
-              | На сегодняшний день 
-              strong
-              |аренда спецтехники в СПб
-              |является популярной услугой не только у коммерческих строительных организаций, 
-              |но и у индивидуальных предпринимателей, это обуславливается доступностью стоимости 
-              strong услуги аренды спецтехники. 
-              | С минимальными финансовыми вложениями вы сможете арендовать технику и выполнить широкий спектр работ.
-              | У нас вы можете взять в аренду 
-              strong экскаватор погрузчик с гидромолотом, 
-              strong экскаватор полноповортный, 
-              strong автокран 14 тонн, 
-              strong автокран 40 тонн, 
-              strong кран манипулятор 
-              |и т.д.
-              strong
-              br
-              br
-              div.embed-responsive.embed-responsive-16by9.col-lg-6.video
-                video(width='400', height='300', controls='controls' poster='/build/img/preload.webp')
-                  source(src="/video/terex-plus.mp4" type='video/mp4')
+              img.excavator(src="/img/terex.webp" width="800" alt="Экскаватор в аренду")
 
-    section.request
-      .container
-        .row   
-        .row
-          include ../requestForm
+    main
+      section.technics
+        .container
+          .row.text-center
+            .col-sm
+              h2.technics__title#mainPageCatalog Каталог спецтехники
+          .row.text-center
+            .techics__menu.col-12
+              ul.technics__menu
+                li#autokranM.btn.techs Автокраны
+                li#mnpltrM.btn.techs Манипуляторы
+                li#minPogruzM.btn.techs Мини-погрузчики
+                li#mineM.btn.techs Мини-экскаваторы
+                li#samosvalM.btn.techs Самосвалы
+                li#teleskPogrM.btn.techs Телескопические погрузчики
+                li#frontPogruzM.btn.techs Фронтальные погрузчики
+                li#ekskGusenichM.btn.techs Экскаваторы Гусеничные
+                li#ekskKolesM.btn.techs Экскаваторы Колесные
+                li#ekskPogrM.btn.techs Экскаваторы-Погрузчики
+
+          .row.justify-content-center
+            .technics__menu-items.text-center
+              .technics__menu-item
+      section.information
+        .container
+          .row.text-center
+            .col
+              h2.info__title Работая с нами Вы получите
+              div.prop
+                ul.advantages_list.text-left
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_3st_van.webp" alt="Большой выбор техники" loading="lazy")
+                      div
+                        b.first|большой выбор техники
+                        b.second|от мини-погрузчиков до самосвалов большетонников
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_19ad_social_networks.webp" alt="Исправная техника" loading="lazy")
+                      div
+                        b.first|100% исправную выбранную Вами модель спецтехники
+                        b.second|у нас работают квалифицированные механики, ежедневно поддерживающие технику
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_31_format_doc.webp" alt="Официальный договор сотрудничества" loading="lazy")
+                      div
+                        b.first|официальный договор сотрудничества
+                        b.second|договор - гарантия того, что будут выполнены все обязательства
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_11mu_calendar.webp" alt="Любой срок аренды" loading="lazy")
+                      div
+                        b.first|любой срок аренды
+                        b.second|от одной смены до постоянного сотрудничества
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_32_profession_builder.webp" alt="Профессиональный оператор техники" loading="lazy")
+                      div
+                        b.first|профессионального оператора техники
+                        b.second|в нашем штате трудятся профессиональные специалисты, имеющие за плечами большой опыт
+                  li
+                    div.text-change
+                      div
+                        img(src="/img/Tilda_Icons_3st_discount2.webp" alt="Скидка на второй заказ" loading="lazy")
+                      div
+                        b.first|скидку на второй заказ
+                        b.second|да-да! вы помогаете нам развиваться заказывая у нас технику, мы вам дарим скидку!
+      section.information-second
+        .container
+          .row.text-center
+            .col
+              h2.info__title СОТРУДНИЧАТЬ С НАМИ ВЫГОДНО!
+              p.advantages.text-justify
+                | На сегодняшний день
+                strong аренда спецтехники в СПб
+                | является популярной услугой не только у коммерческих строительных организаций,
+                | но и у индивидуальных предпринимателей, это обуславливается доступностью стоимости
+                strong услуги аренды спецтехники.
+                | С минимальными финансовыми вложениями вы сможете арендовать технику и выполнить широкий спектр работ.
+                | У нас вы можете взять в аренду
+                strong экскаватор погрузчик с гидромолотом,
+                strong экскаватор полноповортный,
+                strong автокран 14 тонн,
+                strong автокран 40 тонн,
+                strong кран манипулятор
+                | и т.д.
+                br
+                br
+                div.embed-responsive.embed-responsive-16by9.col-lg-6.video
+                  video(width='400' height='300' controls poster='/img/preload.webp' preload='none')
+                    source(src="/video/terex-plus.mp4" type='video/mp4')
+      section.request
+        .container
+          .row
+          .row
+            include ../requestForm
     include ../footer
-    script(src="build/js/all.js" async)

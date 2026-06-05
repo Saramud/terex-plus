@@ -8,7 +8,7 @@ footer.footer
           h5.text-white аренда спецтехники в СПБ
           .col-sm.logo
             a(href="/" title="На главную")
-              img(src="/build/img/logo_3.webp" width="100" alt="Аренда спецтехники в Сакт-Петербурге")
+              img(src="/img/logo_3.webp" width="100" alt="Аренда спецтехники в Санкт-Петербурге")
             
       .col-lg-4.col-md-6.col-sm-6.order-sm-1
         h4 КОНТАКТЫ
@@ -36,7 +36,7 @@ footer.footer
                 a.indexPage(href='#requestform') Оставить завку
             else if !modalHidden
               li.footer-menu__item
-                button.btn.footer_button(type="button" data-toggle="modal" data-target="#exampleModalCenter") Отправить заявку
+                button.btn.footer_button(type="button" data-modal="#exampleModalCenter") Отправить заявку
                 include ./modal
         .footer__contact
           
@@ -44,7 +44,6 @@ footer.footer
       .copyright.col-12
         p 2019 © «Терекс-Плюс». Все права защищены
 
-script(src="https://unpkg.com/popper.js")
 // Yandex.Metrika counter
 script.
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

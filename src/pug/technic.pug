@@ -1,6 +1,28 @@
+-
+  var _serviceLD = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": subPage ? ("Аренда " + subPage + " в Санкт-Петербурге") : "",
+    "description": descr || "",
+    "provider": {
+      "@type": "Organization",
+      "name": "Терекс-Плюс",
+      "url": "https://terex-plus.ru"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Санкт-Петербург"},
+      {"@type": "AdministrativeArea", "name": "Ленинградская область"}
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "seller": {"@type": "Organization", "name": "Терекс-Плюс"}
+    }
+  };
 
-
-section.technic
+script(type='application/ld+json') !{JSON.stringify(_serviceLD)}
+main
+  section.technic
     .container
       .row.text-center
         .col.nav-menu
@@ -13,8 +35,8 @@ section.technic
         .col-lg-6
           .card.bg-light.mb-3
             .card-header.text-center Технические характеристики
-            +ident(identifikator)  
+            +ident(identifikator)
           .orderTech.text-right
-            button.btn.btn-warning.text-right(type="button" data-toggle="modal" data-target="#exampleModalCenter") Арендовать
+            button.btn.btn-warning.text-right(type="button" data-modal="#exampleModalCenter") Арендовать
             include ./modal
       hr
