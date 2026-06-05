@@ -88,8 +88,6 @@
   border-bottom: 3px solid $main-color;
   padding: 12px 0 0;
 
-  .container { max-width: none; }
-
   .logo img { width: 80px; }
 
   @media (max-width: $bp-sm - 1) {
@@ -101,17 +99,18 @@
 // ---- Index page hero header ----
 header#header.header {
   background-color: $white;
-  border-bottom: 3px solid $main-color;
   padding-top: 12px;
 
-  .container { max-width: none; }
+  > .container {
+    border-bottom: 3px solid $main-color;
+    padding-bottom: 0;
+  }
 }
 
 .header__phone {
   background-color: $black;
   color: $white;
   padding: 24px 0;
-  margin-top: 8px;
   position: relative;
   overflow: hidden;
 

@@ -6,9 +6,6 @@ function buildCard(cat: EquipmentCategory, i: number): HTMLElement {
   card.className = 'card border-warning'
   card.href = cat.link[i]
 
-  const inner = document.createElement('div')
-  inner.className = 'border-warning text-center'
-
   const img = document.createElement('img')
   img.className = 'card-image'
   img.src = '/img/placeholder.svg'
@@ -46,11 +43,10 @@ function buildCard(cat: EquipmentCategory, i: number): HTMLElement {
   btn.innerHTML = `<a href="${cat.link[i]}">Взять в аренду</a>`
   cardBody.appendChild(btn)
 
-  inner.appendChild(img)
-  inner.appendChild(title)
-  inner.appendChild(header)
-  inner.appendChild(cardBody)
-  card.appendChild(inner)
+  card.appendChild(img)
+  card.appendChild(title)
+  card.appendChild(header)
+  card.appendChild(cardBody)
 
   return card
 }
