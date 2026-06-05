@@ -88,6 +88,8 @@
   border-bottom: 3px solid $main-color;
   padding: 12px 0 0;
 
+  .container { max-width: none; }
+
   .logo img { width: 80px; }
 
   @media (max-width: $bp-sm - 1) {
@@ -101,6 +103,8 @@ header#header.header {
   background-color: $white;
   border-bottom: 3px solid $main-color;
   padding-top: 12px;
+
+  .container { max-width: none; }
 }
 
 .header__phone {

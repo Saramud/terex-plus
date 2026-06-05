@@ -11,7 +11,7 @@ function buildCard(cat: EquipmentCategory, i: number): HTMLElement {
 
   const img = document.createElement('img')
   img.className = 'card-image'
-  img.src = cat.img[i]
+  img.src = '/img/placeholder.svg'
   img.alt = cat.title[i]
   img.loading = 'lazy'
 
@@ -109,7 +109,7 @@ function initTechnicDetailPage(): void {
   if (!meta) return
 
   const img = document.createElement('img')
-  img.src = meta[1]
+  img.src = '/img/placeholder.svg'
   img.alt = meta[0]
   techEl.appendChild(img)
 
